@@ -1,0 +1,52 @@
+start X1V
+OK
+
+place X1R 1 X1V
+OK
+
+place S1V 3 X1V
+OK
+
+place S1R 6 X1R
+OK
+
+place I1V 5 X1V
+OK
+
+place I1R 2 X1R
+OK
+
+pass
+OK
+
+place I2R 1 X1R
+OK
+
+place I2V 4 X1V
+OK
+
+move S1R 3 X1R
+OK
+
+place I3V 6 I1V
+OK
+
+place I3R 6 X1R
+OK
+
+print
+X1R 1 I2R 2 I1R 3 S1R 4 X1V 6 I3R
+S1R 1 I1R 4 S1V 5 X1V 6 X1R
+I1R 4 S1R 5 X1R 6 I2R
+I2R 3 I1R 4 X1R 5 I3R
+I3R 2 I2R 3 X1R
+X1V 1 X1R 2 S1R 3 S1V 4 I2V 5 I1V
+S1V 1 S1R 5 I2V 6 X1V
+I1V 2 X1V 3 I2V 6 I3V
+I2V 1 X1V 2 S1V 6 I1V
+I3V 3 I1V
+
+move I3V 6 X1V
+DRAW
+
+quit

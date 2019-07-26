@@ -1,0 +1,10 @@
+add-team 5;abcd
+$error
+
+add-team -1;abcd
+$error
+
+add-team 123;abcd
+$error
+
+quit

@@ -1,0 +1,10 @@
+delete programmieren;uabcd
+$error
+
+create programmieren
+OK
+
+delete swt;uabcd
+$error
+
+quit

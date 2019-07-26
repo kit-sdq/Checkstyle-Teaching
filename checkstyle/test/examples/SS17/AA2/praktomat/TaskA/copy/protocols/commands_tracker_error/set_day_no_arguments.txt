@@ -1,0 +1,11 @@
+set-day
+$error
+
+set-day 
+$error
+
+set-day  
+$error
+
+quit
+Quit (Day 0, week 1)

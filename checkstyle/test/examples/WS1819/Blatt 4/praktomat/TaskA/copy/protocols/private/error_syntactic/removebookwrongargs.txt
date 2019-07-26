@@ -1,0 +1,13 @@
+remove-addressbook Name
+$error
+
+remove-addressbook name7
+$error
+
+remove-addressbook äöüß
+$error
+
+remove-addressbook name%
+$error
+
+quit

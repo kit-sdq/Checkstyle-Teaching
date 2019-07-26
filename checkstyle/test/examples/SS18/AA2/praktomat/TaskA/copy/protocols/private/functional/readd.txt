@@ -1,0 +1,38 @@
+create programmieren
+OK
+
+print programmieren
+#
+
+add programmieren;ufate;12
+OK
+
+add programmieren;ulapw;35
+OK
+
+print programmieren
+#[u[f[a[t[e(12)]]]l[a[p[w(35)]]]]]
+
+delete programmieren;ufate
+OK
+
+print programmieren
+#[u[l[a[p[w(35)]]]]]
+
+add programmieren;ufate;12
+OK
+
+print programmieren
+#[u[f[a[t[e(12)]]]l[a[p[w(35)]]]]]
+
+delete programmieren;ufate
+OK
+
+
+add programmieren;ufate;14
+OK
+
+print programmieren
+#[u[f[a[t[e(14)]]]l[a[p[w(35)]]]]]
+
+quit

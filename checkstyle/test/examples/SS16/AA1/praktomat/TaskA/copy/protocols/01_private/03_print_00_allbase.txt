@@ -1,0 +1,24 @@
+
+start
+OK
+
+print
+$basered
+$baseblue
+$basegreen
+$baseyellow
+red
+
+abort
+
+start $baseall
+OK
+
+print
+$basered
+$baseblue
+$basegreen
+$baseyellow
+red
+
+quit

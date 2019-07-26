@@ -1,0 +1,4 @@
+direction f
+S
+
+move 1

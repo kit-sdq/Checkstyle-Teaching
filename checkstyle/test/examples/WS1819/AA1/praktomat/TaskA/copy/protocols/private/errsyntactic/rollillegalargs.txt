@@ -1,0 +1,7 @@
+roll a
+$error
+
+roll ads
+$error
+
+quit

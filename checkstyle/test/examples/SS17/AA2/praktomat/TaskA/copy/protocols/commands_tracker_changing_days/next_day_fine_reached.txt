@@ -1,0 +1,12 @@
+goal pulse less-than 20
+New goal for pulse: less-than <20.00>.
+
+record pulse 5
+pulse: <5.00> to <5.00>
+
+next-day
+Goals reached: 1/1
+Day 1, week 1
+
+quit
+Quit (Day 1, week 1)

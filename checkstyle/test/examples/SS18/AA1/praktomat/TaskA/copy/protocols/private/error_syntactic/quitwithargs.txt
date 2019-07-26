@@ -1,0 +1,16 @@
+quit 
+$error
+
+quit  
+$error
+
+quit a
+$error
+
+quit 1
+$error
+
+quit 1 + a
+$error
+
+quit

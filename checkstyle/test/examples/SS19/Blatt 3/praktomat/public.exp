@@ -1,0 +1,20 @@
+# automatically generated expect script by CreateExpectTestcase
+PROGRAM_start
+
+PROGRAM_test {tut xaver} {}
+PROGRAM_test {stud andrea 10001} {}
+PROGRAM_test {stud berta 10002} {}
+PROGRAM_test {stud christine 10003} {}
+PROGRAM_test {stud daniel 10004} {}
+PROGRAM_test {stud ernst 10005} {}
+PROGRAM_relaxed_test {list-students} {(10001,andrea): xaver (10002,berta): xaver (10003,christine): xaver (10004,daniel): xaver (10005,ernst): xaver}
+PROGRAM_relaxed_test {task Aufgabe_1} {task id(1)}
+PROGRAM_relaxed_test {task Aufgabe_2} {task id(2)}
+PROGRAM_test {submit 1 10001 Loesung_Andrea} {}
+PROGRAM_test {submit 1 10002 Loesung_Berta} {}
+PROGRAM_test {submit 1 10003 Loesung_Christine} {}
+PROGRAM_test {submit 1 10004 Loesung_Daniel} {}
+PROGRAM_relaxed_test {list-solutions 1} {(10001,andrea): Loesung_Andrea (10002,berta): Loesung_Berta (10003,christine): Loesung_Christine (10004,daniel): Loesung_Daniel}
+PROGRAM_relaxed_test {review 1 10003 2 Gut_gemacht_Christine.} {xaver reviewed (10003,christine) with grade 2}
+PROGRAM_relaxed_test {review 1 10004 4 Das_geht_besser_Daniel.} {xaver reviewed (10004,daniel) with grade 4}
+PROGRAM_relaxed_test {results} {task id(1): Aufgabe_1 10003: 2 10004: 4 task id(2): Aufgabe_2}

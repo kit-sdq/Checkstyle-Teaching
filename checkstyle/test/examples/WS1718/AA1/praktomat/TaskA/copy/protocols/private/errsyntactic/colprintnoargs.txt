@@ -1,0 +1,10 @@
+colprint
+$error
+
+colprint 
+$error
+
+colprint  
+$error
+
+quit

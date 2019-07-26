@@ -1,0 +1,19 @@
+move blue;3;4
+OK
+
+build C;3;3
+OK
+
+turn
+P2
+
+move yellow;2;4
+OK
+
+build C;3;4
+$error
+
+build D;3;4
+$error
+
+quit

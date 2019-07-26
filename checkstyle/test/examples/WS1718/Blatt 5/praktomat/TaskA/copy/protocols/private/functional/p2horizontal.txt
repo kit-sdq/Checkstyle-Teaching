@@ -1,0 +1,31 @@
+place 8;9
+OK
+
+place 3;2
+OK
+
+place 6;9
+OK
+
+place 3;1
+OK
+
+place 11;7
+OK
+
+place 3;3
+OK
+
+place 2;11
+OK
+
+place 3;4
+OK
+
+place 4;10
+OK
+
+place 3;5
+P2 wins
+
+quit

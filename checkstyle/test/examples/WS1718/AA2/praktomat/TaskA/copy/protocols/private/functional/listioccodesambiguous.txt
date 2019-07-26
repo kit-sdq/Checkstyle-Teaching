@@ -1,0 +1,45 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-ioc-code 111;arg;argentinien;1920
+OK
+
+add-ioc-code 112;bhu;bhutan;1984
+OK
+
+add-ioc-code 113;bul;bulgarien;1896
+OK
+
+add-ioc-code 114;chi;chile;1896
+OK
+
+add-ioc-code 115;cze;tschechien;1992
+OK
+
+add-ioc-code 116;ecu;ecuador;1924
+OK
+
+add-ioc-code 117;esp;spanien;1900
+OK
+
+add-ioc-code 118;ger;deutschland;1992
+OK
+
+add-ioc-code 119;can;kanada;1900
+OK
+
+list-ioc-codes
+1896 113 bul bulgarien
+1896 114 chi chile
+1900 117 esp spanien
+1900 119 can kanada
+1920 111 arg argentinien
+1924 116 ecu ecuador
+1984 112 bhu bhutan
+1992 115 cze tschechien
+1992 118 ger deutschland
+
+quit

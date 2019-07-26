@@ -1,0 +1,10 @@
+login-admin peet1993;notmyrealpw;
+$error
+
+login-admin ;peet1993;notmyrealpw
+$error
+
+login-admin peet1993
+$error
+
+quit

@@ -1,0 +1,63 @@
+move 11
+
+print
+0330
+0033
+0f33
+
+direction f
+W
+
+move 1
+
+print
+0330
+0033
+f333
+
+move 4
+
+print
+0330
+3333
+30f3
+
+direction f
+N
+
+move 1
+
+direction f
+W
+
+print
+0330
+33f3
+3003
+
+move 1
+
+print
+0330
+3f03
+3003
+
+direction f
+S
+
+move 1
+
+direction f
+W
+
+move 1
+
+print
+0330
+3003
+f303
+
+direction f
+S
+
+move 1

@@ -1,0 +1,10 @@
+state 0;0
+**
+
+state 7;7
+**
+
+state 4;3
+**
+
+quit

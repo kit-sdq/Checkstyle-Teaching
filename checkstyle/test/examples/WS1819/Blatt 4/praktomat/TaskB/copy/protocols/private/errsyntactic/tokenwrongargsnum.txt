@@ -1,0 +1,16 @@
+token P1;P2;P3
+$error
+
+token P1;P2;P3
+$error
+
+token P1;P2
+$error
+
+token P1;
+$error
+
+token ;
+$error
+
+quit

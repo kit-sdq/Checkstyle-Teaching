@@ -1,0 +1,10 @@
+login-admin peet1993;notmyrealpw
+$error
+
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin testabc;testabcabcd
+$error
+
+quit

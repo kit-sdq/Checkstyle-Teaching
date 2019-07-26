@@ -1,0 +1,10 @@
+assignment
+$error
+
+assignment 
+$error
+
+assignment  
+$error
+
+quit

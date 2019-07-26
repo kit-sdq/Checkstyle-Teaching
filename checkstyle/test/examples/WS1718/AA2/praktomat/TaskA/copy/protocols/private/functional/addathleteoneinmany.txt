@@ -1,0 +1,40 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-olympic-sport biathlon;sprint
+OK
+
+add-olympic-sport biathlon;verfolgung
+OK
+
+add-olympic-sport bobsport;bob
+OK
+
+add-olympic-sport eislauf;eisschnelllauf
+OK
+
+add-ioc-code 111;ger;deutschland;1900
+OK
+
+add-athlete 1234;laura;dahlmeier;deutschland;biathlon;sprint
+OK
+
+add-athlete 1234;laura;dahlmeier;deutschland;biathlon;verfolgung
+OK
+
+add-athlete 3434;max;mustermann;deutschland;bobsport;bob
+OK
+
+add-athlete 3434;max;mustermann;deutschland;eislauf;eisschnelllauf
+OK
+
+add-athlete 3434;max;mustermann;deutschland;biathlon;sprint
+OK
+
+add-athlete 3434;max;mustermann;deutschland;biathlon;verfolgung
+OK
+
+quit

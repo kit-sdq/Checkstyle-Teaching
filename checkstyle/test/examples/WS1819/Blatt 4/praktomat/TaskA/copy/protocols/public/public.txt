@@ -1,0 +1,7 @@
+add-addressbook book
+OK
+
+add-contact book,mustermann,mustermann@mustermail.de,0049721234567
+0001
+
+quit

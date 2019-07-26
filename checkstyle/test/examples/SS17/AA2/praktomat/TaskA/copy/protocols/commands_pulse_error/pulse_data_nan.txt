@@ -1,0 +1,8 @@
+pulse 1;a;3
+$error
+
+pulse 1;2,3
+$error
+
+quit
+Quit (Day 0, week 1)

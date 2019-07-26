@@ -1,0 +1,19 @@
+add-team 11;abcd
+OK
+
+add-team 13;ijkl
+OK
+
+add-team 12;efgh
+OK
+
+add-team 14;mnop
+OK
+
+list-team
+11 abcd
+12 efgh
+13 ijkl
+14 mnop
+
+quit

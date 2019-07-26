@@ -1,0 +1,154 @@
+addAssembly A=10:B;12:C
+OK
+
+printAssembly a
+$error
+
+printAssembly A
+B:10;C:12
+
+addAssembly B=18:E;15:D;27:F
+OK
+
+printAssembly B
+D:15;E:18;F:27
+
+addAssembly C=11:E;18:D;52:G
+OK
+
+printAssembly C
+D:18;E:11;G:52
+
+printAssembly D
+COMPONENT
+
+getAssemblies A
+C:12;B:10
+
+getAssemblies B
+EMPTY
+
+getAssemblies D
+$error
+
+getComponents A
+G:624;D:366;E:312;F:270
+
+getComponents B
+F:27;E:18;D:15
+
+getComponents C
+G:52;D:18;E:11
+
+getComponents D
+$error
+
+addAssembly D=9:F;12:G
+OK
+
+printAssembly D
+F:9;G:12
+
+getAssemblies A
+D:366;C:12;B:10
+
+getAssemblies B
+D:15
+
+getAssemblies C
+D:18
+
+getAssemblies D
+EMPTY
+
+getComponents A
+G:5016;F:3564;E:312
+
+getComponents B
+G:180;F:162;E:18
+
+getComponents C
+G:268;F:162;E:11
+
+getComponents D
+G:12;F:9
+
+addPart A+1:A
+$error
+
+addPart D+1:A
+$error
+
+addPart E+1:A
+$error
+
+addAssembly E=1:A
+$error
+
+removeAssembly B
+OK
+
+removeAssembly C
+OK
+
+printAssembly A
+B:10;C:12
+
+getAssemblies A
+EMPTY
+
+getComponents A
+C:12;B:10
+
+printAssembly B
+COMPONENT
+
+printAssembly C
+COMPONENT
+
+printAssembly D
+F:9;G:12
+
+printAssembly E
+$error
+
+addAssembly Abc=1906:iJk
+$error
+
+addAssembly Abc=19:iJk
+OK
+
+printAssembly Abc
+iJk:19
+
+addAssembly iJk=6:xyZ
+OK
+
+printAssembly iJk
+xyZ:6
+
+getAssemblies Abc
+iJk:19
+
+getComponents Abc
+xyZ:114
+
+addPart Abc+1:xyZ
+OK
+
+printAssembly Abc
+iJk:19;xyZ:1
+
+addPart iJk+1:xyZ
+OK
+
+removePart iJk-7:xyZ
+OK
+
+getAssemblies Abc
+EMPTY
+
+getComponents Abc
+iJk:19;xyZ:1
+
+quit

@@ -1,0 +1,7 @@
+approximation 1 2
+$error
+
+approximation 1 2 a
+$error
+
+quit

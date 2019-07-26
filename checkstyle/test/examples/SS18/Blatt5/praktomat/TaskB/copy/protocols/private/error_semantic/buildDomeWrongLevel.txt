@@ -1,0 +1,124 @@
+move red;0;1
+OK
+
+build D;1;1
+$error
+
+build C;1;1
+OK
+
+turn
+P2
+
+move green;3;2
+OK
+
+build C;2;2
+OK
+
+turn
+P1
+
+move red;1;1
+OK
+
+build C;0;1
+OK
+
+turn
+P2
+
+move green;2;2
+OK
+
+build C;3;2
+OK
+
+turn
+P1
+
+move red;0;1
+OK
+
+build D;1;1
+$error
+
+build C;1;1
+OK
+
+turn
+P2
+
+move green;3;2
+OK
+
+build D;2;2
+$error
+
+build C;2;2
+OK
+
+turn
+P1
+
+move red;1;1
+OK
+
+build D;0;1
+$error
+
+build C;0;1
+OK
+
+turn
+P2
+
+move green;2;2
+OK
+
+build D;3;2
+$error
+
+build C;3;2
+OK
+
+turn
+P1
+
+move red;0;1
+OK
+
+build D;1;1
+$error
+
+build C;1;1
+OK
+
+turn
+P2
+
+move green;3;2
+OK
+
+build C;2;2
+OK
+
+turn
+P1
+
+cellprint 0;1
+C,C,red
+
+cellprint 1;1
+C,C,C
+
+cellprint 2;2
+C,C,C
+
+cellprint 3;2
+C,C,green
+
+move red;1;1
+P1 wins
+
+quit

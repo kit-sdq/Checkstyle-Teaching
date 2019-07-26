@@ -1,0 +1,10 @@
+move 15
+1 wins
+
+colprint 0
+{2} (1,1) # #
+
+colprint 3
+(3,1) # # 1
+
+quit

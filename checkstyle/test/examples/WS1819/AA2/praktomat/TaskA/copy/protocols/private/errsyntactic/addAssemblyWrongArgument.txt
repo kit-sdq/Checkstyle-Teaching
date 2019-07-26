@@ -1,0 +1,61 @@
+addAssembly a2=2:B
+$error
+
+addAssembly 2a=2:B
+$error
+
+addAssembly =2:B
+$error
+
+addAssembly ==2:B
+$error
+
+addAssembly a+a=2:B
+$error
+
+addAssembly a-=2:B
+$error
+
+addAssembly 2=2:B
+$error
+
+addAssembly @=2:B
+$error
+
+addAssembly a[a=2:B
+$error
+
+addAssembly a{a=2:B
+$error
+
+addAssembly  =2:B
+$error
+
+addAssembly a\na=2:B
+$error
+
+addAssembly a
+$error
+
+addAssembly a2=B:b
+$error
+
+addAssembly B:b
+$error
+
+addAssembly a2=c;C
+$error
+
+addAssembly x=x
+$error
+
+addAssembly Y+y
+$error
+
+addAssembly x+2:x
+$error
+
+addAssembly x-2:x
+$error
+
+quit

@@ -1,0 +1,10 @@
+teacher name1
+$error
+
+teacher Name
+$error
+
+teacher 123456
+$error
+
+quit

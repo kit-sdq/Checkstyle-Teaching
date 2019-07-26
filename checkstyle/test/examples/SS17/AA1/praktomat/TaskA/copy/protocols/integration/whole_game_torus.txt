@@ -1,0 +1,77 @@
+move 11
+OK
+
+move 11
+OK
+
+rowprint 0
+{1,3} # (0,3) # #
+
+move 7
+OK
+
+players
+1:(0,0)
+2:(1,2)
+3:(2,1)
+
+move 10
+OK
+
+move 10
+OK
+
+move 11
+OK
+
+colprint 0
+{} # 1 # #
+
+colprint 1
+# # # 3 2
+
+colprint 2
+(0,3) # (1,3) # # 
+
+colprint 3
+# (0,4) # # #
+
+colprint 4
+# # # (2,1) #
+
+move 4
+OK
+
+move 6
+OK
+
+move 7
+OK
+
+players
+1:(4,2)
+2:(3,4)
+3:(1,4)
+
+move 7
+OK
+
+move 5
+2 wins
+
+rowprint 0
+{3} # (0,3) # #
+
+rowprint 1
+# # # (0,4) #
+
+rowprint 2
+# # (1,3) # #
+
+rowprint 3
+# # # # (2,1)
+
+rowprint 4
+# 1 # # 2
+
+quit

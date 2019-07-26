@@ -1,0 +1,10 @@
+throwin -1
+$error
+
+throwin 1
+OK
+
+state 1;7
+P1
+
+quit

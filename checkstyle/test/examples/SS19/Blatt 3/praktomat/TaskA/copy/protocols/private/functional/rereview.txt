@@ -1,0 +1,37 @@
+teacher markus
+
+pupil joachim 211156
+
+pupil michael 221059
+
+pupil bernd 190271
+
+teacher winfried
+
+pupil theresia 641965
+
+pupil theresia 281164
+
+pupil susanne 281164
+$error
+
+assignment Schwieriges_Mathe-Abi
+assignment id(1)
+
+submit 1 641965 Die_Loesung_ist_42
+
+review 1 641965 2 Ganz_gut_geloest,_weiter_so!
+winfried reviewed (641965,theresia) with grade 2
+
+results
+assignment id(1): Schwieriges_Mathe-Abi
+641965: 2
+
+review 1 641965 1 Perfekt_geloest!
+winfried reviewed (641965,theresia) with grade 1
+
+results
+assignment id(1): Schwieriges_Mathe-Abi
+641965: 1
+
+quit

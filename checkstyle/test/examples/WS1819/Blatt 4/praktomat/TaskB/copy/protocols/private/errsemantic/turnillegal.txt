@@ -1,0 +1,52 @@
+place 3;1
+OK
+
+place 5;5
+OK
+
+place 3;2
+OK
+
+place 1;3
+OK
+
+place 3;3
+OK
+
+place 2;1
+OK
+
+place 3;4
+OK
+
+place 4;1
+OK
+
+turn-left 5
+$error
+
+turn-left 0
+$error
+
+turn-left -1
+$error
+
+turn-right 5
+$error
+
+turn-right 0
+$error
+
+turn-right -1
+$error
+
+place 3;5
+P1 wins
+
+turn-left 1
+$error
+
+turn-right 1
+$error
+
+quit

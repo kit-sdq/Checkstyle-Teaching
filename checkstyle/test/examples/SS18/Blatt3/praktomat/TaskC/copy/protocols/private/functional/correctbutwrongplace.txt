@@ -1,0 +1,8 @@
+$respect
+Versuch 1:
+
+blau rot orange gelb
+4,0,0,9
+Versuch 2:
+
+quit

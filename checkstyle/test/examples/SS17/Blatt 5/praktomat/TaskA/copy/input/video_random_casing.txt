@@ -1,0 +1,16 @@
+SpaceWestern contains firEfly (id=100)
+sErEnItY (id=101) contained-in FIREFLY (id=100)
+fireflyseason01 (id=102) contained-in firefly (id=100)
+FilM  contains SeReNiTy (id=101)
+series contains fireflYsEason01 (id=102)
+series contains sherlocK (id=200)
+drama contains shERlock (id=200)
+FIREFLy (id=100) contained-in draMa
+sherlock (id=200) contained-in cRime
+sherlockseason01 (id=201) contained-in sheRlock (id=200)
+sherLOCKseason02 (id=202) contained-in sherLock (id=200)
+sherlockseason03 (id=203) contained-in sherlOck (id=200)
+SHERlockseason04 (id=204) contained-in sherloCk (id=200)
+sherlockseason01 (id=201) predecessor-of sherlockSEASON02 (id=202)
+sherlockseason03 (id=203) predecessor-of sherlockseason04 (id=204)
+sherlockseason03 (id=203) successor-of sherlockseason02 (id=202)

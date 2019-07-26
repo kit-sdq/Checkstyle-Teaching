@@ -1,0 +1,16 @@
+place 2;10;15;15
+OK
+
+place 5;7;11;2
+OK 
+
+place 1;11;16;14
+OK
+
+place 7;8;4;4
+OK
+
+place 17;13;0;12
+P1 wins
+
+quit

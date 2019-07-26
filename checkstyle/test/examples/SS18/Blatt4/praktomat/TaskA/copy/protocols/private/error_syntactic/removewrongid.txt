@@ -1,0 +1,16 @@
+add 0001;LAX;FRA;659.99;USD
+OK
+
+remove 1
+$error
+
+remove 01
+$error
+
+remove 001
+$error
+
+remove a
+$error
+
+quit

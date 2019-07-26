@@ -1,0 +1,20 @@
+add 0001;LAX;FRA;659.99;USD
+OK
+
+add 0010;FRA;Tokio;200.49;EUR
+OK
+
+remove 0001
+OK
+
+list-flights
+0010;FRA;Tokio;200.49;EUR
+
+add 0001;locationA;locationB;1.45;EUR
+OK
+
+list-flights
+0001;locationA;locationB;1.45;EUR
+0010;FRA;Tokio;200.49;EUR
+
+quit

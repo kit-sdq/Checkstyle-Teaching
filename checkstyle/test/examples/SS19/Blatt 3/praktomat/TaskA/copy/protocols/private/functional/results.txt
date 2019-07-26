@@ -1,0 +1,68 @@
+teacher markus
+
+pupil joachim 211156
+
+pupil michael 221059
+
+pupil bernd 190271
+
+teacher winfried
+
+pupil theresia 641965
+
+pupil theresia 281164
+
+assignment Schwieriges_Mathe-Abi
+assignment id(1)
+
+assignment Einfaches_Mathe-Abi
+assignment id(2)
+
+submit 1 641965 Die_Loesung_ist_42
+
+submit 1 211156 Glaub_es_ist_42
+
+submit 1 190271 Keine_Ahnung
+
+submit 2 190271 Keine_Ahnung
+
+list-solutions 1
+(190271,bernd): Keine_Ahnung
+(211156,joachim): Glaub_es_ist_42
+(641965,theresia): Die_Loesung_ist_42
+
+list-solutions 2
+(190271,bernd): Keine_Ahnung
+
+results
+assignment id(1): Schwieriges_Mathe-Abi
+assignment id(2): Einfaches_Mathe-Abi
+
+review 1 190271 5 Das_war_wohl_nix.
+markus reviewed (190271,bernd) with grade 5
+
+results
+assignment id(1): Schwieriges_Mathe-Abi
+190271: 5
+assignment id(2): Einfaches_Mathe-Abi
+
+review 2 190271 5 Das_war_wohl_nix.
+markus reviewed (190271,bernd) with grade 5
+
+results
+assignment id(1): Schwieriges_Mathe-Abi
+190271: 5
+assignment id(2): Einfaches_Mathe-Abi
+190271: 5
+
+review 1 641965 2 Ganz_gut_geloest,_weiter_so!
+winfried reviewed (641965,theresia) with grade 2
+
+results
+assignment id(1): Schwieriges_Mathe-Abi
+190271: 5
+641965: 2
+assignment id(2): Einfaches_Mathe-Abi
+190271: 5
+
+quit

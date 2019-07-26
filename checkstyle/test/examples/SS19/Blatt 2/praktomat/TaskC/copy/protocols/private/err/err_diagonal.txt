@@ -1,0 +1,40 @@
+main-diagonal 2:2,2,2,2,2
+$error
+
+main-diagonal 2:2,2,2
+$error
+
+main-diagonal 2:2,--2,2,2
+$error
+
+main-diagonal 2:2,+2,2,2
+$error
+
+main-diagonal 2:2,2,2,A
+$error
+
+main-diagonal 2,2,2,2  
+$error
+
+main-diagonal  2:2,2,2,2
+$error
+
+main-diagonal2:2,2,2,2
+$error
+
+main-diagonal 2:),2,2,2
+$error
+
+main-diagonal 2:2,2,2,-
+$error
+
+main-diagonal 2:2,2,2,999999999999
+$error
+
+main-diagonal 2:2,2,-999999999999,2
+$error
+
+main-diagonal 2:2,2,2,2,2,2,2,2,2
+$error
+
+quit

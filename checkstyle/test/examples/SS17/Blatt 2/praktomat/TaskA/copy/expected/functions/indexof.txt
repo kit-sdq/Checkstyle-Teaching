@@ -1,0 +1,19 @@
+$> tuple = new NaturalNumberTuple(new int[] {1,2,3,2,4,5,5})
+$> tuple.indexOf(1)
+0
+$> tuple.indexOf(2)
+1
+$> tuple.indexOf(3)
+2
+$> tuple.indexOf(4)
+4
+$> tuple.indexOf(5)
+5
+$> tuple.indexOf(6)
+-1
+$> tuple.indexOf(0)
+-1
+$> tuple.indexOf(-1)
+-1
+$> new NaturalNumberTupel(new int[] {}).indexOf(1)
+-1

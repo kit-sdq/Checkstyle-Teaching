@@ -1,0 +1,19 @@
+recommend S1 a
+$error
+
+recommend S1 -1
+$error
+
+recommend S2 a
+$error
+
+recommend S2 -1
+$error
+
+recommend S3 a
+$error
+
+recommend S3 -1
+$error
+
+quit

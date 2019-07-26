@@ -1,0 +1,64 @@
+$respect
+RPSSL 1:
+
+paper
+0,1,1
+RPSSL 2:
+
+lizard
+0,2,1
+RPSSL 3:
+
+spock
+lose
+RPSSL 1:
+
+spock
+0,1,2
+RPSSL 2:
+
+paper
+1,1,2
+RPSSL 3:
+
+scissors
+lose
+RPSSL 1:
+
+scissors
+1,0,3
+RPSSL 2:
+
+rock
+1,0,3
+RPSSL 3:
+
+lizard
+win
+RPSSL 1:
+
+paper
+0,0,4
+RPSSL 2:
+
+rock
+0,1,4
+RPSSL 3:
+
+lizard
+draw
+RPSSL 1:
+
+spock
+0,0,5
+RPSSL 2:
+
+rock
+0,0,5
+RPSSL 3:
+
+spock
+draw
+lose
+
+quit

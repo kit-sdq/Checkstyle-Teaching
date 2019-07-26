@@ -1,0 +1,16 @@
+$respect
+RPSSL 1:
+
+spock
+0,1,1
+RPSSL 2:
+
+paper
+1,1,1
+RPSSL 3:
+
+rock
+draw
+draw
+
+quit

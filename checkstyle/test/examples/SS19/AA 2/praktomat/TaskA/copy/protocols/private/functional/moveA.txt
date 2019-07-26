@@ -1,0 +1,37 @@
+start X1V
+OK
+
+place X1R 2 X1V
+OK
+
+place A1V 6 X1V
+OK
+
+place A1R 3 X1R
+OK
+
+move A1V 5 X1V
+OK
+
+move A1R 2 X1R
+OK
+
+move A1V 0 X1V
+OK
+
+move A1R 0 X1R
+OK
+
+pass
+OK
+
+move A1R 0 A1V
+OK
+
+print
+X1R 5 A1R
+A1R 2 X1R
+X1V 0 A1V 2 X1R
+A1V 0 A1R 2 X1R
+
+quit

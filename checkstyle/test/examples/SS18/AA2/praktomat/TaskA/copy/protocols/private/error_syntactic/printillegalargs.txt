@@ -1,0 +1,16 @@
+create programmieren
+OK
+
+print +
+$error
+
+print 
+$error
+
+print  
+$error
+
+print 1
+$error
+
+quit

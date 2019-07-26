@@ -1,0 +1,19 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-ioc-code 118;ger;deutschland;1992
+OK
+
+add-sports-venue 111;deutschland;berlin;olympiastadion;1936;74475
+OK
+
+logout-admin
+OK
+
+list-sports-venues deutschland
+$error
+
+quit

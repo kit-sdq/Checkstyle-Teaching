@@ -1,0 +1,34 @@
+start a
+$error
+
+start X2R
+$error
+
+start X2V
+$error
+
+start A3R
+$error
+
+start A3V
+$error
+
+start S3R
+$error
+
+start S3V
+$error
+
+start E4R
+$error
+
+start E4V
+$error
+
+start I4R
+$error
+
+start I4V
+$error
+
+quit

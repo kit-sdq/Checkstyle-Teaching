@@ -1,0 +1,13 @@
+addAssembly A=2:B;1:D
+OK
+
+printAssembly A
+B:2;D:1
+
+removePart A-2:B
+OK
+
+printAssembly A
+D:1
+
+quit

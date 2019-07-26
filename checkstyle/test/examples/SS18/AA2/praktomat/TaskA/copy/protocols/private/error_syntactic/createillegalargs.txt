@@ -1,0 +1,13 @@
+create +
+$error
+
+create 
+$error
+
+create  
+$error
+
+create 1
+$error
+
+quit

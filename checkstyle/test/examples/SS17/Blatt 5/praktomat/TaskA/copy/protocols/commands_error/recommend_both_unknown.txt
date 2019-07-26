@@ -1,0 +1,10 @@
+recommend S4 300
+$error
+
+recommend a 300
+$error
+
+recommend 1 300
+$error
+
+quit

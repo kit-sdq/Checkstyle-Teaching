@@ -1,0 +1,7 @@
+approximation -1
+$error
+
+approximation -13
+$error
+
+quit

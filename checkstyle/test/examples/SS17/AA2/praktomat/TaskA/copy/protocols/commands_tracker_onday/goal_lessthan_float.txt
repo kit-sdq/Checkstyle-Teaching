@@ -1,0 +1,5 @@
+goal pulse less-than 10.423
+New goal for pulse: less-than <10.42>.
+
+quit
+Quit (Day 0, week 1)

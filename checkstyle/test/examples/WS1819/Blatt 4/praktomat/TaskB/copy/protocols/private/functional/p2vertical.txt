@@ -1,0 +1,31 @@
+place 1;2
+OK
+
+place 5;4
+OK
+
+place 5;1
+OK 
+
+place 4;4
+OK
+
+place 4;2
+OK
+
+place 3;4
+OK
+
+place 5;3
+OK
+
+place 1;4
+OK
+
+place 0;0
+OK
+
+place 2;4
+P2 wins
+
+quit

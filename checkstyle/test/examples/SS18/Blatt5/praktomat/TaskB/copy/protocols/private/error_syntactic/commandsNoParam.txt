@@ -1,0 +1,10 @@
+move
+$error
+
+build
+$error
+
+turn
+$error
+
+quit

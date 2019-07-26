@@ -1,0 +1,17 @@
+$> tuple = new NaturalNumberTuple(new int[] {1,2,3,4,5})
+$> tuple.min()
+1
+$> tuple.max()
+5
+$> tuple = tuple.swap(0,4)
+5,2,3,4,1
+$> tuple.min()
+1
+$> tuple.max()
+5
+$> tuple = tuple.swap(1,3)
+5,4,3,2,1
+$> tuple.min()
+1
+$> tuple.max()
+5

@@ -1,0 +1,14 @@
+add-team 11;abcd
+OK
+
+add-team 13;ijkl
+OK
+
+add-ice-hockey-match 11;4;13;2;120
+OK
+
+print-del-standings
+(1,abcd,2,2)
+(2,ijkl,1,-2)
+
+quit

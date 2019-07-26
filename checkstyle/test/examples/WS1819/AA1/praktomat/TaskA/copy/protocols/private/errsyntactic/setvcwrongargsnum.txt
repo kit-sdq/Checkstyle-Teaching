@@ -1,0 +1,19 @@
+set-vc 1;2;
+$error
+
+set-vc 1;2;3
+$error
+
+set-vc 1;2;3;4;5
+$error
+
+set-vc 1
+$error
+
+set-vc 1;
+$error
+
+set-vc ;2
+$error
+
+quit

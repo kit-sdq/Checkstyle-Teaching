@@ -1,0 +1,19 @@
+create programmieren
+OK
+
+print programmieren
+#
+
+add programmieren;ufatx;35
+OK
+
+add programmieren;ufate;12
+OK
+
+add programmieren;ufata;11
+OK
+
+print programmieren
+#[u[f[a[t[a(11)e(12)x(35)]]]]]
+
+quit

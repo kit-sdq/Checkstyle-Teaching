@@ -1,0 +1,4 @@
+move red;0;1
+OK
+
+quit

@@ -1,0 +1,13 @@
+move 1
+OK
+
+colprint 0
+{2} (1,1) # #
+
+move 2
+OK
+
+colprint 0
+{} (1,1) # #
+
+quit

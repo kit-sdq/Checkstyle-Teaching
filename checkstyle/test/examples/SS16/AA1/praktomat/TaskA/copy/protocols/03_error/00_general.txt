@@ -1,0 +1,23 @@
+
+foo
+$error
+
+roll
+$error
+
+start
+OK
+
+abort now
+$error
+
+print current
+$error
+
+abort 
+$error
+
+ abort
+$error
+
+quit

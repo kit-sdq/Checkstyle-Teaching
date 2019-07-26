@@ -1,0 +1,40 @@
+matrix-multiplication 2:2:2:2,2,2,2,3,3,3,3,2
+$error
+
+matrix-multiplication 2:2:2:2,2,2,2,3,3,3
+$error
+
+matrix-multiplication 2:2:2:2,--2,2,2,3,3,3
+$error
+
+matrix-multiplication 2:2:2:2,+2,2,2,3,3,3,3
+$error
+
+matrix-multiplication 2:2:2:2,2,2,A,3,3,3,3
+$error
+
+matrix-multiplication 2:2:2,2,2,2,3,3,3,3
+$error
+
+matrix-multiplication  2:2:2:2,2,2,2,3,3,3,3
+$error
+
+matrix-multiplication2:2:2:2,2,2,2,3,3,3,3
+$error
+
+matrix-multiplication 2:2:2:2,2,2,2,3,3,3,3  
+$error
+
+matrix-multiplication 2:2:2:2,2,2,2,3,3,3,-
+$error
+
+matrix-multiplication 2:2:2:2,2,2,2,999999999999,3,3,3
+$error
+
+matrix-multiplication 2:2:2:2,2,2,-999999999999,3,3,3,3
+$error
+
+matrix-multiplication 2:2:2:2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3
+$error
+
+quit

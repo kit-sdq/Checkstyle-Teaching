@@ -1,0 +1,61 @@
+addAssembly a=2:b;2:c;2:d
+OK
+
+addAssembly b=2:e
+OK
+
+addAssembly c=2:e
+OK
+
+addAssembly d=2:e
+OK
+
+addAssembly e=2:f
+OK
+
+addPart e+2:g
+OK
+
+addPart e+2:h
+OK
+
+addAssembly f=2:i
+OK
+
+addAssembly g=2:i
+OK
+
+addAssembly h=2:i
+OK
+
+getAssemblies a
+f:24;g:24;h:24;e:12;b:2;c:2;d:2
+
+getComponents a
+i:144
+
+addPart a+2:c
+OK
+
+getComponents a
+i:192
+
+removeAssembly e
+OK
+
+removeAssembly f
+OK
+
+printAssembly g
+i:2
+
+removePart g-2:i
+OK
+
+printAssembly h
+i:2
+
+printAssembly i
+COMPONENT
+
+quit

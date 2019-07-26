@@ -1,0 +1,50 @@
+throwin 7
+OK
+
+throwin 2
+OK
+
+throwin 1
+OK
+
+throwin 0
+OK
+
+throwin 2
+OK
+
+throwin 4
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 1
+OK
+
+throwin 3
+OK
+
+throwin 3
+OK
+
+throwin 7
+OK
+
+remove 1
+draw
+
+print
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** **
+P1 P1 P1 P1 ** ** ** P2
+P2 P2 P2 P2 P2 ** ** P1
+
+quit

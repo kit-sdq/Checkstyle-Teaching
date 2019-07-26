@@ -1,0 +1,13 @@
+start
+$error
+
+start 
+$error
+
+start  
+$error
+
+start   
+$error
+
+quit

@@ -1,0 +1,10 @@
+create programmieren
+OK
+
+add programmieren;ufate;0
+OK
+
+print programmieren
+#[u[f[a[t[e(0)]]]]]
+
+quit

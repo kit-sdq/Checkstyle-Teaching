@@ -1,0 +1,10 @@
+place 1;a
+$error
+
+place x;2
+$error
+
+place ads;afsa
+$error
+
+quit

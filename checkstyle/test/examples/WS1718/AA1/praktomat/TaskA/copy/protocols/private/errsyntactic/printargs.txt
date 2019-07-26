@@ -1,0 +1,16 @@
+print 
+$error
+
+print  
+$error
+
+print x
+$error
+
+print 2
+$error
+
+print 1;2
+$error
+
+quit

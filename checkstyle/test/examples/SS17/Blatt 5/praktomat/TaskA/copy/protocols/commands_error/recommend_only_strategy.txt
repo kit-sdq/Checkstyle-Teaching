@@ -1,0 +1,10 @@
+recommend S1
+$error
+
+recommend S1 
+$error
+
+recommend S1  
+$error
+
+quit

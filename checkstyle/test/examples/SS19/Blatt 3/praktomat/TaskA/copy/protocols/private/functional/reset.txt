@@ -1,0 +1,131 @@
+teacher markus
+
+pupil joachim 211156
+
+pupil michael 221059
+
+pupil bernd 190271
+
+teacher winfried
+
+pupil theresia 641965
+
+pupil theresia 281164
+
+pupil susanne 281164
+$error
+
+assignment Schwieriges_Mathe-Abi
+assignment id(1)
+
+assignment Einfaches_Mathe-Abi
+assignment id(2)
+
+list-pupils
+(190271,bernd): markus
+(211156,joachim): markus
+(221059,michael): markus
+(281164,theresia): winfried
+(641965,theresia): winfried
+
+review 1 641965 2 Ganz_gut_geloest,_weiter_so!
+$error
+
+submit 1 641965 Die_Loesung_ist_42
+
+review 1 641965 2 Ganz_gut_geloest,_weiter_so!
+winfried reviewed (641965,theresia) with grade 2
+
+submit 1 211156 Glaub_es_ist_42
+
+submit 1 190271 Keine_Ahnung
+
+list-solutions 1
+(190271,bernd): Keine_Ahnung
+(211156,joachim): Glaub_es_ist_42
+(641965,theresia): Die_Loesung_ist_42
+
+review 1 190271 6 Das_war_wohl_nix.
+markus reviewed (190271,bernd) with grade 6
+
+results
+assignment id(1): Schwieriges_Mathe-Abi
+190271: 6
+641965: 2
+assignment id(2): Einfaches_Mathe-Abi
+
+summary-assignment
+assignment id(1): 2 / 3
+assignment id(2): 0 / 0
+
+summary-teacher
+markus: 3 pupils, 1 missing review(s)
+winfried: 2 pupils, 0 missing review(s)
+
+reset
+
+teacher hans
+
+pupil jonas 211157
+
+pupil max 221060
+
+pupil bernd 190272
+
+teacher celin
+
+pupil tamara 641966
+
+pupil tamara 281165
+
+pupil selina 281165
+$error
+
+assignment Sehr_Schwieriges_Mathe-Abi
+assignment id(1)
+
+assignment Sehr_Einfaches_Mathe-Abi
+assignment id(2)
+
+list-pupils
+(190272,bernd): hans
+(211157,jonas): hans
+(221060,max): hans
+(281165,tamara): celin
+(641966,tamara): celin
+
+review 1 641966 2 Ganz_gut_geloest,_weiter_so!
+$error
+
+submit 1 641966 Die_Loesung_ist_42
+
+review 1 641966 2 Ganz_gut_geloest,_weiter_so!
+celin reviewed (641966,tamara) with grade 2
+
+submit 1 211157 Glaub_es_ist_42
+
+submit 1 190272 Keine_Ahnung
+
+list-solutions 1
+(190272,bernd): Keine_Ahnung
+(211157,jonas): Glaub_es_ist_42
+(641966,tamara): Die_Loesung_ist_42
+
+review 1 190272 5 Das_war_wohl_nix.
+hans reviewed (190272,bernd) with grade 5
+
+results
+assignment id(1): Sehr_Schwieriges_Mathe-Abi
+190272: 5
+641966: 2
+assignment id(2): Sehr_Einfaches_Mathe-Abi
+
+summary-assignment
+assignment id(1): 2 / 3
+assignment id(2): 0 / 0
+
+summary-teacher
+celin: 2 pupils, 0 missing review(s)
+hans: 3 pupils, 1 missing review(s)
+
+quit

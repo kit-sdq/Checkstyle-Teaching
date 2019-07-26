@@ -1,0 +1,43 @@
+create programmieren
+OK
+
+add programmieren;uabcd;1
+OK
+
+credits 
+$error
+
+credits  
+$error
+
+credits ;uabcd
+$error
+
+credits +;uabcd
+$error
+
+credits 234;uabcd
+$error
+
+credits Programmieren;uabcd
+$error
+
+credits programmieren;
+$error
+
+credits programmieren;+
+$error
+
+credits programmieren;+++++
+$error
+
+credits programmieren;u2345
+$error
+
+credits programmieren;23456
+$error
+
+credits programmieren;UaBCD
+$error
+
+quit

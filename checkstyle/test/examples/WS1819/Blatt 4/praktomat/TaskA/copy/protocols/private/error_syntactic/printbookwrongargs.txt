@@ -1,0 +1,13 @@
+print-addressbook Name
+$error
+
+print-addressbook name7
+$error
+
+print-addressbook äöüß
+$error
+
+print-addressbook name%
+$error
+
+quit

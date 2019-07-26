@@ -1,0 +1,34 @@
+addAssembly A=7:B;6:F
+OK
+
+addAssembly B=5:C;2:D
+OK
+
+getAssemblies A
+B:7
+
+addAssembly F=4:Z
+OK
+
+getAssemblies A
+B:7;F:6
+
+addAssembly C=3:E
+OK
+
+addAssembly Z=2:T
+OK
+
+getAssemblies A
+C:35;Z:24;B:7;F:6
+
+addAssembly T=1:W
+OK
+
+addAssembly E=1:I
+OK
+
+getAssemblies A
+E:105;T:48;C:35;Z:24;B:7;F:6
+
+quit

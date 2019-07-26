@@ -1,0 +1,35 @@
+add a sum
+Added a with aggregation sum.
+
+goal a less-than 10
+New goal for a: less-than <10.00>.
+
+goals
+$ignoreeffc
+Number of goals: 1
+a: less-than <10.00>
+
+set-day 25
+Day 25, week 4
+
+goal pulse greater-than 105
+New goal for pulse: greater-than <105.00>.
+
+goals
+$ignoreeffc
+Number of goals: 2
+pulse: greater-than <105.00>
+a: less-than <10.00>
+
+set-day 0
+Day 0, week 1
+
+goals
+$ignoreeffc
+Number of goals: 2
+pulse: greater-than <105.00>
+a: less-than <10.00>
+
+
+quit
+Quit (Day 0, week 1)

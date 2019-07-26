@@ -1,0 +1,10 @@
+move 15
+1 wins
+
+rowprint 0
+{2} # # (3,1)
+
+rowprint 3
+# # # 1
+
+quit

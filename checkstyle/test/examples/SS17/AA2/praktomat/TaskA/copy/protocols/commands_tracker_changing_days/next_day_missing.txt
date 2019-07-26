@@ -1,0 +1,6 @@
+next-day
+$ignorefc
+no entry for pulse
+
+quit
+Quit (Day 0, week 1)

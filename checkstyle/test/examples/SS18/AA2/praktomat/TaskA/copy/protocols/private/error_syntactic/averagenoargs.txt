@@ -1,0 +1,10 @@
+create programmieren
+OK
+
+add programmieren;uabcd;1
+OK
+
+average
+$error
+
+quit

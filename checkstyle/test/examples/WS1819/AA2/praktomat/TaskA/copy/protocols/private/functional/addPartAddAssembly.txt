@@ -1,0 +1,22 @@
+addAssembly A=2:B
+OK
+
+printAssembly A
+B:2
+
+addAssembly C=2:D
+OK
+
+addPart A+2:D
+OK
+
+printAssembly A
+B:2;D:2
+
+addPart A+2:C
+OK
+
+printAssembly A
+B:2;C:2;D:2
+
+quit

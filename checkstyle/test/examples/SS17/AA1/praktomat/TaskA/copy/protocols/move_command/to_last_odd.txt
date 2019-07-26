@@ -1,0 +1,16 @@
+move 19
+OK
+
+rowprint 3
+1 # # # #
+
+move 1
+OK
+
+move 1
+OK
+
+rowprint 4
+1 # # # #
+
+quit

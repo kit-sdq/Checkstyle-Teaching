@@ -1,0 +1,297 @@
+\section*{Mensch ärgere Dich nicht (20 Punkte)}
+In dieser Aufgabe soll eine erweiterte Variante des klassischen Brettspiels \gans{Mensch ärgere Dich nicht} implementiert werden. Das Brettspiel wurde vor über 100 Jahren vom Schmidt Spiele Gründer Josef Friedrich Schmidt\footnote{\url{http://www.schmidtspiele.de/mensch-aergere-dich-nicht-100-jahre-jubilaeum.html}} in Anlehnung an das englische Brettspiel Ludo entwickelt.
+
+Das Ziel des Brettspiels ist es, seine eigenen vier Spielfiguren durch Würfeln so schnell als möglich von den eigenen vier Startfeldern auf die eigenen vier Zielfelder zu bringen. Hierzu müssen die vier Figuren das Spielbrett einmal umrunden, um auf die Zielfelder zu gelangen. Währenddessen versucht jeder Spieler die Spielfiguren der gegnerischen Spieler zu \gans{schlagen}, wonach diese Spielfiguren wieder von den Startfeldern des jeweiligen gegnerischen Spielers starten müssen. Dies wirft die betreffenden gegnerischen Spieler in deren Spielfortschritt zurück und erhöht somit die Chancen auf den eigenen Sieg. Der Spieler, welcher alle seine vier Spielfiguren als Erster in die eigenen vier Zielfelder bringt, gewinnt das Spiel. Mit dem Sieg eines Spielers haben die verbleibenden Spieler verloren. Somit endet das aktuelle Spiel.
+
+\subsection*{Aufbau}
+Jedem Spieler ist eine eindeutige Farbe zugeordnet, wobei vier Farben zur Auswahl stehen: Rot (\emph{red}) für den ersten, Blau (\emph{blue}) für den zweiten, Grün (\emph{green}) für den dritten und Gelb (\emph{yellow}) für den vierten Spieler. Jeder Spieler besitzt vier Spielfiguren in seiner entsprechenden Farbe, welche bei jedem Spielstart auf den eigenen vier Startfeldern positioniert sind. Bei jedem Spielstart beginnt immer der erste Spieler (red). Hat ein Spieler seinen Zug vollendet, so ist der nächste Spieler an der Reihe. Nachdem der letzten Spieler (yellow) seinen Zug vollendet hat, ist wieder der erste Spieler (red) am Zug. Dieses Spielprinzip wird so lange vollzogen, bis ein Spieler als Erster alle seine Figuren ins Ziel bringen konnte. 
+Demzufolge endet ein laufendes Spiel sobald ein Spieler eine seiner Spielfigur regulär auf das letzte seiner Zielfelder gezogen hat.
+
+Während eines Spiels, wird im Uhrzeigersinn (siehe \ref{fig:Menschenaergern}) nacheinander gewürfelt und (taktisch möglichst klug) gezogen. Über die Anzahl der zu ziehenden Felder pro Runde entscheidet hierbei die Augenzahl des Würfels. Es wird mit einem gewöhnlichen sechsseitigen Spielwürfel -- mit den Ziffern \emph{1} bis \emph{6} -- gespielt.
+
+\subsection*{Spielfeld}
+Die von \emph{0} bis \emph{39} (jeweils inklusive) durchnummerierten Felder des Spielbretts stellen die Laufbahn dar, die alle Spielfiguren zurücklegen müssen. Dabei geben die Pfeile die Laufrichtung an. Das heißt, alle Spielfiguren bewegen sich im Uhrzeigersinn in gleicher Richtung auf der durchnummerierten Laufbahn.
+
+Auf den jeweiligen Startfeldern warten die Spielfiguren auf ihren Einsatz. Hierbei sind immer vier Startfelder eindeutig einem Spieler zugeordnet. In Abbildung~\ref{fig:Menschenaergern} sind die vier Startfelder für den ersten Spieler (red) mit \emph{SR}, für den zweiten (blue) mit \emph{SB}, für den dritten (green) mit \emph{SG} und für den vierten (yellow) mit \emph{SY} gekennzeichnet. Da es für das Spiel nicht von Bedeutung ist, auf welchem der vier Startfelder sich eine Spielfigur des Spielers befindet, haben die vier Startfeldern eines Spieler immer den gleichen Identifikator.
+
+Durch das Würfeln einer \emph{6} kann ein Spieler einen seiner Spielsteine von einem seiner Startfelder zum Einsatz bringen. Dieser Spielstein beginnt seinen Weg auf der jeweiligen Startposition des Spielers. Die Startpositionen sind wie folgt definiert: erster Spieler (red) Feld \emph{0}, zweiter Spieler (blue) Feld \emph{10}, dritter Spieler (green) Feld \emph{20} und vierter Spieler (yellow) Feld \emph{30}. 
+
+Nach einem vollständigen Umlauf, müssen die Spielfiguren in die vier Zielfelder des jeweiligen Spielers einziehen. Dabei stellen die Felder mit den Präfixen \emph{A}, \emph{B}, \emph{C} und \emph{D} die vier Zielfelder eines Spielers dar. Die vier Felder \emph{AR}, \emph{BR}, \emph{CR} und \emph{DR} sind also die vier Zielfelder des ersten Spielers (red), die vier Felder \emph{AB}, \emph{BB}, \emph{CB} und \emph{DB} die vier Zielfelder des zweiten Spielers (blue), die vier Felder \emph{AG}, \emph{BG}, \emph{CG} und \emph{DG} die vier Zielfelder des dritten Spielers (green) und die vier Felder \emph{AY}, \emph{BY}, \emph{CY} und \emph{DY} die vier Zielfelder des vierten Spielers (yellow).
+
+Wie beschrieben, besitzt jedes Feld einen Identifikator, der entweder aus den Zahlen \emph{0} bis \emph{39} für die Felder der Laufbahn oder aus zwei Großbuchstaben für die insgesamt 32 Start"= und Zielfelder gebildet wird. Auch die vier Spieler lassen sich eindeutig anhand ihre Farben (\emph{red}, \emph{blue}, \emph{green} und \emph{yellow}) identifizieren. Diese Identifikatoren finden immer bei Ein- und Ausgabe der genauen Spielfeldpositionen der Spielfiguren und der Spieler Verwendung.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.75\linewidth]{img/Menschenaergern.pdf}
+\caption{Standart Spielbrett für vier Spieler\label{fig:Menschenaergern}}
+\end{figure}
+
+\subsection*{Spielregeln}
+Solange sich eine der eigenen Spielfiguren auf dem Spielfeld befindet und die Möglichkeit zum Vorrücken besteht, muss genau 1"=mal gewürfelt werden. Dies gilt ebenfalls, wenn ein oder mehrere Figuren ihre Zielfelder erreicht haben und dort noch die Möglichkeit für weiteres Vorrücken besteht. Wenn sich mehrere Figuren eines Spielers auf dem Spielfeld befinden, so kann dieser sich den Regeln entsprechend aussuchen, mit welcher Figur er weiterziehen möchte.
+
+Jede gewürfelte Augenzahl muss mit der eigenen Spielfigur durch Vorrücken der gleichen Anzahl von Spielfeldern direkt ausgeführt werden. Es besteht Zugpflicht. Ausnahme von der Zugpflicht besteht nur dann, wenn mit keiner der eigenen Figuren die entsprechende Zahl vorgerückt werden kann. Im Wege stehende gegnerische und eigene Figuren müssen übersprungen werden. Die übersprungen Felder werden dabei mitgezählt. Zu beachten ist, dass ein Spielfeld nur von einer Figur besetzt werden darf.
+
+Wenn ein Spieler mit dem letzten Punkt seiner gewürfelten Augenzahl auf ein Feld trifft, welches von einer fremden Spielfigur besetzt ist, wird diese Spielfigur geschlagen und die eigene Spielfigur nimmt deren Platz auf dem Spielfeld ein. Es herrscht jedoch kein Schlagzwang. Geschlagene Spielfiguren werden wieder auf eines der Startfelder des jeweiligen Spielers gestellt und dürfen erst nach Würfeln einer \emph{6} wieder am Spiel teilnehmen. Eigene Spielfiguren können nicht geschlagen werden. Auch werden Spielfiguren durch Überspringen nicht geschlagen.
+
+Würfelt der am Zuge befindliche Spieler eine \emph{6}, so muss dieser -- sollte er noch Spielfiguren auf den eigenen Startfeldern zur Verfügung haben -- eine dieser Spielfiguren neu ins Spiel bringen. Auf den Startfeldern befindliche Spielsteine, können also nur durch Würfeln der Augenzahl \emph{6} vom jeweiligen Spieler ins Spiel gebracht und damit auf die bereits zuvor definierte Startposition (\emph{0}, \emph{10}, \emph{20} oder \emph{30}) des Spielers gesetzt werden. Sollte jedoch das Feld der eigenen Startposition noch von einer anderen eigenen Spielfigur besetzt sein, kann der Spieler keine neue Spielfigur ins Spiel bringen. Dafür muss die Spielfigur, welche sich bereits auf der eigenen Startposition befindet, um eben \emph{6} Spielfelder vorgerückt werden. Ist dies ebenfalls nicht möglich, da beispielsweise das entsprechende Feld wieder von einer anderen eigenen Spielfigur besetzt ist, muss mit eben dieser Spielfigur weitergezogen werden. Fall dies auch nicht möglich sein sollte, muss folglich die nächste das Vorrücken verhindernde eigene Spielfigur weitergezogen werden und so weiter. Steht hingegen eine Spielfigur eines anderen Spielers auf dieser Startposition, so wird die fremde Spielfigur mit der Spielfigur, die neu ins Spiel eingebracht wird, geschlagen. Wenn durch das Würfeln einer \emph{6} von einem Spieler eine Spielfigur neu ins Spiel gebracht wurde, darf dieser Spieler nicht direkt danach nochmals würfeln, das heißt die Spielfigur bleibt vorerst auf der Startposition stehen und der nächste Spieler ist regulär mit Würfeln dran.
+
+Würfelt ein Spieler eine \emph{6} und hat keinen Spielstein mehr auf den Startfeldern zur Verfügung, darf er eine beliebige Spielfigur der eigenen Farbe auf der Laufbahn um sechs Felder vorrücken und anschließend erneut würfeln. Das heißt, dass der Spieler, welcher eine \emph{6} würfelt, nach seinem Zug noch einen weiteren Wurf durchführt. Dieser weitere Wurf steht auch dann zur Verfügung, falls der Zug selbst nicht durchführbar war, da der Spieler keine seiner Spielfiguren um die Augenzahl 6 vorrücken konnte. Dabei müssen diese zusätzlichen Züge nicht zwingend mit der gleichen Spielfigur durchgeführt werden. Würfelt der Spieler dabei wieder eine \emph{6}, darf er nach dem Vorrücken erneut würfeln. Schafft es ein Spieler, mit einer \emph{6} seine letzte Spielfigur genau ins Ziel zu bringen, so muss dieser nicht noch einmal würfeln.
+
+Wenn ein Spieler mit einer seiner Spielfiguren die ganze Laufbahn einmal vollständig durchlaufen hat, zieht er mit ihr auf die eigenen Zielfelder vor. Folglich muss für einen Spieler der Einzug auf seine Zielfelder, über das Feld direkt vor dem Feld der eigenen Startposition erfolgen. Auch darf die gewürfelte Zahl nicht größer sein als die Zahl der Felder auf welche noch vorgerückt werden kann. Hierbei lassen sich für einen Spieler die eigenen Zielfelder als Verlängerung der regulären Laufbahn, welche bei seiner Startposition begonnen hat, ansehen. Das heißt, die Zielfelder werden beim Vorrücken einzeln gezählt und Spielfiguren können auf den eigenen Zielfeldern übersprungen werden, jedoch dürfen fremde Zielfelder nicht betreten werden. Eine Spielfigur darf, nachdem sie das Spielbrett einmal umrundet hat und nicht geschlagen wurde, nicht wieder das Feld der Startposition be- oder übertreten. Der Spieler, welcher als Erster alle seine Spielfiguren auf seine Zielfelder gebracht hat, gewinnt das Spiel. 
+
+\subsection*{Optionale Spielregeln}
+\emph{Mensch ärgere Dich nicht} wird von vielen Spielern gerne mit zusätzlichen optionalen Spielregeln gespielt. Hierzu müssen Sie alle diese zusätzlichen Spielregeln in Ihr Programm einbauen. Jeder optionalen Spielregel wird hierbei ein eindeutiger Identifikator bestehend aus Großbuchstaben zugeordnet: \texttt{BACKWARD}, \texttt{BARRIER}, \texttt{JUMP} und \texttt{TRIPLY}.
+
+Eine oder mehrere diese zusätzlichen Spielregeln können optional bei dem Start eines neuen Spiels aktiviert werden. Solche optionalen Spielregeln sind Ausnahmen der Grundregel und verändern diese Standard"=Spielregel in einer zuvor spezifizierten Art und Weise. 
+
+Gehen Sie bei Ihrer Modellierung davon aus, dass später weitere optionale Spielregeln hinzukommen und diese leicht von anderen Programmierern in Ihr Programm zu integrieren sein sollen. Solche weiteren zusätzlichen optionalen Spielregeln sollen jedoch in dieser Aufgabe noch nicht modelliert werden.
+
+Beachten Sie, dass Ihre Abgabe sowohl in Bezug auf Funktionalität als auch im Hinblick auf objektorientierte Modellierung -- wie in der Vorlesung vorgestellt -- bewertet werden wird.
+
+\subsubsection*{Rückwärtsschlagen: \texttt{BACKWARD}} 
+Wenn ein Spieler den Regeln entsprechend eine Zahl würfelt mit der eine gegnerische Spielfigur, welche der entsprechenden Zahl an Feldern hinter einer eigenen Spielfigur steht, schlagen könnte, darf der Spieler ausnahmsweise rückwärts ziehen. Dies betrifft jedoch nur Spielfiguren, welche sich auf den normalen durchnummerierten Feldern der Laufbahn befinden. Auch darf eine Spielfigur nicht auf oder über das Spielfeld der Startpostion des zugehörigen Spielers ziehen.
+
+\subsubsection*{Barrieren: \texttt{BARRIER}} 
+Als Ausnahme zur Grundregel dürfen zwei Spielfiguren des gleichen Spielers auf einem normalen durchnummerierten Feldern der Laufbahn stehen. Diese beiden Spielfiguren bilden hierdurch eine Barriere, welche von keiner anderen Spielfigur übersprungen oder geschlagen werden kann. Diese Sperre wirkt auch auf den Spieler, der sie aufgebaut hat.
+
+\subsubsection*{Überspringen im Ziel verboten: \texttt{JUMP}} 
+Als weiter Ausnahme zur Grundregel dürfen Spielfiguren, welche sich bereits auf den eigenen Zielfeldern befinden, nicht übersprungen werden oder selbst andere eigene Spielfiguren überspringen. Folglich kann die letzte Spielfigur eines Spielers, welche auf ein Zielfeld zieht, nur auf das Zielfeld mit den Präfixen \emph{A} ins Ziel einrücken.
+
+\subsubsection*{Dreimal würfeln: \texttt{TRIPLY}}
+Wenn sich beim Beginn eines regulären Zugs keine Spielfiguren eines Spielers mehr auf den regulär durchnummerierten Feldern der Laufbahn befinden, so darf dieser Spieler bis zu dreimal direkt hintereinander würfeln. Das gilt auch, wenn schon ein oder mehrere Spielfiguren des Spielers die Zielfelder erreicht haben und diese dort nicht weiter vorrücken können. Sobald sich aber eine Spielfigur des Spielers auf der Laufbahn befindet -- beispielsweise durch das Würfeln einer \emph{6} -- darf der entsprechende Spieler nicht nochmals erneut direkt würfeln, sonder der nächste Spieler ist regulär am Zug.
+
+\subsection*{Interaktive Benutzerschnittstelle}
+Ihr Programm arbeitet ausschließlich mit Befehlen, welche nach dem Programmstart über die Konsole mittels \texttt{Terminal.readLine()} eingelesen werden. Nach Abarbeitung eines Befehls wartet das Programm auf weitere Befehle, bis das Programm durch die Eingabe des \texttt{quit}"=Befehls beendet wird. Achten Sie darauf, dass durch Ausführung der folgenden Befehle die Spielregeln nicht verletzt werden dürfen und geben Sie im Fall einer Regelverletzung eine aussagekräftige Fehlermeldung aus. Geben sie auch eine Fehlermeldung aus, falls kein, ein oder mehrere falsche oder nicht korrekt zu interpretierende Befehle eingegeben wurden.
+
+Die Befehle \texttt{move}, \texttt{print}, \texttt{roll} und \texttt{abort} können nur dann ausgeführt werden, wenn ein Spiel aktiv ist. Ist gerade kein Spiel aktiv, so führen diese Befehle zu einer Fehlermeldung.
+
+Die Befehle \texttt{printx} und \texttt{rollx} sollten ebenfalls nur dann ausgeführt werden können, wenn ein Spiel aktiv ist. Diese zwei Befehle werden zu keinem Zeitpunkt vom Praktomaten aufgerufen, weshalb die Umsetzung freiwillig ist. Entscheiden Sie sich, die zwei Befehle nicht zu implementieren, so wird dies keine negativen Auswirkungen auf die Bewertung ihrer Abschlussaufgabe haben. Mit diesen Beiden freiwillig zu implementierenden Befehlen können Sie jedoch -- so Sie dies wünschen -- die \gans{Spielbarkeit} und Testbarkeit Ihres Programm verbessert. Achten Sie jedoch darauf, dass sich das Verhalten Ihres Programms durch diese zwei Befehle keinen Einfluss auf die Umsetzung der Spezifikationen der Aufgabenstellung nimmt.
+
+
+\subsubsection*{start}
+Dieser Befehl ermöglicht es dem Benutzer ein neues Spiel zu starten. Dieser Befehl kann nur dann ausgeführt werden, wenn kein Spiel aktiv ist. Zu jedem Zeitpunkt soll höchstens den Regeln entsprechend ein Spiel aktiv sein. Zum Programmstart ist kein Spiel aktiv.
+
+Ohne Parameter wird nur nach den Standard Spielregel gespielt, es lassen sich jedoch auch mit Hilfe der eindeutigen Identifikator (\texttt{BACKWARD}, \texttt{BARRIER}, \texttt{JUMP} und \texttt{TRIPLY}) ein oder mehre optionale Spielregel aktivieren. 
+Auch ist es möglich mit einem weiteren Parameter die Positionen aller 16 Spielfiguren zum Start eines neuen Spiels anzugeben. Hierbei muss beachtet werden, dass die Spielfiguren im Laufe eines regulären Spiels, den Regeln entsprechend, auf die angegeben Spielfelder gewürfelt werden könnten. Wenn optionale Spielregeln mit angeben wurden, müssen diese hierbei auch mitberücksichtigt werden. Es darf niemals eine vollständige Spielstellung übergeben werden, bei welcher ein oder mehrere Spieler den Regeln entsprechend bereits gewonnen haben. D.h. bei jeder übergeben Spielstellung muss darauf geachtet werden, dass mindesten ein regulärer Zug gespielt werden kann, bevor ein Spieler gewinnt. 
+
+\paragraph*{Eingabeformat}
+\code{start <Spielregeln> <Stellungen>}\\
+\texttt{<Spielregeln>} Keine, ein oder mehre eindeutige Identifikatoren der optionalen Spielregeln in beliebiger Reihenfolge, welche mit jeweils einem Leerzeichen voneinander getrennt werden.
+
+\texttt{<Stellungen>} Hierbei werden zuerst die vier aktuellen Stellungen (Identifikatoren der Spielfelder) des ersten Spielers (red), dann die des zweiten Spielers (blue), dann die des dritten Spielers (green) und dann die des vierten Spielers (yellow) ausgegeben. Die vier aktuellen Stellungen eines Spielers werden jeweils mit einem Komma untereinander getrennt. Die vier Spielfelder der einzelnen Spieler werden jeweils mit einem Semikolon voneinander getrennt. Für jeweils einen Spieler werden zuerst die Startfelder, gefolgt von den regulär durchnummerierten Spielfeldern gelistet. Am Ende werden die Zielfelder in aufsteigender alphabetische Reihenfolge gelistet. Die regulär durchnummerierten Spielfelder werden aufsteigend nach ihrer Spielfeldnummer sortiert.
+
+\paragraph*{Ausgabeformat}
+Falls die Parameter den Spezifikationen entsprochen haben und den Regel entsprechend ein neues Spiel gestartet werde konnte, wird nur \texttt{OK} ausgegeben. Falls ein oder mehrere falsche Parameter dem Befehl übergeben wurden, wird kein Spiel gestartet und nur eine Fehlermeldung ausgegeben.
+
+\begin{tcolorbox}[title=Beispiel]
+\begin{verbatim}
+start
+OK
+abort
+start SR,SR,SR,AR;0,11,22,33;SG,1,23,DG;SY,BY,CY,DY
+OK
+abort
+start BACKWARD BARRIER JUMP TRIPLY
+OK
+abort
+start TRIPLY BACKWARD
+OK
+abort
+start JUMP BARRIER SR,SR,SR,AR;0,11,11,33;SG,1,23,DG;SY,BY,CY,DY
+OK
+abort
+\end{verbatim}
+\end{tcolorbox}
+
+
+\subsubsection*{roll}
+Mit diesem Befehl kann der Benutzer im Rahmen der Regeln eine Zahl übergeben, die als das Ergebnis eines Würfelwurfs interpretiert wird.
+\paragraph*{Eingabeformat}
+\code{roll <Zahl>}\\
+<Zahl> ist hierbei eine natürliche Zahl aus dem abgeschlossenes Intervall von \emph{1} bis \emph{6}.
+\paragraph*{Ausgabeformat}
+Die Ausgabe des Befehls ist hierbei eine Liste mit allen den Regeln entsprechenden Zugmöglichkeiten für den Spieler, basierend auf der übergebenen Zahl.
+
+Jeder Eintrag dieser Liste wird in einer eigenen Zeile dargestellt. Diese Liste kann dabei auch leer sein. Falls es Zugmöglichkeiten gibt, werden diese zeilenweise so formatiert, dass zuerst der Identifikator des Feldes, auf dem sich die Spielfigur befindet, ausgegeben wird. Danach folgt, getrennt durch einen Bindestrich, der Identifikator des Feldes, auf das die Spielfigur, basierend auf der gegebenen Zahl, vorrücken kann.
+
+Sortiert werden die Zeilen der Ausgabe nach dem Identifikator des Feldes, auf dem sich die Spielfigur in diesem Moment befindet. Begonnen wird mit den Startfeldern, gefolgt von den regulär durchnummerierten Spielfeldern. Am Ende werden die Zielfelder in aufsteigender alphabetischer Reihenfolge gelistet. Die regulär durchnummerierten Spielfelder werden aufsteigend nach ihrer Spielfeldnummer sortiert.
+
+Gibt es Spielfiguren des Spielers, für welche die Identifikatoren der Ausgangs- und Zielfelder paarweise identisch sind, so wird der mögliche Spielzug nur einmal gelistet. Es werden also keine identischen Zeilen ausgegeben. Beispiel: Erster Spieler ist am Zug, hat vier Spielfiguren auf den Startfeldern und würfelt eine 6. Es wird nur einmal \gans{SR-0} ausgegeben. 
+
+Nach Ausgabe der Liste möglicher Spielzüge wird eine Zeile ausgegeben, in der die Farbe des Spielers genannt wird, der den Regeln entsprechend am Zug ist.
+Sollten also mit der gegebenen Augenzahl keine Züge möglich sein, wird die Farbe des Spielers ausgegeben, der als nächstes mit Würfeln an der Reihe ist.
+
+Falls kein, ein oder mehrere falsche Parameter dem Befehl übergeben wurden, wird lediglich eine Fehlermeldung ausgegeben und der gleiche Spieler muss nochmals würfeln.
+
+\begin{tcolorbox}[title=Beispiel]
+\begin{verbatim}
+roll 5
+blue
+roll 5
+7-CB
+10-15
+37-2
+blue
+\end{verbatim}
+\end{tcolorbox}
+
+\subsubsection*{rollx}
+Dieser Befehl ermöglicht es dem Benutzer ohne direkte Eingabe einer Zahl das Ergebnis eines Würfelwurfs für einen Spieler zu bestimmen. Hierbei wird dem Befehl kein weiterer zusätzlicher Parameter mitgegeben, sondern die gewürfelte Zahl wird automatisch (zufällig) intern bestimmt. Die Umsetzung diese Befehls ist freiwillig und wird vom Praktomaten nicht aufgerufen werden.
+\paragraph*{Eingabeformat}
+\code{rollx}
+\paragraph*{Ausgabeformat}
+Äquivalent zu der Ausgabe des normalen \texttt{roll}"=Befehls.
+
+\subsubsection*{move}
+Dieser Befehl ermöglicht es dem Benutzer für den aktuellen Spieler, welcher zuvor mithilfe des \texttt{roll}"=Befehls gewürfelt hat, den Regeln entsprechend eine seiner Spielfiguren um die zuvor gewürfelte Augenzahl zu ziehen. Dieser Befehl ist nur dann ausführbar, wenn der Spieler auch am Zug ist, zuvor gewürfelt hat und erlaubte Spielzüge verfügbar sind.
+\paragraph{Eingabeformat}
+\code{move <Feld>}\\
+<Feld> ist hierbei der Identifikator des Feldes, auf welchem sich die Spielfigur des Spielers, welche bewegt werden soll, im Moment befindet.
+\paragraph{Ausgabeformat}
+Zuerst wird in einer eigenen Zeile der Identifikator des Feldes, auf welches die Spielfigur vorgerückt ist, ausgegeben. Danach wird in einer weiteren Zeile die eindeutige Farbe des Spielers, welcher nach dem Zug mit Würfeln an der Reihe ist, ausgegeben.
+Gesetzt den Fall, dass ein Spieler mit diesem Zug eine seiner Spielfiguren regulär auf das letzte seiner Zielfelder ziehen konnte und dieser Spieler so den Regeln entsprechend gewinnt, wird in der letzten Zeile nach der eindeutige Farbe des Spielers, durch ein Leerzeichen getrennt, noch zusätzlich das Wort \texttt{winner} ausgegeben.
+Falls kein, ein oder mehrere falsche Parameter dem Befehl mitgegeben wurden, wird nur eine Fehlermeldung ausgegeben und der gleiche Spieler muss weiterhin für seine gewürfelte Zahl eine seiner Spielfiguren entsprechend ziehen.
+
+\begin{tcolorbox}[title=Beispiel]
+\begin{verbatim}
+move 7
+CB
+green
+roll 6
+15-BG
+green
+move 7
+BG
+green winner
+\end{verbatim}
+\end{tcolorbox}
+
+\subsubsection*{print}
+Dieser parameterlose Befehle gibt die aktuelle Stellung aller Spielfiguren und den aktuellen Spieler, welcher gerade am Zug ist, aus.
+\paragraph{Eingabeformat}
+\code{print}
+\paragraph{Ausgabeformat}
+Bei der Ausgabe werden die aktuellen Positionen aller Spielfiguren eines Spielers in einer eigenen Zeile ausgegeben. In der letzte Zeile wird die eindeutige Farbe des Spielers, welcher den Regeln entsprechend am Zug ist, ausgegeben. 
+
+Die Liste der Spieler ist immer aufsteigend nach der Startposition der Spieler sortiert: Zuerst werden die aktuellen Stellungen aller Spielfiguren des ersten Spielers (red), dann die des zweiten Spielers (blue), dann die des dritten Spielers (green) und dann die des vierten Spielers (yellow) ausgegeben. 
+
+In jeder Zeile werden die Identifikatoren der Felder, auf welchen sich im Moment eine Spielfigur des Spielers befindet, gelistet. Hierbei werden wieder zunächst die Startfelder, gefolgt von den regulär durchnummerierten Spielfeldern und am Ende die Zielfelder in aufsteigender, alphabetischer Reihenfolge gelistet. Die normalen durchnummerierten Spielfelder werden erneut in aufsteigender Reihenfolge sortiert.
+
+Gibt es Spielfiguren des Spielers, für welche die Identifikatoren der Spielfelder identisch sind (Beispiel: Startfelder), so sind in diesem Fall alle Identifikatoren auszugeben. Das heißt, es werden pro Spieler immer genau vier Felder gelistet. 
+
+Die vier Identifikatoren der Felder werden jeweils in einer Zeile durch ein Komma voneinander getrennt ausgegeben. Am Ende der Liste wird der Spieler, der den Regel entsprechend am Zug ist, ausgegeben. 
+
+Falls ein oder mehre falsche Parameter dem Befehl mitgegeben wurden, wird lediglich eine Fehlermeldung ausgegeben.
+\begin{tcolorbox}[title=Beispiel]
+\begin{verbatim}
+print
+SR,SR,SR,SR
+0,11,22,33
+SG,2,AG,DG
+AY,BY,CY,DY
+green
+\end{verbatim}
+\end{tcolorbox}
+
+\subsubsection*{printx}
+Dieser parameterlose Befehl gibt auch die aktuelle Stellung aller Spielfiguren und den aktuellen Spieler aus. Sie können für die Ausgabe das Format frei wählen. Die Umsetzung diese Befehls ist freiwillig und wird vom Praktomaten nicht aufgerufen.
+\paragraph{Eingabeformat}
+\code{printx}
+\paragraph{Ausgabeformat}
+Ein frei wählbares Ausgabeformat, welches ein oder mehrere Zeilen umfassen kann. Ansonsten darf der \texttt{printx}-Befehl, wie auch der \texttt{print}-Befehl, keine direkten Auswirkungen auf das Spiel haben. Beispielsweise wäre eine textuelle Repräsentation der Grafik denkbar, ähnlich wie in Abbildung~\ref{fig:Menschenaergern} dargestellt. 
+
+\subsubsection*{abort}
+Dieser parameterlose Befehl bricht das aktuelle Spiel ab, beendet jedoch nicht das komplette Programm. Es wird ähnlich vorgegangen, als wenn das Spiel regulär beendet worden wäre. Beachten Sie hierzu die Beschreibung des \texttt{move}"=Befehls.
+\paragraph{Eingabeformat}
+\code{abort}
+\paragraph{Ausgabeformat}
+Hierbei findet keine Konsolenausgabe statt.
+\paragraph{Beispiel}
+Siehe Beispiel für \texttt{start}"=Befehl.
+
+\subsubsection*{quit}
+Dieser Befehl bricht nicht nur das aktuelle Spiel ab, sondern beendet ihr Programm vollständig. Die Eingabe des \texttt{quit}"=Befehls ist immer möglich, unabhängig davon, ob gerade ein Spiel aktiv ist oder nicht.
+
+Beachten Sie, dass hierfür keine Methoden wie \texttt{System.exit}\footnote{\url{https://docs.oracle.com/javase/8/docs/api/java/lang/Runtime.html\#exit-int-}} oder \texttt{Runtime.exit}\footnote{\url{https://docs.oracle.com/javase/8/docs/api/java/lang/System.html\#exit-int-}} verwendet werden dürfen.
+\paragraph{Eingabeformat}
+\code{quit}
+\paragraph{Ausgabeformat}
+Hierbei findet keine Konsolenausgabe statt.
+\begin{tcolorbox}[title=Beispiel]
+\begin{verbatim}
+start
+OK
+print
+SR,SR,SR,SR
+SB,SB,SB,SB
+SG,SG,SG,SG
+SY,SY,SY,SY
+red
+roll 5
+blue
+quit
+\end{verbatim}
+\end{tcolorbox}
+
+\subsection*{Beispielinteraktion}
+Beachten Sie im Folgenden, dass Eingabezeilen mit dem \texttt{>}-Zeichen eingeleitet werden, gefolgt von einem Leerzeichen. Diese beiden Zeichen sind ausdrücklich kein Bestandteil des eingegebenen Befehls, sondern dienen nur der Unterscheidung zwischen Ein- und Ausgabe.
+
+\begin{tcolorbox}[title=Beispiel]
+\begin{verbatim}
+> start 36,AR,CR,DR;SB,10,16,22;SG,13,BG,DG;SY,0,20,BY
+OK
+> print
+36,AR,CR,DR
+SB,10,16,22
+SG,13,BG,DG
+SY,0,20,BY
+red
+> roll 6
+red
+> roll 4
+blue
+> roll 6
+22-28
+blue
+> move 22
+28
+blue
+> roll 1
+10-11
+28-29
+16-17
+blue
+> move 10
+11
+green
+> roll 6
+SG-20
+> move SG
+20
+green
+> roll 3
+13-16
+20-13
+green
+> move 13
+16
+yellow
+> roll 1
+red
+> print
+36,AR,CR,DR
+SB,SB,11,28
+16,20,BG,DG
+SY,SY,0,BY
+red
+> roll 5
+36-BR
+> move 36
+BR
+red winner
+> start
+OK
+> abort
+> quit
+\end{verbatim}
+\end{tcolorbox}

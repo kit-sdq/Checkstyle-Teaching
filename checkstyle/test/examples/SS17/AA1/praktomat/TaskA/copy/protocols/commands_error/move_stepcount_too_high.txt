@@ -1,0 +1,4 @@
+move 16
+$error
+
+quit

@@ -1,0 +1,14 @@
+
+start
+OK
+
+start
+$error
+
+start BARRIER
+$error
+
+start $baseall
+$error
+
+quit

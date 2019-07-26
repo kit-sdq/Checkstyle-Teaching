@@ -1,0 +1,10 @@
+teacher
+$error
+
+teacher 
+$error
+
+teacher  
+$error
+
+quit

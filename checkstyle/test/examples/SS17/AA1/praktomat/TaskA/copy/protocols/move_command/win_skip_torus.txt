@@ -1,0 +1,25 @@
+move 34
+OK
+
+rowprint 5
+# # # # 1 #
+
+move 1
+OK
+
+move 2
+OK
+
+rowprint 5
+# 1 # # # #
+
+move 1
+OK
+
+move 9
+1 wins
+
+rowprint 5
+# # # # # 1
+
+quit

@@ -1,0 +1,43 @@
+set-vc 5;2
+OK
+
+roll 5
+OK
+
+place 6;2:6;6
+OK
+
+move 4;2:3;2:1;2
+$error
+
+reset
+OK
+
+set-vc 5;2
+OK
+
+roll 5
+OK
+
+place 6;2:6;6
+OK
+
+move 3;2
+$error
+
+reset
+OK
+
+set-vc 5;2
+OK
+
+roll 5
+OK
+
+place 6;2:6;6
+OK
+
+move 4;1
+$error
+
+quit

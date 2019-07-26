@@ -1,0 +1,34 @@
+state -1;0
+$error
+
+state 0;-1
+$error
+
+state -1;-1
+$error
+
+state 11;0
+$error
+
+state 0;15
+$error
+
+state 11;15
+$error
+
+state 27;93
+$error
+
+state -25;78
+$error
+
+state 0;1000000000000000
+$error
+
+state 2147483648;0
+$error
+
+state 0.5;1
+$error
+
+quit

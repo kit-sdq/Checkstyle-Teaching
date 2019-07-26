@@ -1,0 +1,10 @@
+remove-addressbook name blub
+$error
+
+remove-addressbook name blub blub2
+$error
+
+remove-addressbook n name
+$error
+
+quit

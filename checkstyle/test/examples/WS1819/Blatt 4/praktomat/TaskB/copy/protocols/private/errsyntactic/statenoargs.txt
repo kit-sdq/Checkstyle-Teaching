@@ -1,0 +1,10 @@
+state
+$error
+
+state 
+$error
+
+state  
+$error
+
+quit

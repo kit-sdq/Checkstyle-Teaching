@@ -1,0 +1,19 @@
+token a
+$error
+
+token P
+$error
+
+token 1
+$error
+
+token 2
+$error
+
+token P0
+$error
+
+token P3
+$error
+
+quit

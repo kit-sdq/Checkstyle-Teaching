@@ -1,0 +1,10 @@
+escape 1
+$error
+
+escape (
+$error
+
+escape -5
+$error
+
+quit

@@ -1,0 +1,20 @@
+$respect
+Moderator - Waehlen Sie eins der drei Tore aus:
+
+3
+Moderator - Hinter Tor 1 befindet sich eine Ziege.
+Moderator - Moechten Sie das andere noch verschlossene Tor auswaehlen:
+
+ja
+$error
+nein
+$error
+nein?
+$error
+ja!
+$error
+vielleicht
+$error
+nein1
+$error
+quit

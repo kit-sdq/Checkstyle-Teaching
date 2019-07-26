@@ -1,0 +1,7 @@
+$respect
+Moderator - Waehlen Sie eins der drei Tore aus:
+
+a
+$error
+
+quit

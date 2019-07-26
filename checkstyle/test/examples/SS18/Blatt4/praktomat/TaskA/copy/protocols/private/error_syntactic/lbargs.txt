@@ -1,0 +1,16 @@
+list-bookings 
+$error
+
+list-bookings  
+$error
+
+list-bookings x
+$error
+
+list-bookings 2
+$error
+
+list-bookings 1;2
+$error
+
+quit

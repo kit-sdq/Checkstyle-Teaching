@@ -1,0 +1,24 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-ioc-code 118;ger;deutschland;1992
+OK
+
+add-sports-venue 001;deutschland;berlin;olympiastadion;1936;74475
+OK
+
+add-sports-venue 111;deutschland;berlin tegel;olympiastadion;1964;73525
+OK
+
+add-sports-venue 112;deutschland;berlin;olympiastadion mk2;1970;100000
+OK
+
+list-sports-venues deutschland
+(1 111 berlin tegel 73525) 
+(2 001 berlin 74475)
+(3 112 berlin 100000)
+
+quit

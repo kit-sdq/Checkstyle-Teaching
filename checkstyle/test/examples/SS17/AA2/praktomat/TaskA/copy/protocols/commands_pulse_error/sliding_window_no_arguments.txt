@@ -1,0 +1,11 @@
+sliding-window
+$error
+
+sliding-window 
+$error
+
+sliding-window  
+$error
+
+quit
+Quit (Day 0, week 1)

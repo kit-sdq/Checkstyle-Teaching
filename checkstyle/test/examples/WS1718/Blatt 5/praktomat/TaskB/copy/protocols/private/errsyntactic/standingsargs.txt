@@ -1,0 +1,16 @@
+print-del-standings 
+$error
+
+print-del-standings  
+$error
+
+print-del-standings x
+$error
+
+print-del-standings 2
+$error
+
+print-del-standings 1;2
+$error
+
+quit

@@ -1,0 +1,10 @@
+move 2
+OK
+
+move 9
+OK
+
+move 33
+1 wins
+
+quit

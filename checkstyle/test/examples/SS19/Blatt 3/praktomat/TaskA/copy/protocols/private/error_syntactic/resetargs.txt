@@ -1,0 +1,16 @@
+reset 
+$error
+
+reset  
+$error
+
+reset x
+$error
+
+reset 2
+$error
+
+reset 1;2
+$error
+
+quit

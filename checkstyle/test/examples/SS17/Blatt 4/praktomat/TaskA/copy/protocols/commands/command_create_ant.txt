@@ -1,0 +1,23 @@
+ant
+f
+
+create e,1,1
+
+ant
+e,f
+
+create a,2,2
+
+create g,0,1
+
+create b,2,0
+
+ant
+a,b,e,f,g
+
+print
+0g0
+0e0
+bfa
+
+quit

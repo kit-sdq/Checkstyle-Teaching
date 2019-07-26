@@ -1,0 +1,28 @@
+throwin 1
+OK
+
+throwin 1
+OK
+
+throwin 1
+OK
+
+throwin 1
+OK
+
+throwin 1
+OK
+
+throwin 1
+OK
+
+throwin 1
+OK
+
+throwin 1
+OK
+
+throwin 1
+$error
+
+quit

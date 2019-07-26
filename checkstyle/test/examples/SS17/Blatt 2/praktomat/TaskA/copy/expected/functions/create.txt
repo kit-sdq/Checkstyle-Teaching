@@ -1,0 +1,12 @@
+$> new NaturalNumberTuple(new int[] {})
+
+$> new NaturalNumberTuple(new int[] {0})
+
+$> new NaturalNumberTuple(new int[] {-1,3})
+3
+$> new NaturalNumberTuple(new int[] {3,-1})
+3
+$> new NaturalNumberTuple(new int[] {-1,0,-25,3,-2})
+3
+$> new NaturalNumberTuple(new int[] {25,5325,25,0,2,45,-1})
+25,5325,25,2,45

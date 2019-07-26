@@ -1,0 +1,10 @@
+median programmieren
+$error
+
+create programmieren
+OK
+
+median swt
+$error
+
+quit

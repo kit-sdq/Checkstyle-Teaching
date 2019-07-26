@@ -1,0 +1,19 @@
+create programmieren
+OK
+
+add programmieren;ufate;0
+OK
+
+average programmieren
+0
+
+add programmieren;ufawv;0
+OK
+
+add programmieren;urxdv;0
+OK
+
+average programmieren
+0
+
+quit

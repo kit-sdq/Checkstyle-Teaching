@@ -1,0 +1,10 @@
+remove-addressbook
+$error
+
+remove-addressbook 
+$error
+
+remove-addressbook    
+$error
+
+quit

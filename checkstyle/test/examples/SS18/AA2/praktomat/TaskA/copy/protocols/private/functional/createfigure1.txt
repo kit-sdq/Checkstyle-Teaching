@@ -1,0 +1,22 @@
+create programmieren
+OK
+
+add programmieren;ufaed;28
+OK
+
+add programmieren;ufate;12
+OK
+
+add programmieren;ulapw;35
+OK
+
+add programmieren;uwbsx;17
+OK
+
+add programmieren;uwbsz;23
+OK
+
+print programmieren
+#[u[f[a[e[d(28)]t[e(12)]]]l[a[p[w(35)]]]w[b[s[x(17)z(23)]]]]]
+
+quit

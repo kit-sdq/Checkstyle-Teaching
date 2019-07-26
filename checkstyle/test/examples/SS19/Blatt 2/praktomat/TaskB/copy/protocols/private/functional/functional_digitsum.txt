@@ -1,0 +1,13 @@
+digitsum AA111111111
+11
+
+digitsum ZZ999999999
+133
+
+digitsum ER359829356
+73
+
+digitsum DE128932012
+37
+
+quit

@@ -1,0 +1,10 @@
+add 0001;LAX;FRA;659.99;usd
+$error
+
+add 0001;LAX;FRA;659.99;UsD
+$error
+
+add 0001;LAX;FRA;659.99;uSd
+$error
+
+quit

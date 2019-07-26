@@ -1,0 +1,22 @@
+add 0001;Max;Mustermann;test
+$error
+
+add 0001;Max;Mustermann;
+$error
+
+add 0001;Max;
+$error
+
+add 0001;;Mustermann
+$error
+
+add 0001
+$error
+
+add ;0001;Max;Mustermann
+$error
+
+add Max;Mustermann
+$error
+
+quit

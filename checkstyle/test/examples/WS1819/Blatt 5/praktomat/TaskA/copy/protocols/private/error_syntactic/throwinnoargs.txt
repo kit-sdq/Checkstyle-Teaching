@@ -1,0 +1,4 @@
+throwin
+$error
+
+quit

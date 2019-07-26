@@ -1,0 +1,29 @@
+direction f
+N
+
+move 1
+
+direction f
+E
+
+move 1
+
+direction f
+N
+
+move 1
+
+direction f
+W
+
+move 1
+
+direction f
+SW
+
+move 1
+
+direction f
+NW
+
+quit

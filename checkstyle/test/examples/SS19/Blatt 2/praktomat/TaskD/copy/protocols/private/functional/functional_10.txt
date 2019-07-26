@@ -1,0 +1,19 @@
+check-narcissistic-number 153;10
+true
+
+check-narcissistic-number 8208;10
+true
+
+check-narcissistic-number 92727;10
+true
+
+check-narcissistic-number 548834;10
+true
+
+check-narcissistic-number 2324;10
+false
+
+check-narcissistic-number 315;10
+false
+
+quit

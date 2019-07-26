@@ -1,0 +1,7 @@
+add-team 25;Augsburger Panther
+OK
+
+list-team
+25 Augsburger Panther
+
+quit

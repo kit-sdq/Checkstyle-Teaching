@@ -1,0 +1,7 @@
+addPart a+2:b
+$error
+
+addPart A+2:B
+$error
+
+quit

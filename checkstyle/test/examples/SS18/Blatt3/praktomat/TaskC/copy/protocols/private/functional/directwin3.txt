@@ -1,0 +1,7 @@
+$respect
+Versuch 1:
+
+rot gelb magenta mauve
+win
+
+quit

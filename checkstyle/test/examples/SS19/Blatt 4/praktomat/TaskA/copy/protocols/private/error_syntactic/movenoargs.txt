@@ -1,0 +1,14 @@
+start 1,6,3,5,2,4;2,3,1,4,6,5
+
+roll 1
+
+move
+$error
+
+move  
+$error
+
+move  
+$error
+
+quit

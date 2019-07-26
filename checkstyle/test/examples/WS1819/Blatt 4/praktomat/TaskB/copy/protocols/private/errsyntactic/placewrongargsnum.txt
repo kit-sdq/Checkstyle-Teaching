@@ -1,0 +1,13 @@
+place 1;2;3
+$error
+
+place 1
+$error
+
+place 1;
+$error
+
+place ;2
+$error 
+
+quit

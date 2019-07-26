@@ -1,0 +1,4 @@
+add-olympic-sport eishockey;eishockey
+$error
+
+quit

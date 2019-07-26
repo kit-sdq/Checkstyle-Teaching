@@ -1,0 +1,10 @@
+add programmieren;uabcd;1
+$error
+
+create programmieren
+OK
+
+add swt;uabcd;1
+$error
+
+quit

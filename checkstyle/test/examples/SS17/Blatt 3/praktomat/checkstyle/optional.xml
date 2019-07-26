@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+          "-//Puppy Crawl//DTD Check Configuration 1.1//EN"
+          "http://www.puppycrawl.com/dtds/configuration_1_1.dtd">
+<module name="Checker">
+	
+    <!-- ######## TEMPLATE/CHECKSTYLE/VISIBILITY.XML ######## !-->
+    <module name="com.puppycrawl.tools.checkstyle.TreeWalker">
+        
+        <!-- Checks visibility of class members. !-->
+        <!-- See http://checkstyle.sf.net/config_design.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifier">
+            <property name="packageAllowed"      value="false"/>
+            <property name="protectedAllowed"    value="false"/>
+            <property name="publicMemberPattern" value="^serialVersionUID$"/>
+        </module>
+        
+        <!-- Checks that classes (except abtract one) define a ctor and don't rely on the default one. !-->
+        <!-- See http://checkstyle.sf.net/config_coding.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.coding.MissingCtor"/>
+        
+        <!-- Make sure that utility classes (classes that contain only static methods) do not have a public constructor. !-->
+        <!-- See http://checkstyle.sf.net/config_design.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructor"/>
+        
+    </module>
+    <!-- ######## END OF TEMPLATE/CHECKSTYLE/VISIBILITY.XML ######## !-->
+    
+	
+    <!-- ######## TEMPLATE/CHECKSTYLE/NAMING.XML ######## !-->
+    <module name="com.puppycrawl.tools.checkstyle.TreeWalker">
+        <!-- Checks that the outer type name and the file name match. !-->
+        <!-- See http://checkstyle.sourceforge.net/config_misc.html#OuterTypeFilename !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.OuterTypeFilename"/>
+        
+        <!-- Checks for class type parameter name naming conventions. !-->
+        <!-- See http://checkstyle.sourceforge.net/config_naming.html#ClassTypeParameterName !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.ClassTypeParameterName">
+            <property name="format" value="^[A-Z]$"/>
+        </module>
+        
+        <!-- Checks for constant name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.ConstantName">
+            <property name="format"           value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$"/>
+            <property name="applyToPublic"    value="true"/>
+            <property name="applyToProtected" value="true"/>
+            <property name="applyToPackage"   value="true"/>
+            <property name="applyToPrivate"   value="true"/>
+        </module>
+        
+        <!-- Checks for local final variable name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="tokens" value="VARIABLE_DEF, PARAMETER_DEF"/>
+        </module>
+        
+        <!-- Checks for local variable name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <!--<property name="tokens" value="VARIABLE_DEF, PARAMETER_DEF"/>-->
+        </module>
+        
+        <!-- Checks for member variable name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.MemberName">
+            <property name="format"           value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="applyToPublic"    value="true"/>
+            <property name="applyToProtected" value="true"/>
+            <property name="applyToPackage"   value="true"/>
+            <property name="applyToPrivate"   value="true"/>
+        </module>
+        
+        <!-- Checks for method name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.MethodName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+        </module>
+        
+        <!-- Checks for method type parameter name naming conventions. !-->
+        <!-- See http://checkstyle.sourceforge.net/config_naming.html#MethodTypeParameterName !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.MethodTypeParameterName">
+            <property name="format" value="^[A-Z]$"/>
+        </module>
+        
+        <!-- Checks for package name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.PackageName">
+            <property name="format" value="^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$"/>
+        </module>
+        
+        <!-- Checks for parameter name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.ParameterName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+        </module>
+        
+        <!-- Checks for static variable name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableName">
+            <property name="format"           value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="applyToPublic"    value="true"/>
+            <property name="applyToProtected" value="true"/>
+            <property name="applyToPackage"   value="true"/>
+            <property name="applyToPrivate"   value="true"/>
+        </module>
+        
+        <!-- Checks for type name naming conventions. !-->
+        <!-- See http://checkstyle.sf.net/config_naming.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.naming.TypeName">
+            <property name="format"           value="^[A-Z][a-zA-Z0-9]*$"/>
+            <property name="tokens"           value="CLASS_DEF, INTERFACE_DEF"/>
+            <property name="applyToPublic"    value="true"/>
+            <property name="applyToProtected" value="true"/>
+            <property name="applyToPackage"   value="true"/>
+            <property name="applyToPrivate"   value="true"/>
+        </module>
+        
+    </module>
+    
+    <!-- ######## END OF TEMPLATE/CHECKSTYLE/NAMING.XML ######## !-->
+    
+    
+</module>

@@ -1,0 +1,13 @@
+// Eingabe
+Klauselmenge $F = \{C_0, \dots, C_n\}$ und Ordnung der Variablen $v_0 \leq \dots \leq v_n$
+
+// Initialisierung
+bucket(i) enthaelt alle Klauseln, die als kleinste Variable $v_i$ enthalten (genauer: $v_i$ oder $\lnot v_i$)
+
+// Algorithmus
+for i = 0 to n {
+    Teile die Klauseln in bucket(i) so auf, dass neg(i) diejenigen Klauseln enthaelt, die $\lnot v_i$ enthalten, und pos(i) den Rest
+    Bilde alle moeglichen Resolventen bezueglich $v_i$ zwischen Klauseln aus neg(i) und pos(i) und verteile Sie auf die verbleibenden Buckets bucket(j) ($j > i$)
+    Falls die leere Klausel darunter gebildet wurde, gib UNSAT aus und halte an
+  }
+Gib SAT aus

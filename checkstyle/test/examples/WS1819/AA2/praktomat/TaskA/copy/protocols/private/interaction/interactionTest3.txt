@@ -1,0 +1,40 @@
+addAssembly a=2:b
+OK
+
+addAssembly c=2:d
+OK
+
+addPart a+2:c
+OK
+
+addAssembly b=2:d
+OK
+
+addAssembly d=2:e;2:f
+OK
+
+addAssembly e=2:g
+OK
+
+addAssembly f=2:g
+OK
+
+getAssemblies a
+e:16;f:16;d:8;b:2;c:2
+
+getComponents a
+g:64
+
+removeAssembly f
+OK
+
+getComponents a
+g:32;f:16
+
+removeAssembly d
+OK
+
+getComponents a
+d:8
+
+quit

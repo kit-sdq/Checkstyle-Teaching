@@ -1,0 +1,16 @@
+recommend S1 100
+sherlock:200
+
+recommend S1 200
+firefly:100,fireflyseason01:102
+
+recommend S1 102
+sherlock:200
+
+recommend S1 201
+#empty
+
+recommend S1 101
+#empty
+
+quit

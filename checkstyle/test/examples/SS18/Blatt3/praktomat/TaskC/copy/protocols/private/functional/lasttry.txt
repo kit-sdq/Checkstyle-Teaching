@@ -1,0 +1,43 @@
+$respect
+Versuch 1:
+
+rot blau lila mauve
+2,2,1,9
+Versuch 2:
+
+rot lila gelb grau
+2,2,1,8
+Versuch 3:
+
+rot blau gelb magenta
+3,1,1,7
+Versuch 4:
+
+orange grau lila mauve
+1,3,0,6
+Versuch 5:
+
+orange rot gelb blau
+4,0,0,5
+Versuch 6:
+
+orange rot blau gelb
+4,0,1,4
+Versuch 7:
+
+orange blau rot gelb
+4,0,0,3
+Versuch 8:
+
+rot orange blau gelb
+4,0,2,2
+Versuch 9:
+
+rot blau orange gelb
+4,0,1,1
+Versuch 10:
+
+rot gelb blau orange
+win
+
+quit

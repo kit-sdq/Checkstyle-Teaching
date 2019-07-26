@@ -1,0 +1,16 @@
+summary-teacher 
+$error
+
+summary-teacher  
+$error
+
+summary-teacher x
+$error
+
+summary-teacher 2
+$error
+
+summary-teacher 1;2
+$error
+
+quit

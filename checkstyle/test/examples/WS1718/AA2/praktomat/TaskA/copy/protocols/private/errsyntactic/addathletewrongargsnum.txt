@@ -1,0 +1,19 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-athlete 1234;laura;dahlmeier;deutschland;biathlon;sprint;
+$error
+
+add-athlete ;1234;laura;dahlmeier;deutschland;biathlon;sprint
+$error
+
+add-athlete laura;dahlmeier
+$error
+
+add-athlete deutschland
+$error 
+
+quit

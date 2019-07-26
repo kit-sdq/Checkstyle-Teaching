@@ -1,0 +1,7 @@
+edges 
+$error
+
+edges a
+$error
+
+quit

@@ -1,0 +1,4 @@
+add 0001;LAX;FRA;659;USD
+$error
+
+quit

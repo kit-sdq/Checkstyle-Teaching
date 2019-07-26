@@ -1,0 +1,8 @@
+
+start FOO
+$error
+
+start invalidState
+$error
+
+quit

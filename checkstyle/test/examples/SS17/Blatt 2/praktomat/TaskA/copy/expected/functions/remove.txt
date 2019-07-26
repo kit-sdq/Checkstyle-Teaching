@@ -1,0 +1,21 @@
+$> tuple = new NaturalNumberTuple(new int[] {1,2,3,2,4,5})
+$> tuple = tuple.remove(1)
+2,3,2,4,5
+$> tuple = tuple.remove(1)
+2,3,2,4,5
+$> tuple = tuple.remove(0)
+2,3,2,4,5
+$> tuple = tuple.remove(-1)
+2,3,2,4,5
+$> tuple = tuple.remove(6)
+2,3,2,4,5
+$> tuple = tuple.remove(2)
+3,4,5
+$> tuple = tuple.remove(4)
+3,5
+$> tuple = tuple.remove(3)
+5
+$> tuple = tuple.remove(5)
+
+$> tuple = tuple.remove(5)
+

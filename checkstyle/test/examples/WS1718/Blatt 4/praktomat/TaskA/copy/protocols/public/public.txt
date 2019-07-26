@@ -1,0 +1,13 @@
+add-customer Peter;Oettig;1234
+OK
+
+add-shoppingitem Weihnachtsdekoration;47389211;12.99
+OK
+
+order 742;1234;47389211;1
+OK
+
+print 742
+(742,1234,1,Weihnachtsdekoration,47389211,12.99,12.99)
+
+quit

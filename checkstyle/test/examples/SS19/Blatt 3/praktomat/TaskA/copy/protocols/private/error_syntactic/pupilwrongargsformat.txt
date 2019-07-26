@@ -1,0 +1,22 @@
+pupil name1 123456
+$error
+
+pupil Name 123456
+$error
+
+pupil 123456 name
+$error
+
+pupil 123456 name
+$error
+
+pupil name 23456
+$error
+
+pupil name 1234567
+$error
+
+pupil Name 1234567
+$error
+
+quit

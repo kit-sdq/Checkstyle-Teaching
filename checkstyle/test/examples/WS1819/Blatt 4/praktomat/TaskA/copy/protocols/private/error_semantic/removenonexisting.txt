@@ -1,0 +1,22 @@
+add-addressbook a
+OK
+
+remove-addressbook b
+$error
+
+add-contact a,hans,hans@mail.de,0049123456789
+0001
+
+add-contact a,peter,peter@mail.de,0049987654321
+0002
+
+add-contact a,anna,anna@mail.com,0130987654321
+0003
+
+remove-contact a,0004
+$error
+
+remove-contact b,0001
+$error
+
+quit

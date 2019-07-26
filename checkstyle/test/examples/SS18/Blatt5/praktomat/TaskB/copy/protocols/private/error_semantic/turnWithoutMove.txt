@@ -1,0 +1,7 @@
+build C;2;2
+$error
+
+turn
+$error
+
+quit

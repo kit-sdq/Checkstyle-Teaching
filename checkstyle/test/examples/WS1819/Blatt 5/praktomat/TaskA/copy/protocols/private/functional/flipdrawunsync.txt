@@ -1,0 +1,238 @@
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 7
+OK
+
+throwin 6
+OK
+
+throwin 5
+OK
+
+throwin 4
+OK
+
+throwin 3
+OK
+
+throwin 2
+OK
+
+throwin 1
+OK
+
+throwin 0
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+flip
+OK
+
+throwin 0
+OK
+
+flip
+OK
+
+print
+P1 ** ** ** ** ** ** **
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P1 P2 P1 P2 P1 P2
+P2 P2 P1 P2 P1 P2 P1 P2
+P1 P1 P2 P1 P2 P1 P2 P1
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P1 P2 P1 P2 P1 P2
+P2 P2 P1 P2 P1 P2 P1 P2
+
+throwin 2
+OK
+
+flip
+OK
+
+print
+P2 ** P1 ** ** ** ** **
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P2 P2 P1 P2 P1 P2
+P2 P1 P1 P1 P2 P1 P2 P1
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P2 P2 P1 P2 P1 P2
+
+token
+2
+
+throwin 4
+OK
+
+token
+4
+
+throwin 1
+OK
+
+token
+1
+
+throwin 6
+OK
+
+token
+3
+
+throwin 3
+draw
+
+print
+P2 P1 P1 P1 P2 ** P2 **
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P2 P2 P1 P2 P1 P2
+P2 P1 P1 P1 P2 P1 P2 P1
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P1 P2 P1 P2 P1 P2
+P1 P2 P2 P2 P1 P2 P1 P2
+
+quit

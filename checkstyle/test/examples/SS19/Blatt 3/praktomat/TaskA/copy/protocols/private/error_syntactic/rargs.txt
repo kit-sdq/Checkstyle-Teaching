@@ -1,0 +1,16 @@
+results 
+$error
+
+results  
+$error
+
+results x
+$error
+
+results 2
+$error
+
+results 1;2
+$error
+
+quit

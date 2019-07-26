@@ -1,0 +1,12 @@
+$respect
+RPSSL 1:
+
+spock paper lizard
+$error
+RPSSL 1:
+
+spock scissors
+$error
+RPSSL 1:
+
+quit

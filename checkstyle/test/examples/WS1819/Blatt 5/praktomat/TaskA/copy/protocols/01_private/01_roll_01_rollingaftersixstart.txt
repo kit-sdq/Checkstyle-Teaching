@@ -1,0 +1,29 @@
+
+start SR,SR,SR,0;$baseblue;$basegreen;$baseyellow
+OK
+
+roll 6
+0-6
+red
+
+move 0
+6
+red
+
+roll 6
+SR-0
+red
+
+move SR
+0
+blue
+
+roll 6
+SB-10
+blue
+
+move SB
+10
+green
+
+quit

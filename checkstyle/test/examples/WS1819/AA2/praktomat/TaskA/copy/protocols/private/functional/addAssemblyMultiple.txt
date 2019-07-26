@@ -1,0 +1,7 @@
+addAssembly A=2:B;3:C;25:F;357:G;999:H;234:I;23:J
+OK
+
+printAssembly A
+B:2;C:3;F:25;G:357;H:999;I:234;J:23
+
+quit

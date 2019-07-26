@@ -1,0 +1,22 @@
+check-narcissistic-number 130;4
+true
+
+check-narcissistic-number 3134;5
+true
+
+check-narcissistic-number 44405;6
+true
+
+check-narcissistic-number 12036;9
+true
+
+check-narcissistic-number 44403;6
+false
+
+check-narcissistic-number 12236;9
+false
+
+check-narcissistic-number 170;8
+false
+
+quit

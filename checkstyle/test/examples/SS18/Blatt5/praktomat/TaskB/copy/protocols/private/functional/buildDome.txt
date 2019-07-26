@@ -1,0 +1,106 @@
+move red;1;0
+OK
+
+build C;1;1
+OK
+
+turn
+P2
+
+move green;3;2
+OK
+
+build C;3;3
+OK
+
+turn
+P1
+
+move red;0;0
+OK
+
+build C;0;1
+OK
+
+turn
+P2
+
+move yellow;2;2
+OK
+
+build C;2;3
+OK
+
+turn
+P1
+
+move red;1;0
+OK
+
+build C;0;0
+OK
+
+turn
+P2
+
+move yellow;2;3
+OK
+
+build C;3;3
+OK
+
+turn
+P1
+
+move red;1;1
+OK
+
+build C;0;1
+OK
+
+turn
+P2
+
+move green;2;2
+OK
+
+build C;3;2
+OK
+
+turn
+P1
+
+move red;0;1
+OK
+
+build C;0;0
+OK
+
+turn
+P2
+
+move green;3;2
+OK
+
+build C;3;3
+OK
+
+turn
+P1
+
+move blue;3;4
+OK
+
+build D;3;3
+OK
+
+cellprint 3;3
+C,C,C,D
+
+cellprint 0;1
+C,C,red
+
+cellprint 0;0
+C,C
+
+quit

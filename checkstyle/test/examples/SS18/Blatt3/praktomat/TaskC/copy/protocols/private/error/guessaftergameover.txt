@@ -1,0 +1,11 @@
+$respect
+Versuch 1:
+
+rot gelb blau orange
+win
+
+rot gelb blau orange
+$error
+Versuch 2:
+
+quit

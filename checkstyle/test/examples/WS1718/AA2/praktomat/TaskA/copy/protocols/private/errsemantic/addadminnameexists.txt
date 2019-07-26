@@ -1,0 +1,7 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+add-admin test;abc;peet1993;musterpwx
+$error
+
+quit

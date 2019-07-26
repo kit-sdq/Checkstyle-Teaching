@@ -1,0 +1,25 @@
+addAssembly a=2:a
+$error
+
+addAssembly a=2:b
+OK
+
+addAssembly b=2:a
+$error
+
+addAssembly b=2:c
+OK
+
+addAssembly c=2:a
+$error
+
+addAssembly c=2:d
+OK
+
+addAssembly d=2:e
+OK
+
+addAssembly e=2:a
+$error
+
+quit

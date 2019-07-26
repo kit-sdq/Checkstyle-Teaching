@@ -1,0 +1,24 @@
+
+start BARRIER $baseall
+OK
+
+print
+$basered
+$baseblue
+$basegreen
+$baseyellow
+red
+
+abort
+
+start BARRIER $basered;$baseblue;SG,11,11,22;$baseyellow
+OK
+
+print
+$basered
+$baseblue
+SG,11,11,22
+$baseyellow
+red
+
+quit

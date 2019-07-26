@@ -1,0 +1,11 @@
+add a sum
+Added a with aggregation sum.
+
+record a 12.123
+a: <12.12>
+
+record a 5
+a: <17.12>
+
+quit
+Quit (Day 0, week 1)

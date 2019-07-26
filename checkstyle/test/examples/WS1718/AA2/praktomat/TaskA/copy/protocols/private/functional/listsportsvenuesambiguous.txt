@@ -1,0 +1,26 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-ioc-code 118;ger;deutschland;1992
+OK
+
+list-sports-venues deutschland
+
+add-sports-venue 111;deutschland;berlin;olympiastadion;1936;74475
+OK
+
+add-sports-venue 112;deutschland;berlin;abc123;1954;30000
+OK
+
+add-sports-venue 125;deutschland;koeln;lanxessarena;1980;30000
+OK
+
+list-sports-venues deutschland
+(1 112 berlin 30000)
+(2 125 koeln 30000)
+(3 111 berlin 74475)
+
+quit

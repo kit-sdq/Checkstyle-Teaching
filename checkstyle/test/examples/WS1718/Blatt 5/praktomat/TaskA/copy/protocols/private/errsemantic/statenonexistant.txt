@@ -1,0 +1,25 @@
+state -1;2
+$error
+
+state 5;-1
+$error
+
+state -4;-325
+$error
+
+state 0;15
+$error
+
+state 15;0
+$error
+
+state 1324;27
+$error
+
+state 42;-8
+$error
+
+state -25;1337
+$error
+
+quit

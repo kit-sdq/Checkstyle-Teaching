@@ -1,0 +1,5 @@
+for better portability of pythomat:
+- provide a better error message when javac cannot be found
+- provide a better error message when chardet cannot be found
+- allow renaming of pythomat.zip. Automatically rename it when copying it to
+  the temporary directory.

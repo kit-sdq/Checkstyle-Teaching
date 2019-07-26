@@ -1,0 +1,12 @@
+$respect
+RPSSL 1:
+
+blackhole
+$error
+RPSSL 1:
+
+well
+$error
+RPSSL 1:
+
+quit

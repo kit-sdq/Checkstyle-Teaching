@@ -1,0 +1,60 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-olympic-sport biathlon;verfolgung
+OK
+
+add-olympic-sport bobsport;bob
+OK
+
+add-ioc-code 111;ger;deutschland;1900
+OK
+
+add-ioc-code 112;fra;frankreich;1925
+OK
+
+add-athlete 5324;jack;jerome;frankreich;bobsport;bob
+OK
+
+add-athlete 1234;max;mustermann;deutschland;bobsport;bob
+OK
+
+add-athlete 6804;benedikt;doll;deutschland;biathlon;verfolgung
+OK
+
+add-athlete 9845;natalie;geisenberger;deutschland;bobsport;bob
+OK
+
+add-competition 9845;2018;deutschland;bobsport;bob;1;0;0
+OK
+
+add-competition 9845;2014;deutschland;bobsport;bob;1;0;0
+OK
+
+add-competition 9845;2006;deutschland;bobsport;bob;0;0;0
+OK
+
+add-competition 5324;2014;frankreich;bobsport;bob;0;1;0
+OK
+
+add-competition 6804;2018;deutschland;biathlon;verfolgung;0;0;1
+OK
+
+add-competition 1234;1926;deutschland;bobsport;bob;0;0;0
+OK
+
+add-competition 1234;1982;deutschland;bobsport;bob;0;0;0
+OK
+
+summary-athletes bobsport;bob
+9845 natalie geisenberger 2
+5324 jack jerome 1
+1234 max mustermann 0
+
+summary-athletes biathlon;verfolgung
+6804 benedikt doll 1
+
+quit

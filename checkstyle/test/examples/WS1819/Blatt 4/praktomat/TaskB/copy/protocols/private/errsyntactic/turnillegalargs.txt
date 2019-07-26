@@ -1,0 +1,7 @@
+turn-left a
+$error
+
+turn-right x
+$error
+
+quit

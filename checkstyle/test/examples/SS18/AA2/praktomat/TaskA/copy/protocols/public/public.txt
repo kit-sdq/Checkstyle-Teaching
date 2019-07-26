@@ -1,0 +1,31 @@
+create programmieren
+OK
+
+print programmieren
+#
+
+add programmieren;ufate;12
+OK
+
+add programmieren;ulapw;35
+OK
+
+credits programmieren;ulapw
+35
+
+print programmieren
+#[u[f[a[t[e(12)]]]l[a[p[w(35)]]]]]
+
+modify programmieren;ulapw;0
+OK
+
+average programmieren
+6
+
+reset programmieren
+OK
+
+print programmieren
+#
+
+quit

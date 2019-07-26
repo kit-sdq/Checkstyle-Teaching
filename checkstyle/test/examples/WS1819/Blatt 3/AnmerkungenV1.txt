@@ -1,0 +1,10 @@
+S.2 sie können davon ausgehen, dass alle
+Eingabe gültig sind. -> Eingaben
+Auch können Sie davon
+ausgehen, dass die Befehle mit ihren Parameter dem zuvor definierte Eingabeformat entsprechen. -> Parametern, definierten
+Die Parameter werden durch
+genau ein Leerzeichen vom der Zeichenkette für den Befehl getrennt.  -> von
+wird lediglich eine öffnende eckige Klammer direkt gefolgt einer schließenden eckigen Klammer
+[]
+ausgegeben. -> direkt gefolgt von einer
+S.3 clear auf der leeren liste? (nur falls die frage im forum auftaucht)

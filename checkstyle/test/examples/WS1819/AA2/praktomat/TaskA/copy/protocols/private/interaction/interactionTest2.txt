@@ -1,0 +1,25 @@
+addAssembly a=2:b
+OK
+
+addAssembly b=2:c
+OK
+
+addAssembly c=2:d
+OK
+
+addAssembly d=2:e
+OK
+
+addAssembly e=2:f
+OK
+
+addAssembly f=2:g
+OK
+
+getAssemblies a
+f:32;e:16;d:8;c:4;b:2
+
+getComponents a
+g:64
+
+quit

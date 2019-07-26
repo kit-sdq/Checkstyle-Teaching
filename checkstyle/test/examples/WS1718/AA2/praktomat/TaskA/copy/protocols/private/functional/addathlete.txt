@@ -1,0 +1,40 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-olympic-sport biathlon;sprint
+OK
+
+add-olympic-sport biathlon;verfolgung
+OK
+
+add-olympic-sport ski;skispringen
+OK
+
+add-olympic-sport bobsport;bob
+OK
+
+add-ioc-code 111;ger;deutschland;1900
+OK
+
+add-ioc-code 112;fra;frankreich;1925
+OK
+
+add-athlete 5324;jack;jerome;frankreich;bobsport;bob
+OK
+
+add-athlete 4567;andreas;wellinger;deutschland;ski;skispringen
+OK
+
+add-athlete 5749;arnd;pfeiffer;deutschland;biathlon;sprint
+OK
+
+add-athlete 6804;benedikt;doll;deutschland;biathlon;verfolgung
+OK
+
+add-athlete 9845;natalie;geisenberger;deutschland;bobsport;bob
+OK
+
+quit

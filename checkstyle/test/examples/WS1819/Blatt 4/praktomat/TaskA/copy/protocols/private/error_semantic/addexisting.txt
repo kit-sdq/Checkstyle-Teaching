@@ -1,0 +1,13 @@
+add-addressbook a
+OK
+
+add-addressbook a
+$error
+
+add-contact a,hans,hans@mail.de,0049123456789
+0001
+
+add-contact a,hans,hans@mail.de,0049123456789
+$error
+
+quit

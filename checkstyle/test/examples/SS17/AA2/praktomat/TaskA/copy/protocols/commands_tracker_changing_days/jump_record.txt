@@ -1,0 +1,36 @@
+record pulse 5
+pulse: <5.00> to <5.00>
+
+set-day 25
+Day 25, week 4
+
+state
+$ignorefc
+pulse: none
+
+record pulse 25
+pulse: <25.00> to <25.00>
+
+set-day 0
+Day 0, week 1
+
+state
+$ignorefc
+pulse: <5.00> to <5.00>
+
+set-day 5
+Day 5, week 1
+
+state
+$ignorefc
+pulse: none
+
+set-day 25
+Day 25, week 4
+
+state
+$ignorefc
+pulse: <25.00> to <25.00>
+
+quit
+Quit (Day 25, week 4)

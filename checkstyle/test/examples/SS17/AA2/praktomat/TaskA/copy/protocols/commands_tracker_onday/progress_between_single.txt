@@ -1,0 +1,47 @@
+add a last
+Added a with aggregation last.
+
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: none - no goal
+a: none - no goal
+
+goal a between 10.567 and 20.123
+New goal for a: between <10.56> and <20.12>.
+
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: none - no goal
+a: none - goal not reached
+
+record a 15
+a: <15.00>
+
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: none - no goal
+a: <15.00> - goal reached
+
+record a 20.567
+a: <20.56>
+
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: none - no goal
+a: <20.56> - goal not reached
+
+record a 6
+a: <6.00>
+
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: none - no goal
+a: <6.00> - goal not reached
+
+quit
+Quit (Day 0, week 1)

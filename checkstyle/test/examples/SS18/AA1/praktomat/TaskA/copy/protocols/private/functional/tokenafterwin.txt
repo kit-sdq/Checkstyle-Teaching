@@ -1,0 +1,43 @@
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 5
+OK
+
+throwin 4
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 4
+OK
+
+throwin 7
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 5
+OK
+
+throwin 5
+OK
+
+throwin 5
+P1 wins
+
+token
+26
+
+quit

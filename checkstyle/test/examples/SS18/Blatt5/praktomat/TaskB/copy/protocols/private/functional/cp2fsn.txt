@@ -1,0 +1,31 @@
+move blue;3;4
+OK
+
+cellprint 3;4
+blue
+
+build C;4;4
+OK
+
+turn
+P2
+
+move blue;2;1
+OK
+
+cellprint 2;1
+blue
+
+build C;2;2
+OK
+
+cellprint 2;2
+C
+
+cellprint 2;1
+blue
+
+turn
+P1
+
+quit

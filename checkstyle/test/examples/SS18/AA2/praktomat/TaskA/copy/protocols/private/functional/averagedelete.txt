@@ -1,0 +1,16 @@
+create programmieren
+OK
+
+add programmieren;ufate;12
+OK
+
+add programmieren;ulapw;35
+OK
+
+delete programmieren;ulapw
+OK
+
+average programmieren
+12
+
+quit

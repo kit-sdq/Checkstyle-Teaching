@@ -1,0 +1,52 @@
+place -1;2;3;4
+$error
+
+place 1;-2;3;4
+$error
+
+place 1;2;-3;4
+$error
+
+place 1;2;3;-4
+$error
+
+place -1;2;-3;4
+$error
+
+place 1;-2;3;-4
+$error
+
+place -1;-2;-3;-4
+$error
+
+place -123413;5;3;4
+$error
+
+place 18;1;2;3
+$error
+
+place 1;18;2;3
+$error
+
+place 1;2;18;3
+$error
+
+place 1;2;3;18
+$error
+
+place 25;1;18;3
+$error
+
+place 4;19;17;20
+$error
+
+place 25;18;19;36
+$error
+
+place 2;23423;2;234
+$error
+
+place -1;324;-256;256
+$error
+
+quit

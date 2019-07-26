@@ -1,0 +1,10 @@
+rowprint
+$error
+
+rowprint 
+$error
+
+rowprint  
+$error
+
+quit

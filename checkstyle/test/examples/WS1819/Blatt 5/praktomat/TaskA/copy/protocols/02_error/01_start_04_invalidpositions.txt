@@ -1,0 +1,23 @@
+
+start $basered;$baseblue;$basegreen
+$error
+
+start $basered;$baseblue;$basegreen;SY,SY,SY
+$error
+
+start $basered;$baseblue;$basegreen;$baseyellow;0,1,2,3
+$error
+
+start $basered,0;$baseblue;$basegreen,$baseyellow
+$error
+
+start $basered;$baseblue;SG,SG,SG,40;$baseyellow
+$error
+
+start $basered;$baseblue;basegreen;$baseyellow,1
+$error
+
+start $basered;$baseblue;basegreen;$baseyellow;
+$error
+
+quit

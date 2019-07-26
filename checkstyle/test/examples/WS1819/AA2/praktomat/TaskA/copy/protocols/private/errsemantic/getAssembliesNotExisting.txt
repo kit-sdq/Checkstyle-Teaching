@@ -1,0 +1,7 @@
+getAssemblies a
+$error
+
+getAssemblies A
+$error
+
+quit

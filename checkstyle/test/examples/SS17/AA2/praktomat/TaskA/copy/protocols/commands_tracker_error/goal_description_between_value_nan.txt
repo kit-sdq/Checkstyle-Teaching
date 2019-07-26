@@ -1,0 +1,11 @@
+goal pulse between a and 5
+$error
+
+goal pulse between 4 and b
+$error
+
+goal pulse between a and b
+$error
+
+quit
+Quit (Day 0, week 1)

@@ -1,0 +1,16 @@
+addAssembly A=2:B;3:F
+OK
+
+addAssembly B=1:C;2:D
+OK
+
+getAssemblies A
+B:2
+
+addAssembly F=2:Z
+OK
+
+getAssemblies A
+F:3;B:2
+
+quit

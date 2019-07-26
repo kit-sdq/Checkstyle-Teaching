@@ -1,0 +1,10 @@
+add 0001;LAX;FRA;659.99;USD
+OK
+
+book 0001;Max;Mustermann
+1,1
+
+list-bookings
+1,0001,1
+
+quit

@@ -1,0 +1,22 @@
+move a;2:3;4
+$error
+
+move 1;a:3;4
+$error
+
+move 1;2:a;4
+$error
+
+move 1;2:3;a
+$error
+
+move ads;afsa:sgdg;asdawe
+$error
+
+move 1;2: ;4
+$error
+
+move 1;2;3;4
+$error
+
+quit

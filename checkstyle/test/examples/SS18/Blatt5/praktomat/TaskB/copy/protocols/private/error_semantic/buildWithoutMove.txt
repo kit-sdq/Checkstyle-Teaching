@@ -1,0 +1,4 @@
+build C;3;3
+$error
+
+quit

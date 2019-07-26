@@ -1,0 +1,7 @@
+rowprint 1;2
+$error
+
+rowprint 1;
+$error
+
+quit

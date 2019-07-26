@@ -1,0 +1,16 @@
+create programmieren
+OK
+
+reset +
+$error
+
+reset 
+$error
+
+reset  
+$error
+
+reset 1
+$error
+
+quit

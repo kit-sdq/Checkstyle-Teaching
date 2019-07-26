@@ -1,0 +1,7 @@
+removePart a-2:b
+$error
+
+removePart A-2:B
+$error
+
+quit

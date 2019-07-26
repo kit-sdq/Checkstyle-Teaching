@@ -1,0 +1,71 @@
+
+
+start 36,AR,CR,DR;SB,10,16,22;SG,13,BG,DG;SY,0,20,BY
+OK
+
+print
+36,AR,CR,DR
+SB,10,16,22
+SG,13,BG,DG
+SY,0,20,BY
+red
+
+roll 4
+blue
+
+roll 6
+22-28
+blue
+
+move 22 28
+28
+blue
+
+roll 1
+10-11
+16-17
+28-29
+blue
+
+move 10 11
+11
+green
+
+roll 6
+SG-20
+green
+
+move SG 20
+20
+yellow
+
+roll 1
+0-1
+BY-CY
+yellow
+
+move 0 1
+1
+red
+
+print
+36,AR,CR,DR
+SB,11,16,28
+13,20,BG,DG
+SY,SY,1,BY
+red
+
+roll 5
+36-BR
+red
+
+move 36 BR
+BR
+red winner
+
+start
+OK
+
+abort
+
+quit

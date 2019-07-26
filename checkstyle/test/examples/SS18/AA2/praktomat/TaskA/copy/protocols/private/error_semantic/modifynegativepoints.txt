@@ -1,0 +1,13 @@
+create programmieren
+OK
+
+add programmieren;uabcd;1
+OK
+
+modify prgrammieren;uabcd;-1
+$error
+
+modify prgrammieren;uabcd;-1337
+$error
+
+quit

@@ -1,0 +1,22 @@
+add 0001;LAX;FRA;659.99
+$error
+
+add 0001;LAX;FRA;659.99;
+$error
+
+add 0001;LAX;FRA;;USD
+$error
+
+add 0001
+$error
+
+add 0001;LAX;FRA;659.99;USD;TEST
+$error
+
+add ;LAX;FRA;659.99;USD
+$error
+
+add LAX;FRA;USD
+$error
+
+quit

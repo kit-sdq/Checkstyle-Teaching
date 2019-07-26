@@ -1,0 +1,10 @@
+credits programmieren;uabcd
+$error
+
+create programmieren
+OK
+
+credits swt;uabcd
+$error
+
+quit

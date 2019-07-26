@@ -1,0 +1,10 @@
+direction
+$error
+
+direction 
+$error
+
+direction  
+$error
+
+quit

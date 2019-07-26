@@ -1,0 +1,17 @@
+next-day 
+$error
+
+next-day  
+$error
+
+next-day a
+$error
+
+next-day a b
+$error
+
+next-day 4
+$error
+
+quit
+Quit (Day 0, week 1)

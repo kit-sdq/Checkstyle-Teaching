@@ -1,0 +1,26 @@
+$respect
+Moderator - Waehlen Sie eins der drei Tore aus:
+
+2
+Moderator - Hinter Tor 1 befindet sich eine Ziege.
+Moderator - Moechten Sie das andere noch verschlossene Tor auswaehlen:
+
+nein
+Sie haben gewonnen. 0:1
+Moderator - Waehlen Sie eins der drei Tore aus:
+
+1
+Moderator - Hinter Tor 2 befindet sich eine Ziege.
+Moderator - Moechten Sie das andere noch verschlossene Tor auswaehlen:
+
+nein
+Sie haben gewonnen. 0:2
+Moderator - Waehlen Sie eins der drei Tore aus:
+
+3
+Moderator - Hinter Tor 1 befindet sich eine Ziege.
+Moderator - Moechten Sie das andere noch verschlossene Tor auswaehlen:
+
+nein
+Sie haben gewonnen. 0:3
+Simulation beendet

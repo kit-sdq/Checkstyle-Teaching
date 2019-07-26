@@ -1,0 +1,9 @@
+record pulse 5
+pulse: <5.00> to <5.00>
+
+next-day
+Goals reached: 0/0
+Day 1, week 1
+
+quit
+Quit (Day 1, week 1)

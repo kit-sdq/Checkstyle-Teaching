@@ -1,0 +1,8 @@
+list-bookings
+
+add 0001;LAX;FRA;659.99;USD
+OK
+
+list-bookings
+
+quit

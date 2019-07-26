@@ -1,0 +1,4 @@
+escape x
+$error
+
+quit

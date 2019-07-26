@@ -1,0 +1,25 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-ioc-code ;ger;deutschland;1900
+$error
+
+add-ioc-code 111;;deutschland;1900
+$error
+
+add-ioc-code 111;ger;;1900
+$error
+
+add-ioc-code 111;ger;deutschland;
+$error
+
+add-ioc-code a;ger;deutschland;1900
+$error
+
+add-ioc-code 111;ger;deutschland;b
+$error
+
+quit

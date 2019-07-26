@@ -1,0 +1,16 @@
+summary-assignment 
+$error
+
+summary-assignment  
+$error
+
+summary-assignment x
+$error
+
+summary-assignment 2
+$error
+
+summary-assignment 1;2
+$error
+
+quit

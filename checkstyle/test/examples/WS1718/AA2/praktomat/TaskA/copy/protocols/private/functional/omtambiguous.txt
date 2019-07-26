@@ -1,0 +1,104 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-olympic-sport biathlon;sprint
+OK
+
+add-olympic-sport eishockey;eishockey
+OK
+
+add-olympic-sport biathlon;verfolgung
+OK
+
+add-olympic-sport bobsport;bob
+OK
+
+add-olympic-sport bobsport;skeleton
+OK
+
+add-ioc-code 111;ger;deutschland;1900
+OK
+
+add-ioc-code 112;fra;frankreich;1925
+OK
+
+add-ioc-code 117;esp;spanien;1900
+OK
+
+add-ioc-code 119;can;kanada;1900
+OK
+
+add-ioc-code 113;bhu;bhutan;1984
+OK
+
+add-athlete 1001;deutsch;eins;deutschland;biathlon;sprint
+OK
+
+add-athlete 1002;deutsch;zwei;deutschland;biathlon;sprint
+OK
+
+add-athlete 1003;deutsch;drei;deutschland;biathlon;sprint
+OK
+
+add-athlete 2001;kanada;eins;kanada;eishockey;eishockey
+OK
+
+add-athlete 2002;kanada;zwei;kanada;eishockey;eishockey
+OK
+
+add-athlete 2003;kanada;drei;kanada;eishockey;eishockey
+OK
+
+add-athlete 3001;franz;eins;frankreich;biathlon;verfolgung
+OK
+
+add-athlete 3002;franz;zwei;frankreich;biathlon;verfolgung
+OK
+
+add-athlete 4001;spanien;eins;spanien;bobsport;bob
+OK
+
+add-athlete 5001;buth;eins;bhutan;bobsport;skeleton
+OK
+
+add-competition 1001;2018;deutschland;biathlon;sprint;1;0;0
+OK
+
+add-competition 1002;2018;deutschland;biathlon;sprint;0;1;0
+OK
+
+add-competition 1003;2018;deutschland;biathlon;sprint;0;0;1
+OK
+
+add-competition 2001;2018;kanada;eishockey;eishockey;1;0;0
+OK
+
+add-competition 2002;2018;kanada;eishockey;eishockey;0;1;0
+OK
+
+add-competition 2003;2018;kanada;eishockey;eishockey;0;0;1
+OK
+
+add-competition 3001;2018;frankreich;biathlon;verfolgung;1;0;0
+OK
+
+add-competition 3002;2018;frankreich;biathlon;verfolgung;0;1;0
+OK
+
+add-competition 4001;2018;spanien;bobsport;bob;1;0;0
+OK
+
+add-competition 5001;2018;bhutan;bobsport;skeleton;0;0;0
+OK
+
+olympic-medal-table
+(1,111,ger,deutschland,1,1,1,3)
+(2,119,can,kanada,1,1,1,3)
+(3,112,fra,frankreich,1,1,0,2)
+(4,117,esp,spanien,1,0,0,1)
+(5,113,bhu,bhutan,0,0,0,0)
+
+quit

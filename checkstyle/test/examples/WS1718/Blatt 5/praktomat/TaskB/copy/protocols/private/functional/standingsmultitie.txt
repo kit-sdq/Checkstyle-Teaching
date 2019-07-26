@@ -1,0 +1,32 @@
+add-team 11;abcd
+OK
+
+add-team 13;ijkl
+OK
+
+add-team 12;efgh
+OK
+
+add-team 14;mnop
+OK
+
+add-team 25;hello
+OK
+
+add-ice-hockey-match 11;4;12;1;60
+OK
+
+add-ice-hockey-match 13;4;14;1;60
+OK
+
+add-ice-hockey-match 25;2;14;4;60
+OK
+
+print-del-standings
+(1,abcd,3,3)
+(2,ijkl,3,3)
+(3,mnop,3,-1)
+(4,hello,0,-2)
+(5,efgh,0,-3)
+
+quit

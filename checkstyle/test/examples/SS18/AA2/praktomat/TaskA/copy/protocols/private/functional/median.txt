@@ -1,0 +1,34 @@
+create programmieren
+OK
+
+add programmieren;ufate;12
+OK
+
+median programmieren
+12
+
+add programmieren;ulapw;34
+OK
+
+median programmieren
+23
+
+add programmieren;uxabc;60
+OK
+
+median programmieren
+34
+
+add programmieren;uxagh;80
+OK
+
+median programmieren
+47
+
+add programmieren;uxazv;45
+OK
+
+median programmieren
+45
+
+quit

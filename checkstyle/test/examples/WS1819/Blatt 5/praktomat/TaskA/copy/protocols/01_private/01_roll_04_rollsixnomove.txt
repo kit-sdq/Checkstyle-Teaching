@@ -1,0 +1,8 @@
+
+start 39,AR,BR,CR;$baseblue;$basegreen;$baseyellow
+OK
+
+roll 6
+red
+
+quit

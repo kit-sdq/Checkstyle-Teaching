@@ -1,0 +1,10 @@
+add-team
+$error
+
+add-team 
+$error
+
+add-team  
+$error
+
+quit

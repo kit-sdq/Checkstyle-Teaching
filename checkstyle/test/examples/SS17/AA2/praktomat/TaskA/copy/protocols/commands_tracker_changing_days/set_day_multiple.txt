@@ -1,0 +1,5 @@
+set-day 25
+Day 25, week 4
+
+quit
+Quit (Day 25, week 4)

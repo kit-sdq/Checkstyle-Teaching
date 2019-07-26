@@ -1,0 +1,13 @@
+create programmieren
+OK
+
+add programmieren;uabcd;1
+OK
+
+median programmieren;1
+$error
+
+median programmieren;swt;os
+$error
+
+quit

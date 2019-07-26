@@ -1,0 +1,17 @@
+
+start 
+$error
+
+start  BARRIER
+$error
+
+start BARRIER  $baseall
+$error
+
+start BARRIER$baseall
+$error
+
+start BARRIER  NOJUMP
+$error
+
+quit

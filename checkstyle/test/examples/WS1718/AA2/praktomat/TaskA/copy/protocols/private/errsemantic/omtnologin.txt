@@ -1,0 +1,4 @@
+olympic-medal-table
+$error
+
+quit

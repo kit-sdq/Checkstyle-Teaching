@@ -1,0 +1,7 @@
+create programmieren
+OK
+
+print
+$error
+
+quit

@@ -1,0 +1,10 @@
+move blue;4;3
+OK
+
+build A;4;4
+$error
+
+build ,;4;4
+$error
+
+quit

@@ -1,0 +1,104 @@
+summary-teacher
+
+teacher markus
+
+summary-teacher
+markus: 0 pupils, 0 missing review(s)
+
+pupil joachim 211156
+
+summary-teacher
+markus: 1 pupils, 0 missing review(s)
+
+pupil michael 221059
+
+summary-teacher
+markus: 2 pupils, 0 missing review(s)
+
+pupil bernd 190271
+
+summary-teacher
+markus: 3 pupils, 0 missing review(s)
+
+teacher winfried
+
+summary-teacher
+markus: 3 pupils, 0 missing review(s)
+winfried: 0 pupils, 0 missing review(s)
+
+pupil theresia 641965
+
+summary-teacher
+markus: 3 pupils, 0 missing review(s)
+winfried: 1 pupils, 0 missing review(s)
+
+pupil theresia 281164
+
+summary-teacher
+markus: 3 pupils, 0 missing review(s)
+winfried: 2 pupils, 0 missing review(s)
+
+assignment Schwieriges_Mathe-Abi
+assignment id(1)
+
+assignment Einfaches_Mathe-Abi
+assignment id(2)
+
+review 1 641965 2 Ganz_gut_geloest,_weiter_so!
+$error
+
+summary-teacher
+markus: 3 pupils, 0 missing review(s)
+winfried: 2 pupils, 0 missing review(s)
+
+submit 1 641965 Die_Loesung_ist_42
+
+summary-teacher
+markus: 3 pupils, 0 missing review(s)
+winfried: 2 pupils, 1 missing review(s)
+
+review 1 641965 2 Ganz_gut_geloest,_weiter_so!
+winfried reviewed (641965,theresia) with grade 2
+
+summary-teacher
+markus: 3 pupils, 0 missing review(s)
+winfried: 2 pupils, 0 missing review(s)
+
+submit 1 211156 Glaub_es_ist_42
+
+summary-teacher
+markus: 3 pupils, 1 missing review(s)
+winfried: 2 pupils, 0 missing review(s)
+
+submit 1 190271 Keine_Ahnung
+
+summary-teacher
+markus: 3 pupils, 2 missing review(s)
+winfried: 2 pupils, 0 missing review(s)
+
+list-solutions 1
+(190271,bernd): Keine_Ahnung
+(211156,joachim): Glaub_es_ist_42
+(641965,theresia): Die_Loesung_ist_42
+
+review 1 190271 6 Das_war_wohl_nix.
+markus reviewed (190271,bernd) with grade 6
+
+results
+assignment id(1): Schwieriges_Mathe-Abi
+190271: 6
+641965: 2
+assignment id(2): Einfaches_Mathe-Abi
+
+summary-teacher
+markus: 3 pupils, 1 missing review(s)
+winfried: 2 pupils, 0 missing review(s)
+
+review 1 211156 3 So_Mittel.
+markus reviewed (211156,joachim) with grade 3
+
+summary-teacher
+markus: 3 pupils, 0 missing review(s)
+winfried: 2 pupils, 0 missing review(s)
+
+quit

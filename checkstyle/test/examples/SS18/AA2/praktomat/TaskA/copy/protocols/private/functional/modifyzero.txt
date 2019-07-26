@@ -1,0 +1,22 @@
+create programmieren
+OK
+
+add programmieren;ufate;35
+OK
+
+print programmieren
+#[u[f[a[t[e(35)]]]]]
+
+modify programmieren;ufate;0
+OK
+
+print programmieren
+#[u[f[a[t[e(0)]]]]]
+
+modify programmieren;ufate;10
+OK
+
+print programmieren
+#[u[f[a[t[e(10)]]]]]
+
+quit

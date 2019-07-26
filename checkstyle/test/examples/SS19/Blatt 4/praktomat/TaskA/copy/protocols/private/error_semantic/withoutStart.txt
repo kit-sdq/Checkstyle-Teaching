@@ -1,0 +1,20 @@
+roll 4
+$error
+
+move 4,1;1
+$error
+
+token
+$error
+
+print
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+print-cell 1;1
+*
+
+quit

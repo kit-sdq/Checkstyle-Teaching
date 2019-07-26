@@ -1,0 +1,10 @@
+{
+  "pythomat" : "../../../../../pythomat",
+  "sample_solution" : "../../solution/TaskC/",
+  "checkers" : [
+    "pythomat",
+    "copy:../checkstyle-teaching-1.0.jar",
+	"script:javalyzer.py",
+	"compiler"
+  ]
+}

@@ -1,0 +1,31 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+logout-admin
+OK
+
+add-admin max;mustermann;mmuster;12345678
+OK
+
+add-admin marcel;davis;mdavis;1und1beste
+OK
+
+login-admin mdavis;1und1beste
+OK
+
+logout-admin
+OK
+
+login-admin mmuster;12345678
+OK
+
+logout-admin
+OK
+
+login-admin mmuster;12345678
+OK
+
+quit

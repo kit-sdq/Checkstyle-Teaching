@@ -1,0 +1,23 @@
+submit 123456 text	text2
+$error
+
+teacher markus
+
+pupil joachim 211156
+
+assignment Schwieriges_Mathe-Abi
+assignment id(1)
+
+submit 1 211156 text_1	text_2
+$error
+
+submit 01 211156 text
+$error
+
+submit +1 211156 text
+$error
+
+submit 1 +211156 text
+$error
+
+quit

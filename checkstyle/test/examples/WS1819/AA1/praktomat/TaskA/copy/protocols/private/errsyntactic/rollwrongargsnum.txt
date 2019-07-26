@@ -1,0 +1,13 @@
+roll 1;
+$error
+
+roll 1;2
+$error
+
+roll 1;2;3
+$error
+
+roll ;2
+$error
+
+quit

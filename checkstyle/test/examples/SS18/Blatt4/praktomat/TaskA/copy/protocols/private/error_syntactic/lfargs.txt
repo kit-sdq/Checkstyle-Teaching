@@ -1,0 +1,16 @@
+list-flights 
+$error
+
+list-flights  
+$error
+
+list-flights x
+$error
+
+list-flights 2
+$error
+
+list-flights 1;2
+$error
+
+quit

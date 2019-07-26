@@ -1,0 +1,11 @@
+goal pulse less-than 10
+New goal for pulse: less-than <10.00>.
+
+remove-goal pulse
+Removed goal for pulse.
+
+goals
+Number of goals: 0
+
+quit
+Quit (Day 0, week 1)

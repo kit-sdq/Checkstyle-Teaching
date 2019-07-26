@@ -1,0 +1,56 @@
+place 3;2
+OK
+
+place 5;4
+OK
+
+place 3;1
+OK
+
+state 4;1
+-
+
+place 4;1
+OK
+
+place 3;3
+OK
+
+print
+- - - - - -
+- - - - - -
+- - - - - -
+- 1 1 1 - -
+- 2 - - - -
+- - - - 2 -
+
+place 2;5
+OK
+
+state 2;5
+2
+
+place 3;4
+OK
+
+place 5;5
+OK
+
+place 3;5
+P1 wins
+
+print
+- - - - - -
+- - - - - -
+- - - - - 2
+- 1 1 1 1 1
+- 2 - - - -
+- - - - 2 2
+
+state 5;5
+2
+
+state 3;5
+1
+
+quit

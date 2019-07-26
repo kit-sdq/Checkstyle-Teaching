@@ -1,0 +1,10 @@
+pupil
+$error
+
+pupil 
+$error
+
+pupil  
+$error
+
+quit

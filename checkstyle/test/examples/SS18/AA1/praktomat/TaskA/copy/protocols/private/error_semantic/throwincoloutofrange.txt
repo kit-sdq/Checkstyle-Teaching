@@ -1,0 +1,13 @@
+throwin -1
+$error
+
+throwin 8
+$error
+
+throwin 3248
+$error
+
+throwin -25
+$error
+
+quit

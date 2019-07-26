@@ -1,0 +1,13 @@
+add-team 11;abcd
+OK
+
+add-ice-hockey-match 11;3;13;1;60
+$error
+
+add-ice-hockey-match 13;3;11;1;60
+$error
+
+add-ice-hockey-match 25;3;14;1;60
+$error
+
+quit

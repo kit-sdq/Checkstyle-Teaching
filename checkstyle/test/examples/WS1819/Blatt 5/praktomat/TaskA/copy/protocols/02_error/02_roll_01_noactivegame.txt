@@ -1,0 +1,29 @@
+
+> command = roll 3
+
+$command
+$error
+
+start
+OK
+
+abort
+
+$command
+$error
+
+start 39,BR,CR,DR;$baseblue;$basegreen;$baseyellow
+OK
+
+roll 1
+39-AR
+red
+
+move 39
+AR
+red winner
+
+$command
+$error
+
+quit

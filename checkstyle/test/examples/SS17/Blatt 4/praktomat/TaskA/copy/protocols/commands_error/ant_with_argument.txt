@@ -1,0 +1,7 @@
+ant 
+$error
+
+ant a
+$error
+
+quit

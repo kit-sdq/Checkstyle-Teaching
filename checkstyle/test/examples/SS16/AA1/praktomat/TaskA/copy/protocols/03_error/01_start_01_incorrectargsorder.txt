@@ -1,0 +1,8 @@
+
+start $baseall BARRIER
+$error
+
+start BARRIER $baseall BACKWARD
+$error
+
+quit

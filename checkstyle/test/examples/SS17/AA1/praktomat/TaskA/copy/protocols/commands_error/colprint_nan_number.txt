@@ -1,0 +1,4 @@
+colprint a
+$error
+
+quit

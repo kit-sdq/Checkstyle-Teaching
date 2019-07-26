@@ -1,0 +1,5 @@
+goals-week 1
+Number of goals: 0
+
+quit
+Quit (Day 0, week 1)

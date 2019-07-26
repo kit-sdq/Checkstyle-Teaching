@@ -1,0 +1,10 @@
+print-addressbook
+$error
+
+print-addressbook 
+$error
+
+print-addressbook    
+$error
+
+quit

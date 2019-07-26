@@ -1,0 +1,10 @@
+set-vc
+$error
+
+set-vc 
+$error
+
+set-vc  
+$error
+
+quit

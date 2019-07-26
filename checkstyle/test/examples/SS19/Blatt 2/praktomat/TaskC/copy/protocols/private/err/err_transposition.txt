@@ -1,0 +1,40 @@
+transposition 2:2:2,2,2,2,2
+$error
+
+transposition 2:2:2,2,2
+$error
+
+transposition 2:2:2,--2,2,2
+$error
+
+transposition 2:2:2,+2,2,2
+$error
+
+transposition 2:2:2,2,2,A
+$error
+
+transposition 2:2,2,2,2  
+$error
+
+transposition  2:2:2,2,2,2
+$error
+
+transposition2:2:2,2,2,2
+$error
+
+transposition 2:2:),2,2,2
+$error
+
+transposition 2:2:2,2,2,-
+$error
+
+transposition 2:2:2,2,2,999999999999
+$error
+
+transposition 2:2:2,2,-999999999999,2
+$error
+
+transposition 2:2:2,2,2,2,2,2,2,2,2
+$error
+
+quit

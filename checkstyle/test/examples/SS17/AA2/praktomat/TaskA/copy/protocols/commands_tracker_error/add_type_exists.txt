@@ -1,0 +1,11 @@
+add pulse sum
+$error
+
+add name sum
+Added name with aggregation sum.
+
+add name last
+$error
+
+quit
+Quit (Day 0, week 1)

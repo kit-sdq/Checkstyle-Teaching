@@ -1,0 +1,4 @@
+list-olympic-sports
+$error
+
+quit

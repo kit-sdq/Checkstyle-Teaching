@@ -1,0 +1,17 @@
+state 
+$error
+
+state  
+$error
+
+state a
+$error
+
+state a b
+$error
+
+state 4
+$error
+
+quit
+Quit (Day 0, week 1)

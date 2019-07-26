@@ -1,0 +1,19 @@
+
+start BARRIER 7,9,9,20;$baseblue;$basegreen;$baseyellow
+OK
+
+roll 3
+9-12
+20-23
+red
+
+abort
+
+start BARRIER SR,SR,7,20;SB,SB,9,9;$basegreen;$baseyellow
+OK
+
+roll 3
+20-23
+red
+
+quit

@@ -1,0 +1,7 @@
+check-narcissistic-number 153;10
+true
+
+check-narcissistic-number 154;10
+false
+
+quit

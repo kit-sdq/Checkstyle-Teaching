@@ -1,0 +1,31 @@
+addAssembly a=2:b
+OK
+
+addAssembly c=2:b
+OK
+
+getAssemblies a
+EMPTY
+
+addAssembly b=2:d
+OK
+
+getAssemblies a
+b:2
+
+getComponents a
+d:4
+
+removePart c-2:b
+OK
+
+getAssemblies a
+b:2
+
+getComponents a
+d:4
+
+printAssembly d
+COMPONENT
+
+quit

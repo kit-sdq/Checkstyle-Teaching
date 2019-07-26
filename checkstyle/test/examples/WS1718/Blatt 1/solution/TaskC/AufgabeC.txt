@@ -1,0 +1,114 @@
+
+1)
+    boolean x = true;
+    boolean y = false;
+    boolean z = true;
+    
+    boolean w = !(x    || y) & z    | (z    && !y)     ^ !x;
+    ( 0)    w = !(true || y) & z    | (z    && !y)     ^ !x;
+    ( 1)    w = !true        & z    | (z    && !y)     ^ !x;
+    ( 2)    w = false        & z    | (z    && !y)     ^ !x;
+    ( 3)    w = false        & true | (z    && !y)     ^ !x;
+    ( 4)    w = false               | (z    && !y)     ^ !x;
+    ( 5)    w = false               | (true && !y)     ^ !x;
+    ( 6)    w = false               | (true && !false) ^ !x;
+    ( 7)    w = false               | (true && true)   ^ !x;
+    ( 8)    w = false               | true             ^ !x;
+    ( 9)    w = false               | true             ^ !true;
+    (10)    w = false               | true             ^ false;
+    (11)    w = false               | true;
+    (12)    w = true;
+    
+    The variable 'w' has the value 'true'.
+    
+    Notes:
+    The conditional or ('||') operator is short-circuiting, thus 'y' is not evaluated inbetween step 0 and 1.
+    The precedence of the xor ('^') operator is higher than the precedence of the or ('|') operator and is evaluated
+    first after step 8.
+    
+    
+    Operator Precedence: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html *
+    
+    (* The names of the operators for booleans are not correct, the correct names are _logical_ operators for the
+    non-short-circuiting operators '&', '|' and '^' and _conditional_ operators for the short-circuiting operators '&&'
+    and '||'.)
+
+
+2)
+    float f1 = 1000.0F;
+    float f2 = 0.00003F;
+    float f3 = f1 + f2 + f2 + f2 + f2;  // f3 := 16384000 * 2^-14
+    float f4 = f2 + f2 + f2 + f2 + f1;  // f4 := 16384002 * 2^-14
+    boolean b = f3 == f4;
+    
+    Floats are represented by 32 bits following the IEEE 754 standard and can not represent every value in their range.
+    Between two representable values of a floating point value is a specific distance, called ulp. The value of f2 is a
+    bit less than half of the size of the ulp of f1 (which is 2^-14 -> ~0.000061), thus the value of f1 is not increased
+    when adding f2 (more specific: 'f1+f2==f1' (and thus 'f1==f3') evaluates to true). On the other hand the sum of the
+    four f2's is large enough to increase the value of f1 (by two ulps).
+    
+    Solutions for exactly this question ((a) doesn't deal with the actual problem, (b) won't work reliable for arbitrary
+    values as every IEEE754-representation has the precision-problem and thus should be used together with any of the
+    general approaches below):
+        a) Rewrite the initialization of f3 to have the same semantics as f4:
+        
+            f3 = f1 + (f2 + f2 + f2 + f2);  // or 'f3 = f1 + (f2 + f2) + (f2 + f2);' or 'f3 = f1 + 4 * f2;'
+        
+        b) Use double instead of float (generally: use double unless you have a good reason to use float).
+    
+    General approaches (whereas (d) should be used for everything that requires exactness, e.g. monetary calculations):
+        a) Use a specific maximal absolute epsilon (should only be used if the range of values is known and small):
+        
+                return abs(a - b) <= epsilon;
+        
+        b) Use a specific maximal relative epsilon:
+        
+                return abs(a - b) <= epsilon * max(abs(a), abs(b));
+        
+        c) Use a specific maximal ulp-count:
+        
+                return abs(floatToRawIntBits(a) - floatToRawIntBits(b)) <= ulps;
+        
+        d) Use integer values to represent the floating point values (whereas the decimal point is moved depending on
+           the required precision; depending on the required decimal places use int, long or BigDecimal):
+        
+                int f1 = 100000000;
+                int f2 = 3;
+    
+    
+    Floating-Point Types: https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.2.3
+
+
+3)
+    byte a = 30;
+    byte b = 12;
+    byte c = a + b;
+    
+    The '+' operator (as well as most other operators) on operands of type byte (or short/char) will promote these
+    operands to type int, thus the result of 'a + b' is an int and cannot be assigned to a byte.
+    
+    Solutions (whereas solution (d), (a) and (c) are by far preferable):
+        a) Change type of c to int:
+        
+                int c = a + b;
+        
+        b) Implicit cast of the result:
+        
+                byte c = a;
+                c += b;
+        
+        c) Explicit cast of the result:
+        
+                byte c = (byte) (a + b);
+        
+        d) Replace the expression with a compile time constant:
+        
+            either
+                byte c = 30 + 12;
+            or
+                final byte a = 30;
+                final byte b = 12;
+                byte c = a + b;
+    
+    
+    Numeric Promotion: https://docs.oracle.com/javase/specs/jls/se8/html/jls-5.html#jls-5.6.2

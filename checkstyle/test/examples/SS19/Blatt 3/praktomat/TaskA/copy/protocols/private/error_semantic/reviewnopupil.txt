@@ -1,0 +1,9 @@
+teacher markus
+
+assignment Schwieriges_Mathe-Abi
+assignment id(1)
+
+review 1 123456 2 Ganz_gut_geloest,_weiter_so!
+$error
+
+quit

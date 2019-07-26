@@ -1,0 +1,10 @@
+direction f
+N
+
+direction a
+S
+
+direction A
+S
+
+quit

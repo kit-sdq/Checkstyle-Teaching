@@ -1,0 +1,10 @@
+place
+$error
+
+place 
+$error
+
+place  
+$error
+
+quit

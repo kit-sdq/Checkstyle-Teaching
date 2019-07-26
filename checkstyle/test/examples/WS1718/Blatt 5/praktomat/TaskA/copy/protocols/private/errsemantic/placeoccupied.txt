@@ -1,0 +1,22 @@
+place 1;2
+OK
+
+place 5;4
+OK
+
+place 1;2
+$error
+
+place 5;4
+$error
+
+place 13;8
+OK
+
+place 1;2
+$error
+
+place 5;4
+$error
+
+quit

@@ -1,0 +1,7 @@
+move 5
+OK
+
+rowprint 0
+{2} # # # # 1
+
+quit

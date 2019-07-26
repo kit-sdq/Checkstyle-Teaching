@@ -1,0 +1,10 @@
+print-cell
+$error
+
+print-cell 
+$error
+
+print-cell  
+$error
+
+quit

@@ -1,0 +1,49 @@
+create programmieren
+OK
+
+add 
+$error
+
+add  
+$error
+
+add ;uabcd;2
+$error
+
+add +;uabcd;2
+$error
+
+add 234;uabcd;2
+$error
+
+add Programmieren;uabcd;2
+$error
+
+add programmieren;;2
+$error
+
+add programmieren;+;2
+$error
+
+add programmieren;+++++;2
+$error
+
+add programmieren;u2345;2
+$error
+
+add programmieren;23456;2
+$error
+
+add programmieren;UaBCD;2
+$error
+
+add programmieren;uabcd;
+$error
+
+add programmieren;uabcd;+
+$error
+
+add programmieren;uabcd;abc
+$error
+
+quit

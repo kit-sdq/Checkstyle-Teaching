@@ -1,0 +1,16 @@
+cellprint 1;1
+red
+
+cellprint 4;4
+blue
+
+cellprint 2;3
+yellow
+
+cellprint 2;2
+green
+
+cellprint 0;0
+Empty
+
+quit

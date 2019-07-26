@@ -1,0 +1,10 @@
+list-solutions
+$error
+
+list-solutions 
+$error
+
+list-solutions  
+$error
+
+quit

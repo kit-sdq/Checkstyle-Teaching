@@ -1,0 +1,7 @@
+move blue;4;3
+OK
+
+turn
+$error
+
+quit

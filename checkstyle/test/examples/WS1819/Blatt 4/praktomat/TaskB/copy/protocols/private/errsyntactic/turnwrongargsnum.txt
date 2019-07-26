@@ -1,0 +1,25 @@
+turn-left 1;2;3
+$error
+
+turn-right 1;2;3
+$error
+
+turn-left 1;2
+$error
+
+turn-right 1;2
+$error
+
+turn-left 1;
+$error
+
+turn-right 1;
+$error
+
+turn-left ;
+$error
+
+turn-right ;
+$error
+
+quit

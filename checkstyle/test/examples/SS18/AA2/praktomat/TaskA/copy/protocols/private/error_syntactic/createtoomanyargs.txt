@@ -1,0 +1,7 @@
+create programmieren;1
+$error
+
+create programmieren;swt;os
+$error
+
+quit

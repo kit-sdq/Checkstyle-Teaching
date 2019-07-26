@@ -1,0 +1,10 @@
+
+<code>
+
+basered    = "SR,SR,SR,SR"
+baseblue   = "SB,SB,SB,SB"
+basegreen  = "SG,SG,SG,SG"
+baseyellow = "SY,SY,SY,SY"
+baseall    = basered + ";" + baseblue + ";" + basegreen + ";" + baseyellow
+
+</code>

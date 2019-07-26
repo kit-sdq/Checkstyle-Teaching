@@ -1,0 +1,22 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+list-olympic-sports 
+$error
+
+list-olympic-sports  
+$error
+
+list-olympic-sports x
+$error
+
+list-olympic-sports 2
+$error
+
+list-olympic-sports 1;2
+$error
+
+quit

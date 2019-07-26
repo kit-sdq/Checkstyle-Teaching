@@ -1,0 +1,25 @@
+create programmieren
+OK
+
+add programmieren;ufate;12
+OK
+
+add programmieren;ulapw;13
+OK
+
+average programmieren
+12
+
+add programmieren;uxabc;18
+OK
+
+average programmieren
+14
+
+add programmieren;uxagh;20
+OK
+
+average programmieren
+15
+
+quit

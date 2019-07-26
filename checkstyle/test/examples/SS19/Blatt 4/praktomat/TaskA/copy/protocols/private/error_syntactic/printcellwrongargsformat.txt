@@ -1,0 +1,22 @@
+print-cell 1;3,3
+$error
+
+print-cell 1,1;4
+$error
+
+print-cell 1,1
+$error
+
+print-cell 1.1
+$error
+
+print-cell a.1
+$error
+
+print-cell a;b
+$error
+
+print-cell 999999999999;1
+$error
+
+quit

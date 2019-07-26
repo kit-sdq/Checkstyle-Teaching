@@ -1,0 +1,10 @@
+book
+$error
+
+book 
+$error
+
+book  
+$error
+
+quit

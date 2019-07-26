@@ -1,0 +1,46 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-competition ;2018;deutschland;biathlon;sprint;1;0;0
+$error
+
+add-competition 1234;;deutschland;biathlon;sprint;1;0;0
+$error
+
+add-competition 1234;2018;;biathlon;sprint;1;0;0
+$error
+
+add-competition 1234;2018;deutschland;;sprint;1;0;0
+$error
+
+add-competition 1234;2018;deutschland;biathlon;;1;0;0
+$error
+
+add-competition 1234;2018;deutschland;biathlon;sprint;;0;0
+$error
+
+add-competition 1234;2018;deutschland;biathlon;sprint;1;;0
+$error
+
+add-competition 1234;2018;deutschland;biathlon;sprint;1;0;
+$error
+
+add-competition a;2018;deutschland;biathlon;sprint;1;0;0
+$error
+
+add-competition 1234;csd;deutschland;biathlon;sprint;1;0;0
+$error
+
+add-competition 1234;2018;deutschland;biathlon;sprint;x;0;0
+$error
+
+add-competition 1234;2018;deutschland;biathlon;sprint;1;y;0
+$error
+
+add-competition 1234;2018;deutschland;biathlon;sprint;1;0;z
+$error
+
+quit

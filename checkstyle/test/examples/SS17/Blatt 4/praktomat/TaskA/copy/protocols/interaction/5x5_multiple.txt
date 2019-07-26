@@ -1,0 +1,55 @@
+ant
+a,b,c
+
+move 1
+
+print
+10203
+4a2c2
+01243
+00b10
+32041
+
+direction a
+SW
+
+direction b
+E
+
+direction c
+SE
+
+move 1
+
+print
+10203
+43202
+a124c
+002b0
+32041
+
+direction a
+W
+
+direction b
+S
+
+direction c
+E
+
+move 1
+
+ant
+b
+
+print
+10203
+43202
+31240
+00220
+320b1
+
+direction b
+SW
+
+escape b

@@ -1,0 +1,10 @@
+state 1;a
+$error
+
+state x;2
+$error
+
+state ads;afsa
+$error
+
+quit

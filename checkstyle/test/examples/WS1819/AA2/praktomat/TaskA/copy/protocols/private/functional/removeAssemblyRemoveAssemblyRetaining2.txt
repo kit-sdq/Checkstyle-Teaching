@@ -1,0 +1,25 @@
+addAssembly A=2:B
+OK
+
+addAssembly B=2:C
+OK
+
+addAssembly C=2:D
+OK
+
+removeAssembly C
+OK
+
+printAssembly A
+B:2
+
+printAssembly C
+COMPONENT
+
+printAssembly B
+C:2
+
+printAssembly D
+$error
+
+quit

@@ -1,0 +1,15 @@
+start 1,6,3,5,2,4;2,3,1,4,6,5
+
+token  1
+$error
+
+token a
+$error
+
+token ;
+$error
+
+token =
+$error
+
+quit

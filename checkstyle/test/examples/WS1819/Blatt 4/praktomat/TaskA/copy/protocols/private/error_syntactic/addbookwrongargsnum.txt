@@ -1,0 +1,10 @@
+add-addressbook name blub
+$error
+
+add-addressbook name blub blub2
+$error
+
+add-addressbook n name
+$error
+
+quit

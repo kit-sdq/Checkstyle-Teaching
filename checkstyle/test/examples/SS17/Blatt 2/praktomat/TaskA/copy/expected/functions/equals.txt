@@ -1,0 +1,14 @@
+$> ascending = new NaturalNumberTuple(new int[] {1,2,3,4,5})
+$> twoFives = new NaturalNumberTuple(new int[] {1,2,3,4,5,5})
+$> ascending.equals(new NaturalNumberTuple(new int[] {1,2,3,4,5}))
+true
+$> ascending.equals(ascending)
+true
+$> twoFives.equals(ascending)
+false
+$> new NaturalNumberTuple(new int[] {}).equals(new NaturalNumberTuple(new int[] {}))
+true
+$> new NaturalNumberTuple(new int[] {}).equals(twoFives)
+false
+$> ascending.equals(new NaturalNumberTuple(new int[] {5,4,3,2,1}))
+false

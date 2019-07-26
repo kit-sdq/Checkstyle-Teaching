@@ -1,0 +1,7 @@
+- S.1 Kein java.util?
+- S.1 Checkstyle Kasten
+- S.2 "falls einer der nachfolgenden Regeln verletzt ist" - das r ist wieder aufgetaucht
+- S.3 "Der einfachheitshalber muss in diesem Rechenhilfsmittel auf keine Unter- und Überläufegeprüft werden oder diese behandelt werden." - Würde ich noch etwas umformulieren
+- Generell Das Blatt ist noch Übungsblatt 3 (nicht dass das am ende untergeht)
+- S.5 Ableitungsregeln untereinander schreiben zwecks Übersichtlichkeit
+- S.6 interaktive Benutzerschnittstelle aktualisieren

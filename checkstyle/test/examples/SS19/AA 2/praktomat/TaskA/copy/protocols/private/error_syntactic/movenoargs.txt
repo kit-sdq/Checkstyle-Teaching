@@ -1,0 +1,13 @@
+move
+$error
+
+move 
+$error
+
+move  
+$error
+
+move   
+$error
+
+quit

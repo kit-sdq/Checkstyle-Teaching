@@ -1,0 +1,489 @@
+set-vc 0;1
+OK
+
+state 0;1
+V
+
+reset
+OK
+
+state 0;1
+-
+
+set-vc 0;2
+OK
+
+state 0;2
+V
+
+reset
+OK
+
+set-vc 0;3
+OK
+
+state 0;3
+V
+
+reset
+OK
+
+set-vc 0;4
+OK
+
+state 0;4
+V
+
+reset
+OK
+
+set-vc 0;5
+OK
+
+state 0;5
+V
+
+reset
+OK
+
+set-vc 0;6
+OK
+
+state 0;6
+V
+
+reset
+OK
+
+set-vc 0;7
+OK
+
+state 0;7
+V
+
+reset
+OK
+
+set-vc 0;8
+OK
+
+state 0;8
+V
+
+reset
+OK
+
+set-vc 0;9
+OK
+
+state 0;9
+V
+
+reset
+OK
+
+set-vc 0;10
+OK
+
+state 0;10
+V
+
+reset
+OK
+
+set-vc 0;11
+OK
+
+state 0;11
+V
+
+reset
+OK
+
+set-vc 0;12
+OK
+
+state 0;12
+V
+
+reset
+OK
+
+set-vc 0;13
+OK
+
+state 0;13
+V
+
+reset
+OK
+
+set-vc 10;1
+OK
+
+state 10;1
+V
+
+reset
+OK
+
+set-vc 10;2
+OK
+
+state 10;2
+V
+
+reset
+OK
+
+set-vc 10;3
+OK
+
+state 10;3
+V
+
+reset
+OK
+
+set-vc 10;4
+OK
+
+state 10;4
+V
+
+reset
+OK
+
+set-vc 10;5
+OK
+
+state 10;5
+V
+
+reset
+OK
+
+set-vc 10;6
+OK
+
+state 10;6
+V
+
+reset
+OK
+
+set-vc 10;7
+OK
+
+state 10;7
+V
+
+reset
+OK
+
+set-vc 10;8
+OK
+
+state 10;8
+V
+
+reset
+OK
+
+set-vc 10;9
+OK
+
+state 10;9
+V
+
+reset
+OK
+
+set-vc 10;10
+OK
+
+state 10;10
+V
+
+reset
+OK
+
+set-vc 10;11
+OK
+
+state 10;11
+V
+
+reset
+OK
+
+set-vc 10;12
+OK
+
+state 10;12
+V
+
+reset
+OK
+
+set-vc 10;13
+OK
+
+state 10;13
+V
+
+reset
+OK
+
+set-vc 1;0
+OK
+
+state 1;0
+V
+
+reset
+OK
+
+set-vc 2;0
+OK
+
+state 2;0
+V
+
+reset
+OK
+
+set-vc 3;0
+OK
+
+state 3;0
+V
+
+reset
+OK
+
+set-vc 4;0
+OK
+
+state 4;0
+V
+
+reset
+OK
+
+set-vc 5;0
+OK
+
+state 5;0
+V
+
+reset
+OK
+
+set-vc 6;0
+OK
+
+state 6;0
+V
+
+reset
+OK
+
+set-vc 7;0
+OK
+
+state 7;0
+V
+
+reset
+OK
+
+set-vc 8;0
+OK
+
+state 8;0
+V
+
+reset
+OK
+
+set-vc 9;0
+OK
+
+state 9;0
+V
+
+reset
+OK
+
+set-vc 1;14
+OK
+
+state 1;14
+V
+
+reset
+OK
+
+set-vc 2;14
+OK
+
+state 2;14
+V
+
+reset
+OK
+
+set-vc 3;14
+OK
+
+state 3;14
+V
+
+reset
+OK
+
+set-vc 4;14
+OK
+
+state 4;14
+V
+
+reset
+OK
+
+set-vc 5;14
+OK
+
+state 5;14
+V
+
+reset
+OK
+
+set-vc 6;14
+OK
+
+state 6;14
+V
+
+reset
+OK
+
+set-vc 7;14
+OK
+
+state 7;14
+V
+
+reset
+OK
+
+set-vc 8;14
+OK
+
+state 8;14
+V
+
+reset
+OK
+
+set-vc 9;14
+OK
+
+state 9;14
+V
+
+reset
+OK
+
+set-vc 5;2
+OK
+
+roll 5
+OK
+
+place 6;2:6;6
+OK
+
+move 4;2:3;2
+OK
+
+roll 5
+OK
+
+place 2;0:2;5
+OK
+
+move 4;2:3;2
+OK
+
+roll DAWN
+OK
+
+place 3;1:9;1
+OK
+
+move 4;2
+OK
+
+roll 3
+OK
+
+place 5;3:5;5
+OK
+
+move 5;2:4;2:5;2
+OK
+
+roll 2
+OK
+
+place 0;0:0;1
+OK
+
+move 4;2:5;2
+OK
+
+roll 3
+OK
+
+place 2;6:5;6
+OK
+
+move 4;2:3;2:4;2
+OK
+
+print
+++-------------
+---------------
++++++++--------
+-+----+--------
+-+V---+--------
+-+-++++--------
+-++++++--------
+-+-------------
+-+-------------
+-+-------------
+---------------
+
+set-vc 1;14
+OK
+
+state 1;14
+C
+
+print
+++-------------
+--------------C
++++++++--------
+-+----+--------
+-+V---+--------
+-+-++++--------
+-++++++--------
+-+-------------
+-+-------------
+-+-------------
+---------------
+
+quit

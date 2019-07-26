@@ -1,0 +1,7 @@
+throwin 1
+OK
+
+remove 1
+$error
+
+quit

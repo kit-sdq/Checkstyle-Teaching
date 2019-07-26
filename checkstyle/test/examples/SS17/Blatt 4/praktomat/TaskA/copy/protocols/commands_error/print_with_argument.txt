@@ -1,0 +1,7 @@
+print 
+$error
+
+print a
+$error
+
+quit

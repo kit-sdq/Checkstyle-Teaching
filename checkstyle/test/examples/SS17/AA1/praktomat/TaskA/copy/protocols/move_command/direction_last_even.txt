@@ -1,0 +1,13 @@
+move 31
+OK
+
+rowprint 5
+# 1 # # # #
+
+move 33
+OK
+
+rowprint 5
+# 1 # 2 # #
+
+quit

@@ -1,0 +1,31 @@
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: none - no goal
+
+goal pulse greater-than 20.123
+New goal for pulse: greater-than <20.12>.
+
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: none - goal not reached
+
+record pulse 20.245
+pulse: <20.24> to <20.24>
+
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: <20.24> to <20.24> - goal reached
+
+record pulse 10
+pulse: <10.00> to <20.24>
+
+progress
+$ignoreeffc
+Day 0, week 1
+pulse: <10.00> to <20.24> - goal not reached
+
+quit
+Quit (Day 0, week 1)

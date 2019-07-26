@@ -1,0 +1,13 @@
+recommend S3 105
+#empty
+
+recommend S3 106
+centos5:105
+
+recommend S3 107
+centos5:105,centos6:106
+
+recommend S3 200
+#empty
+
+quit

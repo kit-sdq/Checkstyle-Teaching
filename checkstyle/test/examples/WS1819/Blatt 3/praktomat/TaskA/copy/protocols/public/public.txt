@@ -1,0 +1,18 @@
+print
+[]
+
+add 1
+
+add 2
+
+print
+[1,2]
+
+add 3
+
+add 4
+
+print
+[1,2,3,4]
+
+quit

@@ -1,0 +1,40 @@
+isValid AA1111111115
+true
+
+isValid ZZ9999999999
+true
+
+isValid AA1111111124
+true
+
+isValid AA1111113113
+true
+
+isValid AA1111213112
+true
+
+isValid AA1121213111
+true
+
+isValid AA1111116119
+true
+
+isValid AA1111216118
+true
+
+isValid AA1121216117
+true
+
+isValid AA1121213112
+false
+
+isValid AA1111116118
+false
+
+isValid AA1111216117
+false
+
+isValid AA1121216111
+false
+
+quit

@@ -1,0 +1,8 @@
+$respect
+RPSSL 1:
+
+scissors
+0,1,1
+RPSSL 2:
+
+quit

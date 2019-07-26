@@ -1,0 +1,8 @@
+sliding-window 3 1;a;3
+$error
+
+sliding-window 3 1;2,3
+$error
+
+quit
+Quit (Day 0, week 1)

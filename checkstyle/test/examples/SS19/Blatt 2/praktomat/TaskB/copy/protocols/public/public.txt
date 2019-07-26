@@ -1,0 +1,10 @@
+digitsum AB123456789
+48
+
+checksum AB123456789
+4
+
+isValid AB1234567894
+true
+
+quit

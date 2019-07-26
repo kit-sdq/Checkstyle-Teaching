@@ -1,0 +1,10 @@
+roll
+$error
+
+roll 
+$error
+
+roll  
+$error
+
+quit

@@ -1,0 +1,13 @@
+throwin 1
+OK
+
+flip
+$error
+
+throwin 2
+OK
+
+remove 1
+$error
+
+quit

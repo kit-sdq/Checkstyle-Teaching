@@ -1,0 +1,7 @@
+field 1;1
+$error
+
+field 1 1
+$error
+
+quit

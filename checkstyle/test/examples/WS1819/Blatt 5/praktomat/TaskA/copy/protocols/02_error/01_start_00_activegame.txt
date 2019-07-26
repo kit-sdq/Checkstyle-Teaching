@@ -1,0 +1,14 @@
+
+start
+OK
+
+start
+$error
+
+start something
+$error
+
+start $baseall
+$error
+
+quit

@@ -1,0 +1,10 @@
+recommend   S1   105
+centos6:106,centos7:107
+
+recommend S1   105
+centos6:106,centos7:107
+
+recommend   S1 105
+centos6:106,centos7:107
+
+quit

@@ -1,0 +1,10 @@
+add-admin
+$error
+
+add-admin 
+$error
+
+add-admin  
+$error
+
+quit

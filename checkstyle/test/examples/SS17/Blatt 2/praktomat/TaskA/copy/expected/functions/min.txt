@@ -1,0 +1,8 @@
+$> new NaturalNumberTuple(new int[] {1,2,3,4,5}).min()
+1
+$> new NaturalNumberTuple(new int[] {}).min()
+-1
+$> new NaturalNumberTuple(new int[] {2,1,1,3,4,5,5}).min()
+1
+$> new NaturalNumberTuple(new int[] {235,2134,5364,3,22356}).min()
+3

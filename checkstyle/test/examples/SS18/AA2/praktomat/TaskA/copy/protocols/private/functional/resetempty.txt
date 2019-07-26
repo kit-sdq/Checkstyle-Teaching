@@ -1,0 +1,13 @@
+create programmieren
+OK
+
+print programmieren
+#
+
+reset programmieren
+OK
+
+print programmieren
+#
+
+quit

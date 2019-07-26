@@ -1,0 +1,10 @@
+reset programmieren
+$error
+
+create programmieren
+OK
+
+reset swt
+$error
+
+quit

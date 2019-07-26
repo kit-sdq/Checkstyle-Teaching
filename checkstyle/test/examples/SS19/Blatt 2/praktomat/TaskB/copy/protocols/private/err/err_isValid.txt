@@ -1,0 +1,28 @@
+isValid AAA1111111111
+$error
+
+isValid ZZA999999992
+$error
+
+isValid A11111111122
+$error
+
+isValid ÜA1111113111
+$error
+
+isValid AA11112131112
+$error
+
+isValid AA§121213111
+$error
+
+isValid AA1!11116112
+$error
+
+isValid aA1111216111
+$error
+
+isValid AA11--216112
+$error
+
+quit

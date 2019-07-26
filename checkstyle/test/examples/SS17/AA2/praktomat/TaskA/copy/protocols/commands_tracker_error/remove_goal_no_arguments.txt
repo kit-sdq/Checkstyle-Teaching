@@ -1,0 +1,11 @@
+remove-goal
+$error
+
+remove-goal 
+$error
+
+remove-goal  
+$error
+
+quit
+Quit (Day 0, week 1)

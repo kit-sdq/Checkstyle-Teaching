@@ -1,0 +1,161 @@
+\documentclass{sdqassignment}
+
+\lecture{Programmieren}
+\semester{Sommersemester 2019}
+\lecturer{Prof.\,Dr.\,Ralf H. Reussner}
+\group{Software Design and Quality (SDQ)}
+\ilias{https://sdqweb.ipd.kit.edu/wiki/Programmieren}
+\mail{programmieren-vorlesung@ipd.kit.edu}
+\assignment{Übungsblatt 3}
+\points{20 Punkte}
+\releasedate{22.05.2019, ca.\,13:00 Uhr}
+\praktomatdate{29.05.2019, 13:00 Uhr}
+\duedate{06.06.2019, 06:00 Uhr}
+\version{Version 1.0}
+
+\begin{document}
+
+\hinweise{3}
+
+\section*{Abgabemodalitäten}
+
+Die Praktomat-Abgabe wird am \textbf{Mittwoch, den 29.05.2019 um 13:00 Uhr}, freigeschaltet. Achten Sie unbedingt darauf, Ihre Dateien im Praktomaten bei der richtigen Aufgabe vor Ablauf der Abgabefrist hochzuladen.
+
+\begin{itemize}
+    \item Geben Sie Ihre Klassen zu Aufgabe A als \texttt{*.java}-Dateien ab.
+\end{itemize}
+
+\newpage
+
+\task{Kommandozeilenbasiertes Rechenhilfsmittel für komplexe Zahlen}{20}
+In dieser Aufgabe soll ein kommandozeilenbasiert Rechenhilfsmittel für die vier Grundrechenarten Addition, Subtraktion, Multiplikation und Division für komplexe Zahlen implementiert werden. Zusätzlich soll das Rechenhilfsmittel zur Laufzeit das Speichern und Rechnen von komplexe Zahlen in TODO unterstützen.
+
+Die komplexen Zahlen \(\mathbb{C}\) erweitern den Zahlenbereich der reellen Zahlen \(\mathbb{R}\) derart, dass die Gleichung \(x^{2}+1=0\) lösbar wird. Dies gelingt durch Einführung einer neuen imaginären Zahl \(\mathrm{i}\) mit der Eigenschaft \(\mathrm{i}^{2}=-1\). Diese Zahl \(\mathrm{i}\) wird als imaginäre Einheit bezeichnet. Komplexe Zahlen können in der Form \(\left(a+b\,\mathrm{i}\right)\) dargestellt werden, wobei \(a\) und \(b\) in diesem Rechenhilfsmittel ganze Zahlen sind und \(\mathrm{i}\) die imaginäre Einheit ist. Der einfachheitshalber wird \(a,b\in\mathbb{Z}_{INT}\) mit \(\mathbb{Z}_{INT}\coloneqq\left\{x\in\mathbb{Z}\mid x\geq-2^{31}\land x\leq2^{31}-1\right\}\) angenommen.
+
+Auf die so dargestellten komplexen Zahlen lassen sich die üblichen Rechenregeln für ganze Zahlen anwenden, wobei \(\mathrm{i}^{2}\) stets durch \(-1\) ersetzt werden kann und umgekehrt. Der einfachheitshalber muss in diesem Rechenhilfsmittel auf keine Unter- und Überläufe geprüft werden oder diese behandelt werden.
+
+\subsection{Grundrechenregeln}
+\subsubsection{Addition \lstinlinetxt{+}}
+Für die Addition zweier komplexer Zahlen \(z_{1}=a+b\,\mathrm{i}\) mit \(a,b\in\mathbb{Z}_{INT}\) und \(z_{2}=c+d\,\mathrm{i}\) mit \(c,d\in\mathbb{Z}_{INT}\) gilt: \[z_{1}+z_{2}=(a+c)+(b+d)\,\mathrm{i}\]
+
+\subsubsection{Subtraktion \lstinlinetxt{-}}
+Für die Subtraktion zweier komplexer Zahlen \(z_{1}=a+b\,\mathrm{i}\) mit \(a,b\in\mathbb{Z}_{INT}\) und \(z_{2}=c+d\,\mathrm{i}\) mit \(c,d\in\mathbb{Z}_{INT}\) gilt: \[z_{1}-z_{2}=(a-c)+(b-d)\,\mathrm{i}\]
+
+\subsubsection{Multiplikation \lstinlinetxt{*}}
+Für die Multiplikation zweier komplexer Zahlen \(z_{1}=a+b\,\mathrm{i}\) mit \(a,b\in\mathbb{Z}_{INT}\) und \(z_{2}=c+d\,\mathrm{i}\) mit \(c,d\in\mathbb{Z}_{INT}\) gilt: \[z_{1} * z_{2}=(ac-bd)+(ad+bc)\,\mathrm{i}\]
+
+\subsubsection{Division \lstinlinetxt{/}}
+Für die Division zweier komplexer Zahlen \(z_{1}=a+b\,\mathrm{i}\) mit \(a,b\in\mathbb{Z}_{INT}\) und \(z_{2}=c+d\,\mathrm{i}\) mit \(z_{2}\neq 0\) und \(c,d\in\mathbb{Z}_{INT}\) gilt: \[z_{1} / z_{2}=\frac{ac+bd}{c^{2}+d^{2}}+\frac{bc-ad}{c^{2}+d^{2}}\,\mathrm{i}\]
+
+\section{Zuweisung \lstinlinetxt{=}}
+Mit einer TODO lässt sich eine komplexe Zahl speichern, welche vom Rechenhilfsmittel gelesen und geschrieben werden kann. Um eine Variable zu nutzen, muss ihr eine komplexe Zahl zugewiesen werden. Der Zuweisungsoperator \lstinlinetxt{=} ist ein binärer Operator, bei dem auf der linken Seite die zu belegende Variable steht und auf der rechten Seite ein Ausdruck. Erst nach dem Auswerten des Ausdrucks kopiert der Zuweisungsoperator das Ergebnis in die Variable. Gibt es Laufzeitfehler, etwa durch eine Division durch null, gibt es keinen Schreibzugriff auf die Variable. Wie in Java, könne TODO beliebig oft neue komplexe Zahl zugewiesen werden. % Beispielsweise: \[x=\left(3+2\,\mathrm{i}\right) \land y=\left(5+5\,\mathrm{i}\right) \land z=x+y \Rightarrow z=\left(8+7\,\mathrm{i}\right)\]
+
+
+
+\subsection{Operatorrangfolge}
+Operatorrangfolge entspricht den gebräuchlichen mathematischen Konventionen:
+Klammern zuerst Punkt vor Strich und von links nach rechts.
+
+Für die Operatorrangfolge der vier Grundrechenarten gilt die Konvention Punktrechnung vor Strichrechnung. Das heißt in einem Ausdruck haben, sofern keine Klammern gesetzt sind, Multiplikationen und Divisionen immer Vorrang vor Additionen und Subtraktionen.
+
+Eine Klammerung bietet die Möglichkeit der Bevorrangung eines Teilstücks einer Kette von notierten Operationen: Der eingeklammerte, also von einem eckigen Klammerpaar \([\ldots]\) eingeschlossene Bereich ist rechnerisch zuerst auszuführen und durch das entsprechende Teilergebnis zu ersetzen, was die Klammerung obsolet macht, da sie nun keine Operatoren mehr enthält. Die Klammerung muss die Operatoren samt ihren nötigen Operanden enthalten. Entgegen der verbreiteten Konvention werden Ausdrücke nicht mit runden Klammern, sondern mit eckigen Klammern geklammert, um diese deutlich von der Repräsentation der komplexen Zahlen abzugrenzen.
+
+Für die Operatorrangfolge der vier Grundrechenarten gilt die Konvention links nach rechts. Das heißt, wenn Operatoren gleicher Priorität im gleichen Ausdruck erscheinen, werden diese von links nach rechts rechnerisch zuerst ausgeführt.
+Die Zuweisungsoperatoren werde n jedoch von rechts nach links ausgewertet.
+
+Die Operatoren in \cref{tab:operator} sind in der Reihenfolge ihrer Priorität aufgeführt. Je näher am oberen Rand der Tabelle ein Operator erscheint, desto höher ist seine Priorität. Operatoren mit höherer Priorität werden vor Operatoren mit niedrigerer Priorität ausgewertet. Operatoren auf der gleichen Ebene haben die gleiche Priorität.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Priorität & Operator & Beschreibung & Assoziativität \\ \hline
+    3 & \lstinlinetxt{[} \lstinlinetxt{]} & Klammern & links nach rechts \\ \hline
+    2 & \lstinlinetxt{*} \lstinlinetxt{/} & Multiplikation Division (Punktrechnung) & links nach rechts \\ \hline
+    1 & \lstinlinetxt{+} \lstinlinetxt{-} & Addition Subtraktion (Strichrechnung) & links nach rechts \\ \hline
+    0 & \lstinlinetxt{=} & Zuweisung & rechts nach links \\ \hline
+    \end{tabular}
+    \caption{Operatorrangfolge}
+    \label{tab:operator}
+\end{table}
+
+\subsection{Grammatik}
+Gültige Ausdrücke zur Eingabe in das Rechenhilfsmittel werden im Folgendem als kontextfreie Grammatik beschrieben. Eine kontextfreie Grammatik ist eine formale Grammatik, welche nur solche einfachen Produktionsregeln enthält, bei welchen immer genau ein Nichtterminalsymbol auf eine beliebig lange Folge von Nichtterminal- und/oder Terminalsymbolen abgeleitet wird. Die Produktionsregeln haben folglich immer die Form \(V \rightarrow w\), wobei \(V\) ein Nichtterminalsymbol ist und \(w\) eine Folge mit Alternativen bestehend aus Nichtterminal- und/oder Terminalsymbolen. Zeichenfolgen, welche zwischen den spitzen Klammern \(<\) \(>\) eingeschlossen sind, stellen die Nichtterminalsymbole dar. Das Zeichen \(\rightarrow\) (TODO) wird zur Definition verwendet und das Zeichen \(\mid\) (vertikaler Strich) hat die Bedeutung eines logischen Oder (\(\lor\)) zur Definition von Alternativen.
+
+In den Produktionsregeln stellen die Zeichenfolgen, welche zwischen den einfachen Hochsommers \('\) \('\) eingeschlossen sind, Terminalsymbole dar. Dazu werden für die kontextfreie Grammatik noch die beiden Terminalsymbole \(Integer\) und \(Variable\) definiert. Das Terminalsymbole int entspricht hierbei der Zeichefolge, welche von der Pars int Methde fehlerfrei in den primitiven Datentyp int übersetzt werdne kann.
+
+Das Terminalsymbole var entspricht hierbei der Zeichefolge, welche ein gültiger Java varibalen naem ist.
+mit ausnahem
+
+
+
+
+
+\(<Startsymbol> \rightarrow <Zuweisung> \mid <Ausdruck>\)
+\(<Zuweisung> \rightarrow <Variable> '=' <Ausdruck>\)
+\(<Ausdruck> \rightarrow <Literal> \mid <Addition> \mid <Subtraktion> \mid <Multiplikation> \mid <Division> \mid <Klammer>\)
+\(<Literal> \rightarrow <Variable> \mid <Komplex>\)
+\(<Komplex> \rightarrow '(' <Integer> '+' <Integer> 'i' ')'\)
+\(<Addition> \rightarrow <Ausdruck> '+' <Ausdruck>\)
+\(<Subtraktion> \rightarrow <Ausdruck> '-' <Ausdruck>\)
+\(<Multiplikation> \rightarrow <Ausdruck> '*' <Ausdruck>\)
+\(<Division> \rightarrow <Ausdruck> '/' <Ausdruck>\)
+\(<Klammer> \rightarrow '[' <Ausdruck> ']'\)
+
+Integer \rightarrow
+Variable \rightarrow
+
+
+
+
+\subsubsection{Beispiele}
+
+
+
+\section{Interaktive Benutzerschnittstelle}
+Nach dem Start nimmt Ihr Programm über die Konsole mittels \lstinlinejava{Terminal.readLine()} Eingaben, welche im Folgenden näher spezifiziert werden. Nach Abarbeitung einer Eingabe wartet Ihr Programm auf weitere Eingaben, bis das Programm irgendwann durch die Eingabe der Zeichenfolge \lstinlinetxt{quit} beendet wird.
+
+Achten Sie darauf, dass durch Ausführung der folgenden Befehle die zuvor definierten Grundlagen und Bedingungen nicht verletzt werden und geben Sie in diesen Fällen immer eine aussagekräftige Fehlermeldung aus.
+So muss unter anderem beim Hinzufügen einer neuen Baugruppe oder bei dem Verändern einer bereits bestehenden Baugruppe stets darauf geachtet werden, dass keine Anforderung, wie beispielsweise die Vorgaben für den Namen und die Menge oder die geforderte Zyklenfreiheit verletzt werden.
+Entspricht eine Eingabe nicht dem vorgegebenen Format, dann ist immer eine Fehlermeldung auszugeben.
+Danach soll das Programm auf die nächste Eingabe warten.
+Bei Fehlermeldungen dürfen Sie den Text frei wählen, er sollte jedoch sinnvoll sein.
+Jede Fehlermeldung muss aber mit \lstinlinetxt{Error,} beginnen und darf keine Zeilenumbrüche enthalten.
+
+Da wir automatische Tests Ihrer interaktiven Benutzerschnittstelle durchführen, müssen die Ausgaben exakt den Vorgaben entsprechen.
+Insbesondere sollen sowohl Klein- und Großbuchstaben als auch die Leerzeichen und Zeilenumbrüche genau übereinstimmen.
+Geben Sie auch keine zusätzlichen Informationen aus.
+Beginnen Sie frühzeitig mit dem Einreichen, um Ihre Lösung dahingehend zu testen, und verwenden Sie das Forum, um eventuelle Unklarheiten zu klären.
+
+Beachten Sie, dass bei der Beschreibung der Eingabe- und Ausgabeformate die Wörter zwischen spitzen Klammen (\lstinlinetxt{<} und \lstinlinetxt{>}) für Platzhalter stehen, welche bei der konkreten Ein- und Ausgabe durch Werte ersetzt werden.
+Diese eigentlichen Werte enthalten bei der Ein- und Ausgabe keine spitzen Klammern.
+Vergleichen Sie hierzu auch die jeweiligen Beispielabläufe.
+
+Beachten Sie auch, dass bei den folgenden Beispielabläufen die Eingabezeilen mit dem \lstinlinetxt{>}-Zeichen gefolgt von einem Leerzeichen eingeleitet werden.
+Diese beiden Zeichen sind ausdrücklich kein Bestandteil des eingegebenen Befehls, sondern dienen nur der Unterscheidung zwischen Ein- und Ausgabezeilen.
+
+
+
+
+\subsection{Der \lstinlinetxt{quit}"=Befehl}
+Der parameterlose Befehl ermöglicht es, Ihr Rechenhilfsmittel vollständig zu beenden. Beachten Sie, dass hierfür keine Methoden wie \lstinlinejava{System.exit()} oder \lstinlinejava{Runtime.exit()} verwendet werden dürfen.
+\subsubsection{Eingabeformat}\lstinlinetxt{quit}
+\subsubsection{Ausgabeformat}
+Im Erfolgsfall findet keine Ausgabe statt. Im Fehlerfall (z.B. bei einem falsch spezifizierten Eingabeformat) wird eine aussagekräftige Fehlermeldung beginnend mit \lstinlinetxt{Error,} ausgegeben.
+
+
+
+
+\(<Startsymbol> \rightarrow <Zuweisung> \mid <Ausdruck>\)
+\(<Zuweisung> \rightarrow <Variable> '=' <Ausdruck>\)
+\(<Ausdruck> \rightarrow <Literal> \mid <Addition> \mid <Subtraktion> \mid <Multiplikation> \mid <Division> \mid <Klammer>\)
+\(<Literal> \rightarrow <Variable> \mid <Komplex>\)
+\(<Komplex> \rightarrow '(' <Integer> '+' <Integer> 'i' ')'\)
+\(<Addition> \rightarrow <Ausdruck> '+' <Ausdruck>\)
+\(<Subtraktion> \rightarrow <Ausdruck> '-' <Ausdruck>\)
+\(<Multiplikation> \rightarrow <Ausdruck> '*' <Ausdruck>\)
+\(<Division> \rightarrow <Ausdruck> '/' <Ausdruck>\)
+\(<Klammer> \rightarrow '[' <Ausdruck> ']'\)
+
+
+\end{document}

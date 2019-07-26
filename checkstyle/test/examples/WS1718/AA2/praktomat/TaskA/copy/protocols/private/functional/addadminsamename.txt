@@ -1,0 +1,7 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+add-admin peter;oettig;peet1337;notmyrealpx
+OK
+
+quit

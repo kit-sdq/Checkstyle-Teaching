@@ -1,0 +1,97 @@
+move 1
+
+direction f
+NE
+
+print
+423013
+231241
+141112
+023f21
+341002
+333333
+
+move 1
+
+direction f
+SE
+
+print
+423013
+231241
+1411f2
+023321
+341002
+333333
+
+move 1
+
+direction f
+SW
+
+move 2
+
+direction f
+NW
+
+print
+423013
+231241
+141122
+023322
+341f32
+333333
+
+move 1
+
+direction f
+W
+
+print
+423013
+231241
+141122
+02f322
+341332
+333333
+
+move 1
+
+direction f
+S
+
+print
+423013
+231241
+141122
+0f0322
+341332
+333333
+
+move 1
+
+direction f
+SW
+
+print
+423013
+231241
+141122
+010322
+3f1332
+333333
+
+move 1
+
+direction f
+S
+
+print
+423013
+231241
+141122
+010322
+341332
+f33333
+
+move 1

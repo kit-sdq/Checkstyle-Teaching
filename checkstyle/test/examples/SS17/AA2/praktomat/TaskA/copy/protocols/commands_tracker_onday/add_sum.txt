@@ -1,0 +1,5 @@
+add a sum
+Added a with aggregation sum.
+
+quit
+Quit (Day 0, week 1)

@@ -1,0 +1,10 @@
+position f
+2,1
+
+position a
+1,2
+
+position A
+1,2
+
+quit

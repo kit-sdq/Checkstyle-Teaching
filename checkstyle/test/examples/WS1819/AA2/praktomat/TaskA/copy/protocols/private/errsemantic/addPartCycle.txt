@@ -1,0 +1,25 @@
+addAssembly a=2:b;2:c
+OK
+
+addAssembly b=2:c
+OK
+
+addAssembly d=2:e
+OK
+
+addAssembly e=2:f
+OK
+
+addAssembly f=2:a
+OK
+
+addPart c+2:d
+$error
+
+addAssembly c=2:z
+OK
+
+addPart c+2:d
+$error
+
+quit

@@ -1,0 +1,36 @@
+
+start 0,6,12,18;$baseblue;$basegreen;$baseyellow
+OK
+
+roll 6
+18-24
+red
+
+move 18
+24
+red
+
+roll 6
+12-18
+24-30
+red
+
+move 12
+18
+red
+
+roll 6
+6-12
+24-30
+red
+
+move 6
+12
+red
+
+roll 6
+0-6
+24-30
+red
+
+quit

@@ -1,0 +1,10 @@
+average programmieren
+$error
+
+create programmieren
+OK
+
+average swt
+$error
+
+quit

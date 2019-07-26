@@ -1,0 +1,5 @@
+add a avg
+Added a with aggregation avg.
+
+quit
+Quit (Day 0, week 1)

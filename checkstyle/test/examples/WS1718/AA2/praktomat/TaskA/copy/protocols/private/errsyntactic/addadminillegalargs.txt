@@ -1,0 +1,13 @@
+add-admin ;oettig;peet1993;notmyrealpw
+$error
+
+add-admin peter;;peet1993;notmyrealpw
+$error
+
+add-admin peter;oettig;;notmyrealpw
+$error
+
+add-admin peter;oettig;peet1993;
+$error
+
+quit

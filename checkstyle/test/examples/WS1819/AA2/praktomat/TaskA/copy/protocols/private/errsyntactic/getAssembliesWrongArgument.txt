@@ -1,0 +1,58 @@
+getAssemblies a2
+$error
+
+getAssemblies 2a
+$error
+
+getAssemblies 
+$error
+
+getAssemblies =
+$error
+
+getAssemblies a+a
+$error
+
+getAssemblies a-
+$error
+
+getAssemblies 2=2
+$error
+
+getAssemblies @
+$error
+
+getAssemblies a[a
+$error
+
+getAssemblies a{a
+$error
+
+getAssemblies  
+$error
+
+getAssemblies a\na
+$error
+
+getAssemblies a
+$error
+
+getAssemblies B:b
+$error
+
+getAssemblies c;C
+$error
+
+getAssemblies x=x
+$error
+
+getAssemblies Y+y
+$error
+
+getAssemblies x+2:x
+$error
+
+getAssemblies x-2:x
+$error
+
+quit

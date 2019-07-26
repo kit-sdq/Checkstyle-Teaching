@@ -1,0 +1,25 @@
+start X1V
+OK
+
+place X2R 1 X1V
+$error
+
+place A3R 1 X1V
+$error
+
+place S3R 1 X1V
+$error
+
+place E4R 1 X1V
+$error
+
+place I4R 1 X1V
+$error
+
+place A1R 0 X1V
+$error
+
+place A1R 7 X1V
+$error
+
+quit

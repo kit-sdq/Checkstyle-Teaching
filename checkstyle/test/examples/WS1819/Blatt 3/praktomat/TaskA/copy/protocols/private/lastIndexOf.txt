@@ -1,0 +1,36 @@
+lastIndexOf 2
+-1
+
+add 1
+
+lastIndexOf 1
+0
+
+add 2
+
+lastIndexOf 2
+1
+
+add 3
+
+add 4
+
+lastIndexOf 5
+-1
+
+add 5
+
+add 6
+
+add 7
+
+lastIndexOf 1
+0
+
+add 8
+
+add 9
+
+add 10
+
+quit

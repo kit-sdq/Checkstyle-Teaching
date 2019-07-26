@@ -1,0 +1,34 @@
+create programmieren
+OK
+
+add programmieren;ufaed;28
+OK
+
+add programmieren;ufate;12
+OK
+
+add programmieren;ulapw;35
+OK
+
+add programmieren;uwbsx;17
+OK
+
+add programmieren;uwbsz;23
+OK
+
+credits programmieren;ufaed
+28
+
+credits programmieren;ufate
+12
+
+credits programmieren;ulapw
+35
+
+credits programmieren;uwbsx
+17
+
+credits programmieren;uwbsz
+23
+
+quit

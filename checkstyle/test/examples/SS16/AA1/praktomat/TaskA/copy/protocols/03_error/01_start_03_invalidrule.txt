@@ -1,0 +1,8 @@
+
+start FOO
+$error
+
+start barrier
+$error
+
+quit

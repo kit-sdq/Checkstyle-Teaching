@@ -1,0 +1,4 @@
+rowprint a
+$error
+
+quit

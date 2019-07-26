@@ -1,0 +1,204 @@
+\documentclass{sdqassignment}
+
+\lecture{Programmieren}
+\semester{Sommersemester 2019}
+\lecturer{Prof.\,Dr.\,Ralf H. Reussner}
+\group{Software Design and Quality (SDQ)}
+\ilias{https://sdqweb.ipd.kit.edu/wiki/Programmieren}
+\mail{programmieren-vorlesung@ipd.kit.edu}
+\assignment{Übungsblatt 5}
+\points{20 Punkte}
+\releasedate{19.06.2019, ca.\,13:00 Uhr}
+\praktomatdate{26.06.2019, 13:00 Uhr}
+\duedate{04.07.2019, 06:00 Uhr}
+\version{Version 1.0}
+
+\begin{document}
+
+\hinweise{5}[\lstinlinejava{java.lang}, \lstinlinejava{java.io} und \lstinlinejava{java.util}]
+
+\section*{Abgabemodalitäten}
+Die Praktomat"=Abgabe wird am \textbf{Mittwoch, den 26.06.2019 um 13:00 Uhr}, freigeschaltet. Achten Sie unbedingt darauf, Ihre Dateien im Praktomaten bei der richtigen Aufgabe vor Ablauf der Abgabefrist hochzuladen.
+\begin{itemize}
+    \item Geben Sie Ihre Klassen zu Aufgabe A als \texttt{*.java}-Dateien ab.
+\end{itemize}
+
+\terminalinfo
+
+\newpage
+
+\task{Aussagenlogik}{20}
+Aussagenlogische Formeln bestehen aus einer Menge von Variablen, die mittels aussagenlogischer Operatoren wie $\land$ (\enquote{Und}), $\lor$ (\enquote{Oder}) bzw. $\lnot$ (\enquote{Nicht}) verknüpft sind. Variablen können dabei die Wahrheitswerte $0$ (\enquote{Falsch}) oder $1$ (\enquote{Wahr}) annehmen.
+
+Kennt man eine vollständige Belegung der Variablen (d.h. eine Zuweisung jeder Variablen zu $0$ oder $1$), die in einer aussagenlogischen Formel vorkommen, so kann man den Wahrheitwert der gesamten Formel unter Zuhilfenahme von Wahrheitstafeln ermitteln. Die Wahrheitstafeln für die Booleschen Operatoren sind in Abbildung~\ref{wahrheitstafel} dargestellt. Ausgehend von den Variablen lassen sich damit zunehmend größere Teilformeln evaluieren, bis die gesamte Formel ausgewertet ist.
+
+Eine aussagenlogische Formel ist \textit{erfüllt}, wenn sie unter einer gegebenen Variablenbelegung zu \enquote{Wahr} auswertet. Eine aussagenlogische Formel ist \textit{erfüllbar}, wenn eine Variablenbelegung existiert, die die Formel \textit{erfüllt}. Existiert keine solche erfüllende Belegung nennt man die Formel \textit{unerfüllbar}.
+
+\begin{figure}[hb]
+  \begin{minipage}{.3\linewidth}
+    \centering
+    \begin{tabular}{cc|c}
+      $a$ & $b$ & $a \land b$ \\
+      \hline
+      $0$ & $0$ & $0$ \\
+      $0$ & $1$ & $0$ \\
+      $1$ & $0$ & $0$ \\
+      $1$ & $1$ & $1$
+    \end{tabular}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.3\linewidth}
+    \centering
+    \begin{tabular}{cc|c}
+      $a$ & $b$ & $a \lor b$ \\
+      \hline
+      $0$ & $0$ & $0$ \\
+      $0$ & $1$ & $1$ \\
+      $1$ & $0$ & $1$ \\
+      $1$ & $1$ & $1$
+    \end{tabular}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{.3\linewidth}
+    \centering
+    \begin{tabular}{c|c}
+      $a$ & $\lnot a$ \\
+      \hline
+      $0$ & $1$ \\
+      $1$ & $0$
+    \end{tabular}
+  \end{minipage}
+
+  \caption{Wahrheittafeln für elementare logische Operatoren $\land$ (\enquote{Und}), $\lor$ (\enquote{Oder}) bzw. $\lnot$ (\enquote{Nicht})}
+  \label{wahrheitstafel}
+\end{figure}
+
+
+\subsection{Klauseldarstellung}
+
+Häufig wird eine aussagenlogische \textbf{Formel} als Menge von Klauseln dargestellt. Eine \textbf{Klausel} ist ihrerseits eine Menge von Literalen. Ein \textbf{Literal} ist entweder eine \textbf{Variable} oder die Negation einer Variablen. Logisch betrachtet ist eine Klauselmenge eine andere Darstellung für eine Konjunktion (\enquote{Und}"=Verknüpfung) von Disjunktionen (\enquote{Oder}"=Verknüpfungen). In \cref{klauselform} finden Sie ein paar Beispiele. Man erkennt leicht, dass eine Formel, die in Klauselform vorliegt, genau dann \textit{erfüllt} ist, wenn in jeder Klausel mindestens ein Literal \textit{erfüllt} ist.
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{c|c}
+    Formel & Klauseldarstellung \\
+    \hline
+    $(a \lor b) \land \lnot a \land (\lnot b \lor c)$ & $\{ \{ a, b \}, \{ \lnot a \}, \{ \lnot b, c \} \}$ \\
+    $(a \lor b \lor c) \land (\lnot a \lor b \lor c) \land (\lnot b \lor d)$ & $\{ \{ a, b, c \}, \{\lnot a, b, c\}, \{ \lnot b, d \} \}$ \\
+  \end{tabular}
+  \caption{Beispiele für Formeln in Klauseldarstellung}
+  \label{klauselform}
+\end{table}
+
+\subsection{Resolution}
+
+In der Praxis ist man oft daran interessiert, ob eine aussagenlogische Formel \textit{erfüllbar} ist. Dieses \enquote{Erfüllbarkeitsproblem} der Aussagenlogik ist eines der prominentesten und zugleich schwersten Probleme der Informatik. Es gehört zu einer Problemklasse, die man als NP"=vollständige Probleme bezeichnet. In der Verifikation von Hard- und Software spielt das Erfüllbarkeitsproblem der Aussagenlogik auch in der Praxis eine entscheidende Rolle.
+
+Resolution ist ein Entscheidungsverfahren, bei dem eine Formel, die in Klauselform vorliegt, automatisiert so umgeformt wird, dass man direkt ablesen kann, ob für diese Formel eine erfüllende Belegung existiert oder nicht.
+
+Hierzu definieren wir den Resolutionsoperator $\circ$, der zwei Klauseln als Eingabe erhält. Gegeben seien zwei Klauseln $C_1$ und $C_2$ und eine Variable $v$, so dass $v \in C_1$ und $\lnot v \in C_2$. Mittels Resolution erhält man die Resolvente $R = C_1 \circ C_2$ folgendermaßen: $R = C_1 \circ C_2 = (C_1 \setminus \{v\}) \cup (C_2 \setminus \{\lnot v\})$. In \cref{resolution} finden Sie einige Anwendungs"=Beispiele für den Resolutionsoperator. Beachten Sie, dass pro Resolutionsschritt maximal \textbf{eine} Variable eliminiert wird. Manchmal gibt es für zwei Klauseln mehrere mögliche Resolventen, je nachdem an welcher Variable man resolviert. In einem solchen Fall ist jede dieser Resolventen eine Tautologie (Siehe \cref{sec:tautology}).
+
+\begin{figure}[ht]
+  \begin{align*}
+    \{a, b\} \circ \{\lnot a, b\} &= \{b\} \\
+    \{a, c\} \circ \{\lnot a, b\} &= \{b, c\} \\
+    \{a\} \circ \{\lnot a\} &= \emptyset \\
+    \{a, b\} \circ \{\lnot a, \lnot b\} &= \{b, \lnot b\}
+  \end{align*}
+  \caption{Beispiele für Resolution}
+  \label{resolution}
+\end{figure}
+
+Die Resolvente $C_1 \circ C_2$ ist eine logische Konsequenz aus $C_1 \land C_2$. Das bedeutet, dass wenn eine Klauselmenge $K$ mit $\{ C_1, C_2 \} \subseteq K$ erfüllbar ist, dann ist auch $C_1 \circ C_2$ erfüllbar. Das bedeutet auch, dass eine unerfüllbare Resolvente die Unerfüllbarkeit der ganzen Klauselmenge beweist. Nun ist die einzige unerfüllbare Resolvente genau die leere Klausel $\emptyset$. Lässt sich nach einer endlichen Zahl von Resolutionsschritten die leere Klausel resolvieren, d.h. $R = \emptyset$, dann ist die Formel unerfüllbar. Lässt sich die leere Menge nicht resolvieren, so ist die Klauselmenge erfüllbar. Resolution ist vollständig, d.h. aus jeder unerfüllbaren Klauselmenge lässt sich mittels endlich vielen Resolutionsschritten die leere Klausel bilden.
+
+\subsection{Algorithmus Bucket"=Elimination}
+\label{sec:algo}
+
+Mit Bucket"=Elimination bezeichnet man ein systematisches Verfahren, bei dem solange Resultion angewandt wird, bis (bezüglich einer gegebenen Ordnung) jede mögliche Resolvente bzw. die leere Klausel gebildet wurde. Der Algorithmus ist Teil eines Verfahrens, das 1960 von Davis \& Putnam vorgestellt wurde und wird daher auch oft als DP"=Resolution bezeichnet.
+
+Dabei werden die Klauseln nach einer vorher festgelegten Variablenordnung so in Buckets (Behälter oder Mengen) sortiert, dass es für jede Variable $v$ einen Bucket gibt, in dem die Klauseln enthalten sind, deren \textit{kleinste} Variable $v$ ist. Wir nennen $v$ die determinierende Variable ihres Buckets.
+
+Die Buckets werden dann entsprechend der Variablenordnung abgearbeitet. In jedem Bucket werden nun alle Resolutionsschritte ausgeführt, die an der determinierenden Variablen möglich sind, und die Resolventen werden in die passenden Buckets einsortiert. Lässt sich so die leere Klausel ableiten, ist die Formel nicht erfüllbar. Ansonsten gibt es eine Lösung für die Klauselmenge. \Cref{pseudocode} stellt den Algorithmus mithilfe von Pseudocode dar.
+
+\begin{figure}[ht]
+\lstinputtxt{pseudocode}
+\caption{Bucket"=Elimination Pseudocode}
+\label{pseudocode}
+\end{figure}
+
+
+Überlegen Sie sich geeignete Datenstrukturen, um das oben beschriebene Erfüllbarkeitsproblem für aussagenlogische Formeln in Klauselform zu erfassen und implementieren Sie den oben angegebenen Algorithmus. Verwenden Sie für die Buckets die natürliche Ordnung der Variablennamen, wie sie sich aus dem Eingabeformat ergibt (siehe Teil~\ref{sec:io}).
+
+\subsubsection{Subsumption}
+Eine Klausel $C_1$ \emph{subsumiert} eine Klausel $C_2$ falls gilt $C_1 \subseteq C_2$. So gilt z.B., dass \{a,b\} die Klausel \{a,b,c\} subsumiert. In diesem Fall kann $C_2$ aus einer gegebenen Klauselmenge gelöscht werden, da sie eine logische Konsequenz von $C_1$ ist. Schreiben Sie den Algorithmus so um, dass bei jedem Einfügen einer Klausel in einen Bucket (sowohl im Initialisierungsschritt als auch nach jeder Resolution) ein Subsumptions-Check durchgeführt wird, der alle subsumierten Klauseln (im aktuellen Bucket) sofort löscht.
+
+\subsubsection{Tautologien}
+\label{sec:tautology}
+Eine Klausel $C$ ist eine Tautologie, falls es eine Variable $v$ gibt, so dass $\{v, \lnot v\} \subseteq C$. Eine solche Klausel ist immer wahr, und kann sofort gelöscht werden, da sie für die Resolution nicht benötigt wird. Schreiben Sie den Algorithmus so um, dass vor jedem Einfügen einer Klausel in einen Bucket (sowohl im Initialisierungsschritt als auch nach jeder Resolution) ein Tautologie"=Check durchgeführt wird, so dass tautologische Klauseln nicht hinzugefügt werden.
+
+\subsection{Implementierung}
+\subsubsection{Eingabe}
+\label{sec:io}
+Ihr Programm erhält als Eingabe ein Kommandozeilenargument, das einen Pfad auf eine Datei enthält. Verwenden Sie die Methode \lstinlinejava{Terminal.readFile(String path)} der Klasse \lstinlinejava{Terminal}, um den Inhalt einer Datei zu lesen. Diese Methode hat als Rückgabewert ein \lstinlinejava{String[]}, das die einzelnen Zeilen der Datei \lstinlinejava{path} enthält.
+
+Diese Datei enthält eine Klauselmenge im sogenannten DIMACS"=Format. Das DIMACS"=Format lässt sich einfach Zeilenweise interpretieren. Eine DIMACS"=Datei kann drei verschiedene Zeilentypen enthalten: genau eine \enquote{p}"=Zeile, beliebig viele \enquote{c}"=Zeilen und beliebig viele Klauseldefinitionen.
+
+\enquote{c}"=Zeilen beginnen mit einem \enquote{c}, sind Kommentarzeilen und können beim Einlesen ignoriert werden. Eine \enquote{p}"=Zeile beginnt mit \enquote{p cnf } gefolgt von der Gesamtzahl der Variablen und Klauseln. Alle anderen Zeilen enthalten Klauseln. Klauseldefinitionen dürfen erst nach der \enquote{p}"=Zeile auftauchen. Eine Klausel enthält Leerzeichen"=separiert Literale, wobei einen positive Zahl $i$ für das nicht"=negierte Literal der Variablen mit Nummer $i$ steht und eine negative Zahl für das negierte Literal der Variablen mit Nummer $i$. Die Variablennummerierung beginnt bei $1$ und darf von Ihnen als lückenlos angenommen werden. Eine Klauselzeile wird immer mit einer $0$ abgeschlossen. Die DIMACS"=Datei in \cref{dimacs} steht so für die Klauselmenge $\{\{x_1, x_2\}, \{\lnot x_1\}, \{ \lnot x_2, x_3 \} \}$.
+
+\begin{figure}[ht]
+\lstinputtxt{DIMACS}
+\caption{Beispiel für eine DIMACS"=Datei}
+\label{dimacs}
+\end{figure}
+
+\subsubsection{Ausgabe}
+In der Ausgabe sollen Sie die einzelnen Resolutionsschritte dokumentieren. Bevor Sie einen Bucket $i$ bearbeiten, geben Sie die Zeile \lstinlinetxt{Processing Bucket i} auf der Konsole aus. Für jeden Resolutionsschritt $C_1 \circ C_2 = R$ mit $C_1 = \{r, l_{10}, \dots, l_{1n}\}$ und $C_2 = \{\lnot r, l_{20}, \dots, l_{2m}\}$ geben Sie bitte folgende Zeile auf der Konsole aus (wobei die Sortierung der Literale in der Resolventen nicht erhalten bleiben muss): $$\mathtt{ \{r, l_{10}, \dots, l_{1n}\} * \{-r, l_{20}, \dots, l_{2m}\} = \{l_{10}, \dots, l_{1n}, l_{20}, \dots, l_{2m}\} }$$ Falls ihr Programm zu dem Schluss kommt, dass die Eingabe erfüllbar ist, soll \lstinlinetxt{SAT} ausgegeben werden. Falls die leere Klausel erzeugt wird soll \lstinlinetxt{UNSAT} ausgegeben werden (jeweils auf einer eigenen Zeile).
+
+\subsubsection{Fehlerbehandlung}
+
+Überprüfen Sie das Format der Eingabedatei und geben Sie eine aussagekräftige Fehlermeldung, die mit \enquote{Error,} beginnt aus, falls die angegebenen Spezifikationen nicht erfüllt sind. Auf keinen Fall soll Ihr Programm eine Exception werfen. Dies wird als Absturz gewertet und führt zu Punktabzug.
+
+\subsubsection{Hinweise}
+Achten Sie darauf, die Funktionalität auf die passenden Klassen zu verteilen, und schreiben Sie insbesondere kein monolithisches Programm.
+
+\subsection{Großes Beispiel}
+\subsubsection{Eingabedatei}
+\lstinputtxt{Eingabedatei}
+
+\subsubsection{Eingabe für Algorithmus}
+Klauselmenge: $\{ \{1,2,3\}, \{\lnot 1,2,5\}, \{\lnot 2,3,4\}, \{\lnot 3\} \}$ \\
+Variablenordnung: $1 < 2 < 3 < 4 < 5$
+
+\subsubsection{Initialisierung}
+Bucket 1: $\{ \{1,2,3\}, \{\lnot 1,2,5\} \}$ \\
+Bucket 2: $\{ \{ \lnot 2,3,4\} \}$ \\
+Bucket 3: $\{ \{ \lnot 3\} \}$
+
+\subsubsection{Resolution in Bucket 1}
+Bucket 1: $\{ \{1,2,3\}, \{\lnot 1,2,5\} \}$ \\
+Bucket 2: $\{ \{ \lnot 2,3,4\}, \{2,3,5\} \}$ \\
+Bucket 3: $\{ \{ \lnot 3\} \}$
+
+\subsubsection{Resolution in Bucket 2}
+Bucket 1: $\{ \{1,2,3\}, \{\lnot 1,2,5\} \}$ \\
+Bucket 2: $\{ \{ \lnot 2,3,4\}, \{2,3,5\} \}$ \\
+Bucket 3: $\{ \{ \lnot 3\}, \{3,4,5\} \}$
+
+\subsubsection{Resolution in Bucket 3}
+Bucket 1: $\{ \{1,2,3\}, \{\lnot 1,2,5\} \}$ \\
+Bucket 2: $\{ \{ \lnot 2,3,4\}, \{2,3,5\} \}$ \\
+Bucket 3: $\{ \{ \lnot 3\}, \{3,4,5\} \}$ \\
+Bucket 4: $\{ \{4,5\} \}$
+
+\subsubsection{Zusammenfassung der Ausgabe}
+\lstinlinetxt{Processing Bucket 1} \\
+$\mathtt{\{1,2,3\} * \{-1,2,5\} = \{2,3,5\}}$ \\
+\lstinlinetxt{Processing Bucket 2} \\
+$\mathtt{\{ -2,3,4\} * \{2,3,5\} = \{3,4,5\}}$ \\
+\lstinlinetxt{Processing Bucket 3} \\
+$\mathtt{\{ -3\} * \{3,4,5\} = \{4,5\}}$ \\
+\lstinlinetxt{Processing Bucket 4} \\
+\lstinlinetxt{Processing Bucket 5} \\
+\lstinlinetxt{SAT}
+
+\end{document}

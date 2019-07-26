@@ -1,0 +1,28 @@
+checksum AAA111111111
+$error
+
+checksum ZZA99999999
+$error
+
+checksum A1111111112
+$error
+
+checksum ÜA111111311
+$error
+
+checksum AA1111213111
+$error
+
+checksum AA§12121311
+$error
+
+checksum AA1!1111611
+$error
+
+checksum aA111121611
+$error
+
+checksum AA11--21611
+$error
+
+quit

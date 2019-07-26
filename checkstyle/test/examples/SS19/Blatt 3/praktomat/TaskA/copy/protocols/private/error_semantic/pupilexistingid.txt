@@ -1,0 +1,10 @@
+teacher a
+
+pupil b 123456
+
+pupil c 123456
+$error
+
+pupil c 123457
+
+quit

@@ -1,0 +1,22 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-olympic-sport biathlon;verfolgung
+OK
+
+add-ioc-code 111;ger;deutschland;1900
+OK
+
+add-athlete 1235;max;mustermann;deutschland;biathlon;verfolgung
+OK
+
+logout-admin
+OK
+
+add-competition 1235;2018;deutschland;biathlon;verfolgung;1;0;0
+$error
+
+quit

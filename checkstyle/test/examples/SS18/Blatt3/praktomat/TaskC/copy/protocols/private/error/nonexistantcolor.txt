@@ -1,0 +1,12 @@
+$respect
+Versuch 1:
+
+rot gelb gruen orange
+$error
+Versuch 1:
+
+rot gelb braun violett
+$error
+Versuch 1:
+
+quit

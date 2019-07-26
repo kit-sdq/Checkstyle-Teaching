@@ -1,0 +1,19 @@
+addAssembly A=2:B;1:b
+OK
+
+addAssembly B=1:D;2:a
+OK
+
+addAssembly b=1:D;2:e
+OK
+
+printAssembly A
+B:2;b:1
+
+printAssembly B
+D:1;a:2
+
+printAssembly b
+D:1;e:2
+
+quit

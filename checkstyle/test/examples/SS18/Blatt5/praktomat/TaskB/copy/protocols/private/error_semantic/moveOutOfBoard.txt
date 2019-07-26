@@ -1,0 +1,4 @@
+move blue;4;5
+$error
+
+quit

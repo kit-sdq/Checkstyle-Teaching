@@ -1,0 +1,34 @@
+add-admin peter;oettig;peet1993;notmyrealpw
+OK
+
+login-admin peet1993;notmyrealpw
+OK
+
+add-ioc-code 111;arg;argentinien;1920
+OK
+
+add-ioc-code 112;bhu;bhutan;1984
+OK
+
+add-ioc-code 113;bul;bulgarien;1896
+OK
+
+add-ioc-code 114;chi;chile;1896
+OK
+
+add-ioc-code 115;cze;tschechien;1992
+OK
+
+add-ioc-code 116;ecu;ecuador;1924
+OK
+
+add-ioc-code 117;esp;spanien;1900
+OK
+
+add-ioc-code 118;ger;deutschland;1992
+OK
+
+add-ioc-code 119;can;kanada;1900
+OK
+
+quit

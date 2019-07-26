@@ -1,0 +1,37 @@
+addAssembly a=2:b;3:c
+OK
+
+addPart a+2:d;3:e
+$error
+
+addPart a+2:d
+OK
+
+addPart a+2:e
+OK
+
+addPart a+2:f
+OK
+
+addPart a+2:g
+OK
+
+addAssembly b=2:f;2:g
+OK
+
+addAssembly c=2:d;2:e
+OK
+
+addAssembly d=2:f;2:g
+OK
+
+addAssembly e=2:d
+OK
+
+getComponents a
+f:54;g:54
+
+getAssemblies a
+d:24;e:8;c:3;b:2
+
+quit

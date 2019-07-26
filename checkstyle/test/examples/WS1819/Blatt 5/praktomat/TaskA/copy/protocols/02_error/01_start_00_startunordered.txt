@@ -1,0 +1,20 @@
+
+start 1,0,2,3;$baseblue;$basegreen;$baseyellow
+$error
+
+start SR,AR,2,3;$baseblue;$basegreen;$baseyellow
+$error
+
+start AR,2,3,SR;$baseblue;$basegreen;$baseyellow
+$error
+
+start SR,SR,BR,AR;$baseblue;$basegreen;$baseyellow
+$error
+
+start AR,BR,CR,36;$baseblue;$basegreen;$baseyellow
+$error
+
+start 0,1,2,3;1,10,20,30;$basegreen;$baseyellow
+$error
+
+quit

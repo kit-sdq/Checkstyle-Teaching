@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+          "-//Puppy Crawl//DTD Check Configuration 1.1//EN"
+          "http://www.puppycrawl.com/dtds/configuration_1_1.dtd">
+
+<module name="Checker">
+    <module name="com.puppycrawl.tools.checkstyle.TreeWalker">
+        <module name="edu.kit.checkstyle.checks.metrics.AttributesPerClassCheck"/>
+<!--        <module name="edu.kit.checkstyle.checks.metrics.MaxNestedBlockDepthCheck"/> -->
+        <module name="edu.kit.checkstyle.checks.metrics.MethodsPerClassCheck"/>
+        <module name="edu.kit.checkstyle.checks.metrics.NumberOfArgumentsCheck"/>
+<!--        <module name="edu.kit.checkstyle.checks.metrics.NumberOfClassesCheck"/> -->
+<!--        <module name="edu.kit.checkstyle.checks.metrics.NumberOfMethodsPerClassCheck"/> -->
+        <module name="edu.kit.checkstyle.checks.metrics.NumberOfStatementsPerMethodCheck"/>
+    </module>
+</module>
+

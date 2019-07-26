@@ -1,0 +1,4 @@
+move a
+$error
+
+quit

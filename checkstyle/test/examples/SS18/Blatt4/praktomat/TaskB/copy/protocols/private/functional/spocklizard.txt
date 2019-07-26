@@ -1,0 +1,8 @@
+$respect
+RPSSL 1:
+
+spock
+0,1,1
+RPSSL 2:
+
+quit

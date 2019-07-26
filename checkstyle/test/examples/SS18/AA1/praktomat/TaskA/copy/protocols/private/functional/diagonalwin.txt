@@ -1,0 +1,44 @@
+throwin 4
+OK
+
+throwin 0
+OK
+
+throwin 6
+OK
+
+throwin 5
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 7
+OK
+
+throwin 7
+OK
+
+throwin 7
+P1 wins
+
+print
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** **
+** ** ** ** ** ** ** P1
+** ** ** ** ** ** P1 P2
+** ** ** ** ** P1 P2 P1
+P2 ** ** ** P1 P2 P1 P2
+
+quit

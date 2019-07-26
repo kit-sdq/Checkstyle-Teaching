@@ -1,0 +1,10 @@
+ 
+$error
+
+fool
+$error
+
+escpe
+$error
+
+quit

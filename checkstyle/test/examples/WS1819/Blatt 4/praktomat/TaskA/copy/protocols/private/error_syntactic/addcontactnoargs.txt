@@ -1,0 +1,10 @@
+add-contact
+$error
+
+add-contact 
+$error
+
+add-contact    
+$error
+
+quit

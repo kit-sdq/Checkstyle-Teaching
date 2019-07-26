@@ -1,0 +1,13 @@
+players 
+$error
+
+players  
+$error
+
+players a
+$error
+
+players 2
+$error
+
+quit

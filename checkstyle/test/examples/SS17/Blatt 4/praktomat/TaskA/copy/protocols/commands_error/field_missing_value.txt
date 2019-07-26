@@ -1,0 +1,10 @@
+field ,2
+$error
+
+field 2,
+$error
+
+field ,
+$error
+
+quit

@@ -1,0 +1,16 @@
+token 
+$error
+
+token  
+$error
+
+token a
+$error
+
+token 1
+$error
+
+token 1 + a
+$error
+
+quit

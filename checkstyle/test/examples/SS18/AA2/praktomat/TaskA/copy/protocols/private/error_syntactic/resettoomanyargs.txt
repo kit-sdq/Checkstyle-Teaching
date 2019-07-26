@@ -1,0 +1,10 @@
+create programmieren
+OK
+
+reset programmieren;1
+$error
+
+reset programmieren;swt;os
+$error
+
+quit

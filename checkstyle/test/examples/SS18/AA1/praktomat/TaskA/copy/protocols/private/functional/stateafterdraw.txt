@@ -1,0 +1,202 @@
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 7
+OK
+
+throwin 6
+OK
+
+throwin 5
+OK
+
+throwin 4
+OK
+
+throwin 3
+OK
+
+throwin 2
+OK
+
+throwin 1
+OK
+
+throwin 0
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 0
+OK
+
+throwin 1
+OK
+
+throwin 2
+OK
+
+throwin 3
+OK
+
+throwin 4
+OK
+
+throwin 5
+OK
+
+throwin 6
+OK
+
+throwin 7
+OK
+
+throwin 7
+OK
+
+throwin 6
+OK
+
+throwin 5
+OK
+
+throwin 4
+OK
+
+throwin 3
+OK
+
+throwin 2
+OK
+
+throwin 1
+OK
+
+throwin 0
+draw
+
+state 0;0
+P2
+
+state 7;7
+P2
+
+state 4;3
+P1
+
+quit

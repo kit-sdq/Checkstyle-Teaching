@@ -1,0 +1,19 @@
+list-solutions 123 456
+$error
+
+assignment Schwieriges_Mathe-Abi
+assignment id(1)
+
+list-solutions 1 name
+$error
+
+list-solutions 1 2
+$error
+
+list-solutions 1 
+$error
+
+list-solutions 1  
+$error
+
+quit

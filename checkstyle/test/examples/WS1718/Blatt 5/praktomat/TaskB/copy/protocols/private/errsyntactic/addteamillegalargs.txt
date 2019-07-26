@@ -1,0 +1,4 @@
+add-team a;NAME
+$error
+
+quit

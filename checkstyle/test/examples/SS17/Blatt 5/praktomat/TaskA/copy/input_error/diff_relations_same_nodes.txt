@@ -1,0 +1,2 @@
+CentOS5 (id=105) contained-in CentOS6 (id=106)
+CentOS5 (id=105) successor-of CentOS6 (id=106)

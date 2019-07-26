@@ -1,0 +1,29 @@
+add-contact <name>,<nameOfContact>,<email>,<phone>
+- Darf davon was nicht vorhanden sein? 
+- Format für email und phone ist nicht spezifiziert
+- Generell ist name bzw nameOfContact nicht spezifiziert (insbesondere fehlt die Einschränkung ob oder ob keine Kommas enthalten sein dürfen)
+- Wie siehts mit der Einmaligkeit von Kontakten aus?
+- print-addressbook Format nicht vollständig spezifiziert, Klammerung der einzelnen Kontakte, Zeilenumbrüche ja/nein
+- Was genau heißt der Kontakt existiert schon? Was muss alles gleich sein?
+- Wenn löschen eine ID vorraussetzt, in der Aufgabenstellung aber keine spezielle Erstellung außer eindeutig gefordert wird, können wir remove nicht testen (entweder nameOfContact verwenden, den dann auch als unique voraussetzen bzgl Kontakt existiert schon? oder Vergabe der IDs vorgeben)
+- Generell bezüglich der ID, darf oder muss sie wiederverwendet werden etc. Mein Vorschlag einfach wieder ein static counter (Der dann auch über alle Adressbücher gleich ist oder einen pro Adressbuch)
+- Für den Fall, dass noch keine Kontakte im Adressbuch gespeichert sind, findet keine Ausgabe statt. Keine Ausgabe heißt leere Zeile oder wirklich nichts?
+
+B.1
+P1 wins, draw, etc. nicht als Ausgabe hervorgehoben mit Hintergrund
+
+Der turn-left-Befehl
+- "nach links drehen" ist eventuell nicht eindeutig
+- numberOfQuadrant hat keine Größenangabe 0<x<5
+- Nachdem alle Spielfelder auf dem Spielbrett anhand eines vorherigen Spielzuges belegt sind. Es existieren
+somit keine freien Felder auf dem Spielbrett mehr - Macht diese Einschränkung Sinn? Wäre es nicht spannend wenn man diese Option weiter hat und sich so noch nachdem alle Steine platziert sind einen Sieg sichern kann?
+- Gleiches auch für turn-right
+
+print state token können immer aufgerufen werden, auch nach Ende des Spiels und ändern nicht den aktiven Spieler
+
+- Die jeweiligen Koordinaten werden jeweils von unten nach oben und pro Zeile von links nach rechts
+ausgegeben. - Von unten nach oben heißt von 7 nach 0?
+
+Trennzeichen bei A Kommas und bei B Semikola?
+
+Keine Beispielinteraktionen?

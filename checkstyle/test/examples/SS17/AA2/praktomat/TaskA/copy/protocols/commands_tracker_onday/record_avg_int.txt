@@ -1,0 +1,11 @@
+add a avg
+Added a with aggregation avg.
+
+record a 12
+a: <12.00>
+
+record a 6
+a: <9.00>
+
+quit
+Quit (Day 0, week 1)
