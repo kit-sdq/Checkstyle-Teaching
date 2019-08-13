@@ -277,8 +277,8 @@ class CompilerChecker(Checker):
         # print compiler output
         if len(stdout) + len(stderr) != 0:
             with self.document.pre({'style': 'font-family:monospace;color:red;'}):
-                self.document.cdata(stdout)
-                self.document.cdata(stderr)
+                self.document.cdata(stdout.decode())
+                self.document.cdata(stderr.decode())
 
         # and evaluate the return code
         if compiler.returncode != 0:

@@ -107,7 +107,7 @@ def run_single_test(checker, description):
             path = os.path.join("sandbox", filename)
             descriptor = open(path, 'w')
             tempfiles.enter_context(descriptor)
-            descriptor.write(content)
+            descriptor.write(content.decode())
             descriptor.flush()
 
             # show contents of temporary files (except for protocol files)

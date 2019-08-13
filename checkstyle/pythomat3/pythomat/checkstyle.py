@@ -141,7 +141,7 @@ def checkstyle(checker, filenames, config):
         raise ConfigurationError("Return code of checkstyle was " + str(returncode))
 
     # split up stdout into non-empty lines
-    messages = [line for line in stdout.splitlines() if len(line.strip()) != 0]
+    messages = [line.decode('latin-1') for line in stdout.splitlines() if len(line.strip()) != 0]
 
     # stop early of we don't have anything to report
     if len(messages) == 0:
