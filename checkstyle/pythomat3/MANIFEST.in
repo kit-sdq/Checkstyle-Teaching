@@ -1,6 +1,0 @@
-include CHANGES.txt
-include README.txt
-include examples/*
-include examples/nqueens/*
-include examples/media/*
-include examples/enigma/*
