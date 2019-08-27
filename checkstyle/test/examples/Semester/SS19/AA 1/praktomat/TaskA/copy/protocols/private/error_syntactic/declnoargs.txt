@@ -1,0 +1,10 @@
+a = 
+$error
+
+a = []
+$error
+
+a =
+$error
+
+quit

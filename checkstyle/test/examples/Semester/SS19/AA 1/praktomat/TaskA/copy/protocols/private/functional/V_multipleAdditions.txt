@@ -1,0 +1,10 @@
+a = (3 + 1i)
+a = (3 + 1i)
+
+a = a + a + a
+a = (9 + 3i)
+
+a = a + a + a + a + a + a + a + a + a + a + a + a + a + a + a
+a = (135 + 45i)
+
+quit

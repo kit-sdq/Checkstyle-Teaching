@@ -1,0 +1,28 @@
+a = (1 + 1i) = (1 + 1i)
+$error
+
+a = ()
+$error
+
+a = (1)
+$error
+
+a = (1i)
+$error
+
+a = [1 + 1i]
+$error
+
+a = {1 + 1i}
+$error
+
+a = 1 + 1i
+$error
+
+a = 01 + 1i
+$error
+
+a = 1 + 01i
+$error
+
+quit

@@ -1,0 +1,19 @@
+quit 
+$error
+
+quit  
+$error
+
+quit x
+$error
+
+quit 2
+$error
+
+quit 1;2
+$error
+
+quit = (1 + 2i)
+$error
+
+quit

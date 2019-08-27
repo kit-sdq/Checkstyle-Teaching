@@ -1,0 +1,10 @@
+start X1V
+OK
+
+place X1R 2 X1V
+OK
+
+place X1V 6 X1V
+$error
+
+quit

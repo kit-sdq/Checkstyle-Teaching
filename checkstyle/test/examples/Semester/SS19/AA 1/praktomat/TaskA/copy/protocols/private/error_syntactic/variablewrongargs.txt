@@ -1,0 +1,16 @@
+a = (1 + 1i)
+a = (1 + 1i)
+
+a a
+$error
+
+a 
+$error
+
+a 123
+$error
+
+a   
+$error
+
+quit

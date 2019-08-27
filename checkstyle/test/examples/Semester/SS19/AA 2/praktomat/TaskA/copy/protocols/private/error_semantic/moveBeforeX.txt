@@ -1,0 +1,13 @@
+start X1V
+OK
+
+place I1R 2 X1V
+OK
+
+place I1V 6 X1V
+OK
+
+move I1R 3 X1V
+$error
+
+quit

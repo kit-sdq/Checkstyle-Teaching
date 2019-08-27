@@ -1,0 +1,37 @@
+start X1V
+OK
+
+place I1R 2 X1V
+OK
+
+place I1V 6 X1V
+OK
+
+place E1R 1 I1R
+OK
+
+place E1V 6 I1V
+OK
+
+place S2R 1 E1R
+OK
+
+pass
+OK
+
+place X1R 6 E1R
+OK
+
+move X1V 4 I1V
+$error
+
+pass
+OK
+
+move I1R 3 X1V
+$error
+
+move E1R 2 I1R 3 I1R 4 I1R
+$error
+
+quit
