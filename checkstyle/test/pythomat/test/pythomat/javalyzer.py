@@ -63,22 +63,23 @@ def run(files, filenames=None, packages=None, imports=None, classes=None, enums=
         java_files = [filename for filename in file_list if filename.lower().endswith(".java")]
 
         # check if the required jar files do exist
-        jars = ["checkstyle-teaching-1.0.jar"]#, "checkstyle-5.6-all.jar"]
-        for jar in jars:
-            if not os.path.isfile(jar):
-                raise ConfigurationError("Missing jar archive " + jar)
+       # jars = ["checkstyle-teaching-1.0.jar"]#, "checkstyle-5.6-all.jar"]
+       # for jar in jars:
+       #     if not os.path.isfile(jar):
+       #         raise ConfigurationError("Missing jar archive " + jar)
 
         # run checkstyle in lists mode on all java files
-        command_line = [java, "-classpath", ":".join(jars), "edu.kit.checkstyle.ListThings"] + java_files
-        process = subprocess.Popen(command_line, shell=False, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        stdout, stderr = process.communicate()
-        returncode = process.returncode
+       # command_line = [java, "-classpath", ":".join(jars), "edu.kit.checkstyle.ListThings"] + java_files
+       # process = subprocess.Popen(command_line, shell=False, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+       # stdout, stderr = process.communicate()
+       # returncode = process.returncode
 
-        if returncode != 0:
-            raise ConfigurationError("Return code of checkstyle was " + str(returncode) + "\n" + stdout + "\n" + stderr)
+        #if returncode != 0:
+        #    raise ConfigurationError("Return code of checkstyle was " + str(returncode) + "\n" + stdout + "\n" + stderr)
 
         # split the output
-        for line in stdout.decode().split("\n"):
+        '''
+        for line in stdout.split("\n"):
 
             # skip empty lines
             if len(line) == 0:
@@ -102,7 +103,7 @@ def run(files, filenames=None, packages=None, imports=None, classes=None, enums=
                 method_list.append(string.strip())
             else:
                 raise ConfigurationError("Checkstyle is probably not set up properly\n" + line)
-
+        '''
         if filenames:
             filename_defaults = {
                 'accept' : 'The file ${name} is accepted',

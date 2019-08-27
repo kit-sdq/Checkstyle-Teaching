@@ -1,14 +1,12 @@
-import re
 import os
 import shutil
 import subprocess
-import sys
 import zipfile
 
-from . import packager
-from pythomat.which import which
-from pythomat.contexts import InternalTimeoutGuard
 from pythomat.contexts import ExternalTimeoutException
+from pythomat.contexts import InternalTimeoutGuard
+from pythomat.which import which
+from . import packager
 
 
 class CheckerFailure(Exception):
@@ -36,6 +34,7 @@ class Checker(object):
     for display when the checker is run.
     """
 
+    # TODO see packager.py
     # each checker should also do the packaging for itself:
     # provide a 'package' method to place everything in pythomat
     # provide a 'run_packaged' method to use the pythomat packaged data
@@ -80,6 +79,9 @@ class Checker(object):
             with self.document.div({'class': 'passed'}):
                 self.document.cdata("Success")
 
+    def run(self):
+        raise NotImplementedError('Please implement run()')
+
 
 class SearchMainDummyChecker(Checker):
     """This is a dummy checker to signalize that the main method
@@ -88,13 +90,12 @@ class SearchMainDummyChecker(Checker):
 
 
 class FileCopyChecker(Checker):
-    """Copy files into the temporary directory."""
+    """Copy a file into the temporary directory."""
 
     def title(self):
         return "Copying file"
 
     def run(self):
-        '''Copy the file over to the temporary directory'''
         with self.document.div():
             self.document.cdata(self.arguments)
 
@@ -110,6 +111,7 @@ class FileCopyChecker(Checker):
 
         # relative paths are kept, unless they are to an outside directory
         directory = os.path.dirname(normpath)
+
         if directory == "..":
             target_directory = self.tempdir
         else:
@@ -126,19 +128,19 @@ class FileCopyChecker(Checker):
 
 
 class FileRemovalChecker(Checker):
-    """Copy files into the temporary directory."""
+    """Removes a file from the temporary directory."""
 
     def title(self):
         return "Removing file"
 
     def run(self):
-        '''Remove a file from the temporary directory'''
         with self.document.div():
             self.document.cdata(self.arguments)
 
-        fullPath = os.path.join(self.tempdir, self.arguments)
-        if os.path.exists(fullPath):
-            os.remove(fullPath)
+        full_path = os.path.join(self.tempdir, self.arguments)
+
+        if os.path.exists(full_path):
+            os.remove(full_path)
 
 
 class ExtractFileChecker(Checker):
@@ -148,7 +150,6 @@ class ExtractFileChecker(Checker):
         return "Extracting archive"
 
     def run(self):
-        """Extract a file from a zip archive"""
         with self.document.div():
             self.document.cdata(self.arguments)
 
@@ -205,7 +206,7 @@ class CheckstyleChecker(Checker):
         return "Checking style"
 
     def run(self):
-        '''Run checkstyle on the java files in the directory'''
+        """Run checkstyle on the java files in the directory"""
         with self.document.div():
             self.document.cdata("Skipped (currently not supported)")
 
@@ -223,7 +224,7 @@ class ZipDirectoryChecker(Checker):
         return "Copying zip file"
 
     def run(self):
-        '''Zip up the directory 'arguments' to a zip file in tempdir'''
+        """Zip up the directory 'arguments' to a zip file in tempdir"""
         basename = os.path.basename(self.arguments)
         zip_file = zipfile.ZipFile(self.tempdir + '/' + basename + ".zip", 'w')
         for content in [x for x in os.listdir(self.arguments) if not os.path.splitext(x)[1] == ".swp"]:
@@ -238,7 +239,6 @@ class CompilerChecker(Checker):
         return "Compiling"
 
     def run(self):
-        '''run the java compiler on all java files in the directory'''
         # find all java files
         java_files = []
         for directory, s, filenames in os.walk(self.tempdir):
@@ -296,7 +296,7 @@ def list_files_relative(directory):
 
 
 def create_temp_script(tempdir, src_name):
-    '''Copy the file src_name to dst_name and make it executable'''
+    """Copy the file src_name to dst_name and make it executable"""
     # TODO: we don't replace strings anymore, so a simple shutil.copy should suffice
     dst_name = tempdir + '/' + os.path.basename(src_name)
     with open(src_name, 'r') as src:
@@ -336,10 +336,9 @@ class ScriptChecker(Checker):
         return "Running " + self.arguments
 
     def run(self):
-        '''Run a single script checker'''
-        error = None
+        """Run a single script checker"""
 
-        if not ":" in self.arguments:
+        if ":" not in self.arguments:
             script = create_temp_script(self.tempdir, self.arguments)
         else:
             script = unzip_script(self.tempdir, self.arguments)
@@ -349,21 +348,23 @@ class ScriptChecker(Checker):
         if ext == 'py':
             command = [script]
         else:
+            # TODO ambiguous
             command = ['python', script]
 
         all_files = list_files_relative(self.tempdir)
 
         process = subprocess.Popen(command + all_files, cwd=self.tempdir, stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE)
+
         try:
             with InternalTimeoutGuard(60, process):
                 stdout, stderr = process.communicate()
-        except ExternalTimeoutException as e:
+        except ExternalTimeoutException:
             raise SubmissionFailure("Timeout occured")
 
         with self.document.div():
-            self.document.raw(stdout.decode())
-            self.document.raw(stderr.decode())
+            self.document.raw(stdout)
+            self.document.raw(stderr)
 
         if process.returncode != 0:
             raise SubmissionFailure("Return code should have been 0 but was " + str(process.returncode))

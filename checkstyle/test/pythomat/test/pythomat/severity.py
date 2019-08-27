@@ -45,7 +45,7 @@ class Severity:
     @staticmethod
     def iterate():
         """Iterate over all Severity values."""
-        return  list(range(Severity.SUCCESS, Severity.CRASH+1))
+        return  range(Severity.SUCCESS, Severity.CRASH+1)
 
 
 class Statistics(object):

@@ -153,10 +153,8 @@ class AnnotateableLine(object):
     def __str__(self):
         if hasattr(self, 'substitute'):
             return self.substitute
-        elif isinstance(self._content, str):
-            return self._content
         else:
-            return self._content.decode()
+            return self._content
 
     def __len__(self):
         return len(str(self))

@@ -1,6 +1,5 @@
 import os
 import string
-import sys
 import zipfile
 
 from pythomat import contexts
@@ -27,8 +26,8 @@ def modules_and_ressources(argument):
     ressources = []
     for filename in non_modules:
         if os.path.isdir(filename):
-            for d,ss,fs in os.walk(filename):
-                for entry in (os.path.join(d,f) for f in fs):
+            for d, ss, fs in os.walk(filename):
+                for entry in (os.path.join(d, f) for f in fs):
                     ressources.append(entry)
         else:
             ressources.append(filename)
@@ -36,7 +35,7 @@ def modules_and_ressources(argument):
     return modules, ressources
 
 
-def package(target, root, subdirs, tests = [], modules = [], ressources = [], main=None):
+def package(target, root, subdirs, tests=[], modules=[], ressources=[], main=None):
     """Package py files from a directory plus additional files"""
     archive = zipfile.PyZipFile(target, 'w')
     for directory, dirs, files in os.walk(root):
@@ -70,7 +69,6 @@ def package(target, root, subdirs, tests = [], modules = [], ressources = [], ma
 
 
 def create_main(output, checkers):
-
     checkers = ",\n".join(['"' + checker + '"' for checker in checkers])
     return string.Template("""import sys
 import fakeomat
@@ -92,10 +90,12 @@ def parsed(string):
     return command, argument
 
 
+# TODO unused argument submission
 def run(checkers, submission, output):
     adapted_checkers = []
     tests = []
     modules = []
+    # TODO typo
     ressources = []
 
     # adapt the checkers as needed
@@ -120,6 +120,7 @@ def run(checkers, submission, output):
     # package pythomat
     main = create_main(output, adapted_checkers)
     root = os.path.abspath(os.path.split(os.path.dirname(__file__))[0])
-    package("pythomat.zip", root, ["pythomat", "fakeomat", "chardet"], tests=tests, modules=modules, ressources=ressources, main=main)
+    package("pythomat.zip", root, ["pythomat", "fakeomat", "chardet"], tests=tests, modules=modules,
+            ressources=ressources, main=main)
 
     print("Run 'python pythomat.zip <submission>'")

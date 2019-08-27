@@ -50,7 +50,7 @@ def color_bang(color, percent):
 
 def toHex(color):
     """ turn a tuple or list of integers into a single hexadecimal string"""
-    return "#" + "".join([hex(int(component)).lstrip("0x").zfill(2) for component in color])
+    return "#" + "".join([hex(component).lstrip("0x").zfill(2) for component in color])
 
 kit_colors = {
     "KITblack"     : (  0,  0,  0),

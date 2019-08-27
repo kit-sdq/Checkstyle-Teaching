@@ -1,19 +1,18 @@
 import os
 import re
-import shutil
-import sys
 import zipfile
 
-from . import checkers
+from .checkers import Checker
 from .checkers import CheckerFailure
 from .checkers import SubmissionFailure
 
 
-class FindJava(checkers.Checker):
+class FindJava(Checker):
     """Find java and store the paths in the environment.
 
     Sets the environment variable JAVA and JAVA_SECURE, similar to how
     Praktomat does it."""
+
     def title(self):
         return "Find java executable"
 
@@ -34,11 +33,8 @@ def write_unicode(filename, contents):
         raise CheckerFailure("{0} (hint: try to install python-chardet)".format(e))
 
     import codecs
-    
-    if not isinstance(contents, str):
-        as_unicode = contents.decode(chardet.detect(contents)['encoding'])
-    else:
-        as_unicode = contents
+    # TODO str/bytes
+    as_unicode = str(contents, chardet.detect(contents)['encoding'])
     dirname, basename = os.path.split(filename)
     if not os.path.exists(dirname):
         os.makedirs(dirname)
@@ -59,7 +55,7 @@ def write_bytes(filename, contents):
 
 def write_file(filename, contents):
     """Write a file, if it's java care for unicode, otherwise not"""
-    basename,ext = os.path.splitext(filename)
+    basename, ext = os.path.splitext(filename)
     if ext.lower() == ".java":
         write_unicode(filename, contents)
     else:
@@ -68,6 +64,7 @@ def write_file(filename, contents):
 
 def extract_submission_files(submission, dst_dir):
     """Unzip all files in the zip file to the temporary directory"""
+    # TODO use with instead of try-finally?
     try:
         submission_zip = zipfile.ZipFile(submission, 'r')
         for filename in submission_zip.namelist():
@@ -81,7 +78,7 @@ def extract_submission_files(submission, dst_dir):
 
 def copy_submission_directory(src_dir, dst_dir):
     """Copy all files from a directory to the temporary directory"""
-    for d,s,f in os.walk(src_dir):
+    for d, s, f in os.walk(src_dir):
         for filename in [os.path.join(d, filename) for filename in f if not filename.endswith(".class")]:
             with open(filename, 'r') as handle:
                 contents = handle.read()
@@ -100,16 +97,16 @@ def copy_submission_file(filename, dst_dir):
 def list_submission_files(directory):
     """List all files in the temporary directory"""
     files = []
-    for d,s,f in os.walk(directory):
+    for d, s, f in os.walk(directory):
         for filename in f:
             path = os.path.normpath(d + '/' + filename)
-            path = path[len(directory)+1:]
+            path = path[len(directory) + 1:]
             files.append(path)
 
     return files
 
 
-class CopySubmissionChecker(checkers.Checker):
+class CopySubmissionChecker(Checker):
     def title(self):
         return "Copying submission"
 
@@ -118,7 +115,7 @@ class CopySubmissionChecker(checkers.Checker):
         submission = self.arguments
 
         if isinstance(submission, str):
-            submission = [ submission ]
+            submission = [submission]
 
         if len(submission) == 0:
             raise SubmissionFailure("No submission files specified")
@@ -135,25 +132,27 @@ class CopySubmissionChecker(checkers.Checker):
             else:
                 copy_submission_file(filename, self.tempdir)
 
-
         # List all files in the temporary directory
-        submission_files =  list_submission_files(self.tempdir)
+        submission_files = list_submission_files(self.tempdir)
         for filename in submission_files:
             with self.document.div():
                 self.document.cdata(filename)
 
 
 package_re = re.compile("\s*package\s+([^\s]+)\s*;\s*")
+
+
 def fully_qualified_classname(filename):
-    '''Naively try to find a package line in the first few lines of the file.
-    Note, that this does not handle comments correctly.
-    '''
+    """
+    Naively try to find a package line in the first few lines of the file.
+    Note that this does not handle comments correctly.
+    """
 
     classname = os.path.splitext(os.path.basename(filename))[0]
 
     from itertools import islice
     with open(filename, 'r') as java_file:
-        for line in islice(java_file, 0,10):
+        for line in islice(java_file, 0, 10):
             match = package_re.match(line)
             if match:
                 # file contains a package line, use it
@@ -164,8 +163,10 @@ def fully_qualified_classname(filename):
 
 
 main_re = re.compile(".*\s+public\s+static\s+void\s+main\s*[(].*")
+
+
 def contains_main_method(filename):
-    '''search for the main method in the file'''
+    """Search for the main method in the file."""
     with open(filename, 'r') as javafile:
         for line in javafile:
             if main_re.match(line):
@@ -173,26 +174,27 @@ def contains_main_method(filename):
 
 
 def search_main_method_in_directory(root_directory):
-    '''search for a class containing a main method'''
+    """Search for a class containing a main method."""
     # open all java files in the directory
     # search them for a file containing a main method
     # return the fully qualified name of that class
     found = None
-    for (directory,subdirectories,filenames) in os.walk(root_directory):
+    for (directory, subdirectories, filenames) in os.walk(root_directory):
         for filename in filenames:
-            (base,extension) = os.path.splitext(filename)
+            (base, extension) = os.path.splitext(filename)
             if extension.lower() == ".java":
                 full_filename = directory + '/' + filename
                 if contains_main_method(full_filename):
-                    if found == None:
+                    if found is None:
                         found = full_filename
                     else:
-                        raise SubmissionFailure("No unique main method found (" + filename + " and " + os.path.split(found)[1] + ")")
+                        raise SubmissionFailure(
+                            "No unique main method found (" + filename + " and " + os.path.split(found)[1] + ")")
 
     return fully_qualified_classname(found) if found else None
 
 
-class SearchMainMethodChecker(checkers.Checker):
+class SearchMainMethodChecker(Checker):
     def title(self):
         return "Searching for main method"
 
