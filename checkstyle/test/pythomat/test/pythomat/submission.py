@@ -6,7 +6,9 @@ from . import contexts
 from .exc import ConfigurationError
 from .which import which
 
-def execute_submission(java, submission, environment = {}, arguments = [], stdin = [], timeout = 1, sandbox="sandbox", classpath=[]):
+
+def execute_submission(java, submission, environment={}, arguments=[], stdin=[], timeout=1, sandbox="sandbox",
+                       classpath=[]):
     """Run the student's submission with the argument 'argument' passing the
     array of strings 'stdin' to the new processes standard input stream.
     Return a tuple containing stdout, stderr and the return code."""
@@ -37,7 +39,7 @@ def execute_submission(java, submission, environment = {}, arguments = [], stdin
         classpath.insert(0, "..")
 
     command_line += "-classpath", ":".join(classpath)
-    
+
     command_line += [submission] + arguments
 
     # set locale to english (mostly for local execution)
@@ -46,9 +48,9 @@ def execute_submission(java, submission, environment = {}, arguments = [], stdin
     env.update(environment)
 
     process = subprocess.Popen(command_line, env=env, shell=False, cwd=sandbox,
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE)
+                               stdin=subprocess.PIPE,
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE, encoding='utf-8')
 
     with contexts.InternalTimeoutGuard(timeout, process) as timer:
         stdout, stderr = process.communicate('\n'.join(stdin))

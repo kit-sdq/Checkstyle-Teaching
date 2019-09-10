@@ -25,6 +25,7 @@ if (document.getElementById($ID) == null) {
 
 __compress = re.compile("[\s]+")
 
+
 def inject_css(document, id, css):
     """Write a script to the document for injection a style into the document.
 
@@ -37,40 +38,43 @@ def inject_css(document, id, css):
     css = '"' + css + '"'
     with document.javascript():
         # print a script to the document that inserts css code into the document
-        document.raw(inject_css_template.substitute({'ID' : id, 'CSS' : css}))
+        document.raw(inject_css_template.substitute({'ID': id, 'CSS': css}))
 
 
 def color_bang(color, percent):
     """Similiar to xcolors color!fraction"""
     if isinstance(color, int):
-        result = 255 - ((255-color) * percent/100)
+        result = 255 - ((255 - color) * percent // 100)
         return result
     else:
         return [color_bang(component, percent) for component in color]
+
 
 def toHex(color):
     """ turn a tuple or list of integers into a single hexadecimal string"""
     return "#" + "".join([hex(component).lstrip("0x").zfill(2) for component in color])
 
+
 kit_colors = {
-    "KITblack"     : (  0,  0,  0),
-    "KITgreen"     : (  0,150,130),
-    "KITblue"      : ( 70,100,170),
-    "KITpalegreen" : (130,190, 60),
-    "KITyellow"    : (250,230, 20),
-    "KITorange"    : (220,160, 30),
-    "KITbrown"     : (160,130, 50),
-    "KITred"       : (160, 30, 40),
-    "KITlilac"     : (160,  0,120),
-    "KITcyanblue"  : ( 80,170,230),
-    "KITseablue"   : ( 50, 80,140),
+    "KITblack": (0, 0, 0),
+    "KITgreen": (0, 150, 130),
+    "KITblue": (70, 100, 170),
+    "KITpalegreen": (130, 190, 60),
+    "KITyellow": (250, 230, 20),
+    "KITorange": (220, 160, 30),
+    "KITbrown": (160, 130, 50),
+    "KITred": (160, 30, 40),
+    "KITlilac": (160, 0, 120),
+    "KITcyanblue": (80, 170, 230),
+    "KITseablue": (50, 80, 140),
 }
 
 extended_kit_colors = {}
 for color, rgb in list(kit_colors.items()):
     extended_kit_colors[color] = toHex(rgb)
-    for percent in [70,50,30,15]:
+    for percent in [70, 50, 30, 15]:
         extended_kit_colors[color + str(percent)] = toHex(color_bang(rgb, percent))
+
 
 def substitute_kit_colors(css):
     return string.Template(css).substitute(extended_kit_colors)
@@ -427,6 +431,7 @@ __pythomat_css = """
 }"""
 
 __pythomat_css = substitute_kit_colors(__pythomat_css)
+
 
 def inject_pythomat_css(document):
     """Inject the default pythomat css declarations into the document."""

@@ -7,8 +7,8 @@ from os.path import dirname, join, relpath, exists
 
 import html2text
 
-reference_command = r'C:\Python27\python.exe'
 test_command = 'python'
+reference_command = r'C:\Python27\python.exe'
 
 
 def is_task(files):
@@ -109,21 +109,21 @@ def compare_solutions(reference_solution, test_solution):
     :return: true iff the solutions are equivalent.
     """
 
-    reference_simplified = simplify(reference_solution)
     test_simplified = simplify(test_solution)
+    reference_simplified = simplify(reference_solution)
+
+    with open('test_simplified.txt', 'w') as handle:
+        handle.write(test_simplified)
+
+    with open('reference_simplified.txt', 'w') as handle:
+        handle.write(reference_simplified)
 
     if reference_simplified == test_simplified:
         print('Test successful')
         return True
-
-    with open('reference.html', 'w') as handle:
-        handle.write(reference_simplified)
-
-    with open('test.html', 'w') as handle:
-        handle.write(test_simplified)
-
-    print('Test not successful')
-    return False
+    else:
+        print('Test not successful')
+        return False
 
 
 def test_task(task_path):
@@ -137,13 +137,19 @@ def test_task(task_path):
     print('Found task {}'.format(task_path))
     fix_simplejson_if_necessary(task_path)
 
+    print('\nTest:')
+    run_task(task_path, test_command, 'test')
+    test_solution = get_solution(task_path)
+
+    with open('test.html', 'w') as handle:
+        handle.write(test_solution)
+
     print('\nReference:')
     run_task(task_path, reference_command, 'reference')
     reference_solution = get_solution(task_path)
 
-    print('\nTest:')
-    run_task(task_path, test_command, 'test')
-    test_solution = get_solution(task_path)
+    with open('reference.html', 'w') as handle:
+        handle.write(reference_solution)
 
     print('\n')
 

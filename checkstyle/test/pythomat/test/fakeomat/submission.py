@@ -50,7 +50,7 @@ def write_bytes(filename, contents):
         os.makedirs(dirname)
 
     with open(os.path.join(filename), 'w') as out_handle:
-        out_handle.write(contents)
+        out_handle.write(contents.decode())
 
 
 def write_file(filename, contents):
@@ -80,7 +80,7 @@ def copy_submission_directory(src_dir, dst_dir):
     """Copy all files from a directory to the temporary directory"""
     for d, s, f in os.walk(src_dir):
         for filename in [os.path.join(d, filename) for filename in f if not filename.endswith(".class")]:
-            with open(filename, 'r') as handle:
+            with open(filename, 'rb') as handle:
                 contents = handle.read()
             relpath = os.path.relpath(filename, src_dir)
             write_file(os.path.join(dst_dir, relpath), contents)

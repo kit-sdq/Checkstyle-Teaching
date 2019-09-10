@@ -271,7 +271,8 @@ class CompilerChecker(Checker):
         command_line += java_files
 
         # compile the sources
-        compiler = subprocess.Popen(command_line, cwd=self.tempdir, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        compiler = subprocess.Popen(command_line, cwd=self.tempdir, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                    encoding='utf-8')
         stdout, stderr = compiler.communicate()
 
         # print compiler output
@@ -354,7 +355,7 @@ class ScriptChecker(Checker):
         all_files = list_files_relative(self.tempdir)
 
         process = subprocess.Popen(command + all_files, cwd=self.tempdir, stdout=subprocess.PIPE,
-                                   stderr=subprocess.PIPE)
+                                   stderr=subprocess.PIPE, encoding='utf-8')
 
         try:
             with InternalTimeoutGuard(60, process):
