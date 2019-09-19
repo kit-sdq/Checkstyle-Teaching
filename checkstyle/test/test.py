@@ -97,8 +97,9 @@ def simplify(solution):
     simplified = html2text.html2text(solution)
     simplified = simplified.replace('\n', '')
     simplified = re.sub(r'Time taken: [0-9]+\.[0-9]+s', 'Time taken: ?s', simplified)
-    simplified = re.sub('pythomat-[a-z0-9_]{6}', 'pythomat-?', simplified)
+    simplified = re.sub(r'pythomat-\w{6}(\w{2})?', 'pythomat-?', simplified)
     simplified = simplified.replace(' ', '')
+    simplified = simplified.lower()
     return simplified
 
 
@@ -134,7 +135,7 @@ def test_task(task_path):
     :return: true iff the test was successful.
     """
 
-    print('Found task {}'.format(task_path))
+    print('\nFound task {}'.format(task_path))
     fix_simplejson_if_necessary(task_path)
 
     print('\nTest:')
