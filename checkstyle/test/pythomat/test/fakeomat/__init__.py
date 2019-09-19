@@ -34,8 +34,6 @@ def run(command='simulate', checkers=None, submission=None, output='browser'):
         elif command == 'package':
             from . import packager
             packager.run(checkers, submission, output)
-        else:
-            sys.stderr.write('Unsupported command. Use "simulate" or "package" instead')
     except UserInputError as e:
         sys.stderr.write("Invalid input:\n" + str(e) + '\n')
         return False
