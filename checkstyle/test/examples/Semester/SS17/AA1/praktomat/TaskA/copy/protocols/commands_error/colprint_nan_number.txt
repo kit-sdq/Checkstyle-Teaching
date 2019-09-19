@@ -1,4 +1,0 @@
-colprint a
-$error
-
-quit

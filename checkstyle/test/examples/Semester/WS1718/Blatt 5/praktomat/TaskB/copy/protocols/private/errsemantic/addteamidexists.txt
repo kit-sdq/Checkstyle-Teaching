@@ -1,7 +1,0 @@
-add-team 11;abcd
-OK
-
-add-team 11;xyz
-$error
-
-quit

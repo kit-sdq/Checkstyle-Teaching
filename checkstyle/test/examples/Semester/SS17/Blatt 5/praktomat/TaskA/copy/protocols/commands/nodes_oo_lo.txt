@@ -1,4 +1,0 @@
-nodes
-apacheopenoffice:201,hellfrozen:206,libreoffice:202,microsoftoffice:205,never:204,neverever:207,officesuite,openoffice:200
-
-quit

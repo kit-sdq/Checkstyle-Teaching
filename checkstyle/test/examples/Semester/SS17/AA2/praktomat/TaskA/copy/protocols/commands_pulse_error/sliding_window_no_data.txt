@@ -1,5 +1,0 @@
-sliding-window 2
-$error
-
-quit
-Quit (Day 0, week 1)

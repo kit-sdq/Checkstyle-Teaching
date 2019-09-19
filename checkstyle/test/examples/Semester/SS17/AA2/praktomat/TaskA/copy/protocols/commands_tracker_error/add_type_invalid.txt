@@ -1,5 +1,0 @@
-add n4m3 sum
-$error
-
-quit
-Quit (Day 0, week 1)

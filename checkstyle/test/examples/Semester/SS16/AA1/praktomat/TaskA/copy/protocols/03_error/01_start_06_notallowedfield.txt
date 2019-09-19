@@ -1,8 +1,0 @@
-
-start 1,2,3,4;$baseblue;SR,5,6,7;$baseyellow
-$error
-
-start 1,2,3,4;$baseblue;5,6,7,AB;$baseyellow
-$error
-
-quit

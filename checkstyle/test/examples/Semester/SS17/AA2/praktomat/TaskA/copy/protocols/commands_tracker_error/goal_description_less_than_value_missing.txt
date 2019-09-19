@@ -1,8 +1,0 @@
-goal pulse less-than
-$error
-
-goal pulse less-than 
-$error
-
-quit
-Quit (Day 0, week 1)

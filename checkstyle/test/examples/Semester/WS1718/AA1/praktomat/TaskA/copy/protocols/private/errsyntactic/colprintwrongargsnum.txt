@@ -1,7 +1,0 @@
-colprint 1;2
-$error
-
-colprint 1;
-$error
-
-quit

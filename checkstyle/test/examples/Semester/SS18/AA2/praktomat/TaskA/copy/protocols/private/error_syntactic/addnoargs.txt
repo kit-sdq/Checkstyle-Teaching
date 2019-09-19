@@ -1,7 +1,0 @@
-create programmieren
-OK
-
-add
-$error
-
-quit

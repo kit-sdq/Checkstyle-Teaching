@@ -1,7 +1,0 @@
-move 6
-OK
-
-rowprint 1
-# # # # # 1
-
-quit

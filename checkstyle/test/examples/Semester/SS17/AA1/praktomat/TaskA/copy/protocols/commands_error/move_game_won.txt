@@ -1,7 +1,0 @@
-move 15
-1 wins
-
-move 1
-$error
-
-quit

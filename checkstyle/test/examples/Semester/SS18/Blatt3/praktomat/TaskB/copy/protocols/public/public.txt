@@ -1,4 +1,0 @@
-approximation 4
-2.7083
-
-quit

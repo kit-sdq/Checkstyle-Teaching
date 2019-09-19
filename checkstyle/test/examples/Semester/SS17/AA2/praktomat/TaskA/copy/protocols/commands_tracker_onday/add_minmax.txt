@@ -1,5 +1,0 @@
-add a minmax
-Added a with aggregation minmax.
-
-quit
-Quit (Day 0, week 1)

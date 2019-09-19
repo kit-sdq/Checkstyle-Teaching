@@ -1,7 +1,0 @@
-quit 
-$error
-
-quit a
-$error
-
-quit

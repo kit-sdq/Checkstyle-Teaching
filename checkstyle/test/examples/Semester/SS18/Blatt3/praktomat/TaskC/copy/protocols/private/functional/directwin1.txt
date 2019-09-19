@@ -1,7 +1,0 @@
-$respect
-Versuch 1:
-
-rot gelb blau orange
-win
-
-quit

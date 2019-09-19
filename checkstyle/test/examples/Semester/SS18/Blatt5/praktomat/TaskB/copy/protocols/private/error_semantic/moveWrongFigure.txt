@@ -1,4 +1,0 @@
-move green;3;2
-$error
-
-quit

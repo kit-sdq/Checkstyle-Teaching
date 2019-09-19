@@ -1,8 +1,0 @@
-move 10
-
-print
-330
-f33
-033
-
-quit

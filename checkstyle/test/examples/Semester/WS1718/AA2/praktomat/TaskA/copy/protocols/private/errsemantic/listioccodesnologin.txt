@@ -1,4 +1,0 @@
-list-ioc-codes
-$error
-
-quit

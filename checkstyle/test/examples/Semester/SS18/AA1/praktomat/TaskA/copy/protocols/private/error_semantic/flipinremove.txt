@@ -1,7 +1,0 @@
-throwin 1
-OK
-
-flip
-$error
-
-quit

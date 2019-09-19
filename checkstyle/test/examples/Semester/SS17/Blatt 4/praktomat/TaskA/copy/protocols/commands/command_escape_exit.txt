@@ -1,8 +1,0 @@
-escape f
-
-print
-000
-00a
-000
-
-escape A

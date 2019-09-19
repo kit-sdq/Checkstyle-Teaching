@@ -1,7 +1,0 @@
-getComponents a
-$error
-
-getComponents A
-$error
-
-quit

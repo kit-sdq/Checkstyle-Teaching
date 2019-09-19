@@ -1,5 +1,0 @@
-add a last
-Added a with aggregation last.
-
-quit
-Quit (Day 0, week 1)

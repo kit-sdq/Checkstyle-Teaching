@@ -1,4 +1,0 @@
-remove
-$error
-
-quit

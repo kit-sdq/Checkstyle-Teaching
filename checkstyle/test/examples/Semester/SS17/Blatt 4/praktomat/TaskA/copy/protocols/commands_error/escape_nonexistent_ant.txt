@@ -1,4 +1,0 @@
-escape x
-$error
-
-quit

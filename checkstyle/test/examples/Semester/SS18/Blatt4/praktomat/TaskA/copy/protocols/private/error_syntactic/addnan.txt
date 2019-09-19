@@ -1,4 +1,0 @@
-add 0001;LAX;FRA;a;USD
-$error
-
-quit

@@ -1,5 +1,0 @@
-goal pulse greater-than a
-$error
-
-quit
-Quit (Day 0, week 1)

@@ -1,4 +1,0 @@
-top 1 pulse
-
-quit
-Quit (Day 0, week 1)

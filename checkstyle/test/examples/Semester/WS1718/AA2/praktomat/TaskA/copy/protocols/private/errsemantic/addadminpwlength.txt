@@ -1,7 +1,0 @@
-add-admin peter;oettig;peet1993;notmyre
-$error
-
-add-admin peter;oettig;peet1993;notmyrealpwxy
-$error
-
-quit

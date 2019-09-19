@@ -1,5 +1,0 @@
-add sum
-$error
-
-quit
-Quit (Day 0, week 1)

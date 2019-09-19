@@ -1,7 +1,0 @@
-approximation 5
-2.7167
-
-approximation 12
-2.7183
-
-quit

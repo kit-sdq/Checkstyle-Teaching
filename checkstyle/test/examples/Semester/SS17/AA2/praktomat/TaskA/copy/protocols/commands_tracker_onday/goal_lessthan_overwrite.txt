@@ -1,8 +1,0 @@
-goal pulse less-than 10
-New goal for pulse: less-than <10.00>.
-
-goal pulse less-than 20
-New goal for pulse: less-than <20.00>.
-
-quit
-Quit (Day 0, week 1)

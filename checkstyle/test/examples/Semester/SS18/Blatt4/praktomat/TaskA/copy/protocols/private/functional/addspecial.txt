@@ -1,7 +1,0 @@
-add 0001;test location A!;testlocationB?;659.99;USD
-OK
-
-list-flights
-0001;test location A!;testlocationB?;659.99;USD
-
-quit

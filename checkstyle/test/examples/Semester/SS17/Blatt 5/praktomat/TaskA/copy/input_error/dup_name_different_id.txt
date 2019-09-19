@@ -1,2 +1,0 @@
-CentOS5 (id=105) contained-in operatingSystem
-centOS5 (id=106) contained-in OperatingSystem

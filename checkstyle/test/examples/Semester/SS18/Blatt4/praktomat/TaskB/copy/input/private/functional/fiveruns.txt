@@ -1,5 +1,0 @@
-scissors,rock,paper
-lizard,spock,rock
-paper,rock,lizard
-paper,paper,paper
-spock,rock,spock

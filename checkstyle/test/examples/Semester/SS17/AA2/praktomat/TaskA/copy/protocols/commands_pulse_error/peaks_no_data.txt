@@ -1,5 +1,0 @@
-peaks 5 3
-$error
-
-quit
-Quit (Day 0, week 1)

@@ -1,5 +1,0 @@
-goal pulse between 10 and 20
-New goal for pulse: between <10.00> and <20.00>.
-
-quit
-Quit (Day 0, week 1)

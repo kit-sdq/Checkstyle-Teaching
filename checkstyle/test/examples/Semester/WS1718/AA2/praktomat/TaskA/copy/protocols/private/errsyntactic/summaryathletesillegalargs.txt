@@ -1,7 +1,0 @@
-summary-athlete ;verfolgung
-$error
-
-summary-athlete biathlon;
-$error
-
-quit

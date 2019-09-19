@@ -1,4 +1,0 @@
-nodes
-crime,drama,film,firefly:100,fireflyseason01:102,serenity:101,series,sherlock:200,sherlockseason01:201,sherlockseason02:202,sherlockseason03:203,sherlockseason04:204,spacewestern
-
-quit

@@ -1,7 +1,0 @@
-add-olympic-sport ;verfolgung
-$error
-
-add-olympic-sport biathlon;
-$error
-
-quit

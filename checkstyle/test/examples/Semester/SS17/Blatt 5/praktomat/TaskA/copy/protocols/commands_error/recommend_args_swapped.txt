@@ -1,4 +1,0 @@
-recommend 105 S1
-$error
-
-quit

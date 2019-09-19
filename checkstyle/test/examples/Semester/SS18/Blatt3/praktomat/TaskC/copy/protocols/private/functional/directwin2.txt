@@ -1,7 +1,0 @@
-$respect
-Versuch 1:
-
-lila braun grau cyan
-win
-
-quit

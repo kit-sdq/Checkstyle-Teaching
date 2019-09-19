@@ -1,5 +1,0 @@
-add name lol
-$error
-
-quit
-Quit (Day 0, week 1)

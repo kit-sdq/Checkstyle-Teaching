@@ -1,7 +1,0 @@
-create programmieren
-OK
-
-average programmieren
-$error
-
-quit

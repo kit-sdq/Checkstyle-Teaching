@@ -1,4 +1,0 @@
-rowprint a
-$error
-
-quit

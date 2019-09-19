@@ -1,7 +1,0 @@
-export 
-$error
-
-export a
-$error
-
-quit

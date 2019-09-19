@@ -1,5 +1,0 @@
-set-day 1
-Day 1, week 1
-
-quit
-Quit (Day 1, week 1)

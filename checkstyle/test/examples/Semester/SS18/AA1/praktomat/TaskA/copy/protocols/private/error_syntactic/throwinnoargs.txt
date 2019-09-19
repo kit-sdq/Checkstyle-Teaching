@@ -1,4 +1,0 @@
-throwin
-$error
-
-quit

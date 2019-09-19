@@ -1,4 +1,0 @@
-position x
-$error
-
-quit

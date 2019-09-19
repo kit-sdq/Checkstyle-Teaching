@@ -1,1 +1,0 @@
-operatingSystem predecessor-of CentOS5 (id=105)

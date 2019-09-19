@@ -1,7 +1,0 @@
-approximation a
-$error
-
-approximation +
-$error
-
-quit

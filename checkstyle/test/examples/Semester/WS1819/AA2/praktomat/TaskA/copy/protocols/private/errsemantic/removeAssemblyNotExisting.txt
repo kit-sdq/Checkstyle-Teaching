@@ -1,7 +1,0 @@
-removeAssembly a
-$error
-
-removeAssembly A
-$error
-
-quit

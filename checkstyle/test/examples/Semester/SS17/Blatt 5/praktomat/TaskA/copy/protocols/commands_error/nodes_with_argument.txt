@@ -1,7 +1,0 @@
-nodes 
-$error
-
-nodes a
-$error
-
-quit

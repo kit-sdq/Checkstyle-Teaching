@@ -1,5 +1,0 @@
-remove-goal pulse
-$error
-
-quit
-Quit (Day 0, week 1)

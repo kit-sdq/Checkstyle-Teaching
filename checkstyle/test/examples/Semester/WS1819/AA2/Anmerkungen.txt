@@ -1,8 +1,0 @@
-- Was passiert wenn die Mengen durch Kombination 1000 überschreiten?
-- Ist es möglich bei addComponent auch ganze assemblies hinzuzufügen? --> weil component oben für einzelstück steht, dann bei add component aber anscheinend für beides
-- was passiert bei remove wenn das zu löschende assembly noch in einem anderen assembly verwendet wird?
-V2
-- getAssemblies 
-	- definiert keine totale ordnung wenn ich das richtig sehe (wenn beabsichtigt, können wir glaube ich nicht testen)
-	- direkt oder indirekt, also alle baugruppen die irgendwo im baum vorkommen (gibt ziemlich sicher ne frage im ilias, genauso für getComponents, v.a. wenn ich sehe wie oft die Frage nach den zu setzenden Steinen bei AA1 schon gestellt wurde)
-- noch einen reset Befehl einbauen der die Datenhaltung zurücksetzt?

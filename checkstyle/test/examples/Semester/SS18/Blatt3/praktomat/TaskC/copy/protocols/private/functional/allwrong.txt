@@ -1,8 +1,0 @@
-$respect
-Versuch 1:
-
-braun grau magenta lila
-0,4,0,9
-Versuch 2:
-
-quit

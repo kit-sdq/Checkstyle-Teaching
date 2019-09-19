@@ -1,5 +1,0 @@
-normalize 0 1
-$error
-
-quit
-Quit (Day 0, week 1)

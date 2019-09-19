@@ -1,7 +1,0 @@
-move 0
-$error
-
-move -1
-$error
-
-quit

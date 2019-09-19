@@ -1,4 +1,0 @@
-move a
-$error
-
-quit

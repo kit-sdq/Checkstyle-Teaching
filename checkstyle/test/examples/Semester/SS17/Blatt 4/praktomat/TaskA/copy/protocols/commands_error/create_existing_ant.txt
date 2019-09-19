@@ -1,4 +1,0 @@
-create f,0,0
-$error
-
-quit

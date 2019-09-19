@@ -1,5 +1,0 @@
-goal less-than 40
-$error
-
-quit
-Quit (Day 0, week 1)

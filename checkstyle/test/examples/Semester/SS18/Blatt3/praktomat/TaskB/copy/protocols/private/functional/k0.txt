@@ -1,4 +1,0 @@
-approximation 0
-1.0000
-
-quit
