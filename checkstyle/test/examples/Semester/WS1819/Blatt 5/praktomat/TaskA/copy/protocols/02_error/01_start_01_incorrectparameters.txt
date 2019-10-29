@@ -1,8 +1,0 @@
-
-startsome $baseall
-$error
-
-start some$baseall
-$error
-
-quit

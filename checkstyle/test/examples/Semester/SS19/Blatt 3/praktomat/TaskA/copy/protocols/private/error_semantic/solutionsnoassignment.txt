@@ -1,4 +1,0 @@
-list-solutions 1
-$error
-
-quit

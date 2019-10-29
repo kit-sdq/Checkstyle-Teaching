@@ -1,4 +1,0 @@
-timeout:1
-output:Enter any of {|error|info|exit|sleep|ctrl+d}:
-input:sleep
-exit:0

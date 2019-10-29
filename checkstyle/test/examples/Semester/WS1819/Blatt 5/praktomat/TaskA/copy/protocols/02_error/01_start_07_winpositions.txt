@@ -1,5 +1,0 @@
-
-start AR,BR,CR,DR;$baseblue;$basegreen;$baseyellow
-$error
-
-quit

@@ -1,7 +1,0 @@
-assignment Schwieriges_Mathe-Abi
-assignment id(1)
-
-submit 1 211156 Glaub_es_ist_42
-$error
-
-quit

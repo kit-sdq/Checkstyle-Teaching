@@ -1,8 +1,0 @@
-pupil a 123456
-$error
-
-teacher b
-
-pupil a 123456
-
-quit

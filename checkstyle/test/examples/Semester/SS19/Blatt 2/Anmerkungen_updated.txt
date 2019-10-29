@@ -1,8 +1,0 @@
-S.2 
-falls EINE der nachfolgenden Regeln
-
-S.3
-Kommazahl float oder double?
-
-S.4
-Auf Basis der 12-stellige Seriennummer [..] lassen sich diverse Informationen ablesen. - klingt etwas komisch für mich?
