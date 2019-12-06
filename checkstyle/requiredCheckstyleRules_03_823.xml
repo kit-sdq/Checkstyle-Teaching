@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+          "-//Puppy Crawl//DTD Check Configuration 1.1//EN"
+          "http://www.puppycrawl.com/dtds/configuration_1_1.dtd">
+
+<module name="Checker">
+	<!-- ######## TEMPLATE/CHECKSTYLE/WHITESPACE.XML ######## !-->
+    <module name="com.puppycrawl.tools.checkstyle.TreeWalker">
+        
+        <!-- Checks the padding of an empty for initializer. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyForInitializerPadCheck">
+            <property name="option" value="nospace"/>
+        </module>
+        
+        <!-- Checks the padding of an empty for iterator. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyForIteratorPadCheck">
+            <property name="option" value="nospace"/>
+        </module>
+        
+        <!-- Checks that the whitespace around the Generic tokens < and > is correct to the typical convention. !-->
+        <!-- See http://checkstyle.sourceforge.net/config_whitespace.html#GenericWhitespace !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"/>
+        
+        <!-- Checks the padding between the identifier of a method definition, !-->
+        <!-- constructor definition, method call, or constructor invocation; and the left parenthesis of the parameter list. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck">
+            <property name="allowLineBreaks" value="false"/>
+            <property name="option"          value="nospace"/>
+            <property name="tokens"          value="CTOR_DEF, LITERAL_NEW, METHOD_CALL, METHOD_DEF, SUPER_CTOR_CALL "/>
+        </module>
+        
+        <!-- Checks that there is no whitespace after a token. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck">
+            <property name="allowLineBreaks" value="true"/>
+            <property name="tokens"          value="ARRAY_INIT, BNOT, DEC, DOT, INC, LNOT, UNARY_MINUS, UNARY_PLUS"/>
+        </module>
+        
+        <!-- Checks that there is no whitespace before a token. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck">
+            <property name="allowLineBreaks" value="false"/>
+            <property name="tokens"          value="SEMI, POST_DEC, POST_INC"/>
+        </module>
+        
+        <!-- Checks the policy on how to wrap lines on operators. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck">
+            <property name="option" value="nl"/>
+            <property name="tokens" value="ASSIGN, BAND, BOR, BSR, BXOR, COLON, DIV,
+            EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF,
+            LOR, LT, MINUS, MOD, NOT_EQUAL,
+            PLUS, QUESTION, SL, SR, STAR"/>
+        </module>
+        
+        <!-- Checks the policy on the padding of parentheses. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck">
+            <property name="option" value="nospace"/>
+            <property name="tokens" value="CTOR_CALL, METHOD_CALL, SUPER_CTOR_CALL"/>
+        </module>
+        
+        <!-- Checks the policy on the padding of parentheses for typecasts. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.TypecastParenPadCheck">
+            <property name="option" value="nospace"/>
+            <property name="tokens" value="TYPECAST, RPAREN"/>
+        </module>
+        
+        <!-- Checks that a token is followed by whitespace. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck">
+            <property name="tokens" value="COMMA, SEMI, TYPECAST"/>
+        </module>
+        
+        <!-- Checks that a token is surrounded by whitespace. !-->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck">
+            <property name="tokens" value="ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR, BSR_ASSIGN,
+            BXOR, BXOR_ASSIGN, COLON, DIV, DIV_ASSIGN, EQUAL, GE, GT, LAND,
+            LCURLY, LE, LITERAL_ASSERT, LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE,
+            LITERAL_FINALLY, LITERAL_FOR, LITERAL_IF, LITERAL_RETURN,
+            LITERAL_SYNCHRONIZED, LITERAL_TRY, LITERAL_WHILE, LOR, LT,
+            MINUS, MINUS_ASSIGN, MOD, MOD_ASSIGN, NOT_EQUAL, PLUS, PLUS_ASSIGN,
+            QUESTION, RCURLY, SL, SLIST, SL_ASSIGN, SR, SR_ASSIGN, STAR, STAR_ASSIGN"/>
+            <property name="allowEmptyConstructors" value="false"/>
+            <property name="allowEmptyMethods"      value="false"/>
+        </module>
+        
+        <!-- The following checks are actually not whitespace checks, but still fit here quite well. !-->
+        
+        <!-- Checks that there is only one statement per line. !-->
+        <!-- See http://checkstyle.sourceforge.net/config_coding.html#OneStatementPerLine !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"/>
+        
+        <!-- Checks that each variable declaration is in its own statement and on its own line. !-->
+        <!-- See http://checkstyle.sf.net/config_coding.html !-->
+        <module name="com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck"/>
+        
+    </module>
+    
+    <!-- Checks that there are no tabs in the source file !-->
+    <!-- http://checkstyle.sourceforge.net/config_whitespace.html#FileTabCharacter !-->
+    <module name="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+    
+    <!-- ######## END OF TEMPLATE/CHECKSTYLE/WHITESPACE.XML ######## !-->
+</module>
