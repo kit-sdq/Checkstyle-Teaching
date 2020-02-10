@@ -268,13 +268,8 @@
             <!--
              <property name="excludeScope"                 value=""/>
              !-->
-            <property name="allowUndeclaredRTE" value="false"/>
-            <property name="allowThrowsTagsForSubclasses" value="false"/>
             <property name="allowMissingParamTags" value="false"/>
-            <property name="allowMissingThrowsTags" value="false"/>
             <property name="allowMissingReturnTag" value="false"/>
-            <property name="logLoadErrors" value="true"/>
-            <property name="suppressLoadErrors" value="false"/>
             <property name="tokens" value="METHOD_DEF, CTOR_DEF"/>
         </module>
 
