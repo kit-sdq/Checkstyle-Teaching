@@ -5,7 +5,7 @@
 
 	<groupId>edu.kit.checkstyle</groupId>
 	<artifactId>checkstyle-teaching</artifactId>
-	<version>2.0</version>
+	<version>8.29</version>
 
 	<!--packaging>jar</packaging--> <!-- todo necessary? -->
 
@@ -13,7 +13,7 @@
 		<dependency>
 			<groupId>com.puppycrawl.tools</groupId>
 			<artifactId>checkstyle</artifactId>
-			<version>8.29</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-cli</groupId>
