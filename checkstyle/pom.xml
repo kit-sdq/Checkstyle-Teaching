@@ -5,7 +5,7 @@
 
 	<groupId>edu.kit.checkstyle</groupId>
 	<artifactId>checkstyle-teaching</artifactId>
-	<version>8.29</version>
+	<version>8.32</version>
 
 	<!--packaging>jar</packaging--> <!-- todo necessary? -->
 
