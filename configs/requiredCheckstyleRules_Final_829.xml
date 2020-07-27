@@ -340,9 +340,7 @@
 
         <!-- Implements Bloch, Effective Java, Item 17 - Use Interfaces only to define types. !-->
         <!-- See http://yle.sf.net/config_html !-->
-        <module name="InterfaceIsType">
-            <property name="allowMarkerInterfaces" value="false"/>
-        </module>
+        <module name="InterfaceIsType" />
 
         <!-- Restricts throws statements to a specified count. !-->
         <!-- See http://yle.sf.net/config_html !-->
