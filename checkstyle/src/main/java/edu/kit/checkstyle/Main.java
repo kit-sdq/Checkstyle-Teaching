@@ -7,8 +7,9 @@ import com.puppycrawl.tools.checkstyle.PropertyResolver;
 import com.puppycrawl.tools.checkstyle.api.AuditListener;
 import com.puppycrawl.tools.checkstyle.api.CheckstyleException;
 import com.puppycrawl.tools.checkstyle.api.Configuration;
-import edu.kit.checkstyle.listeners.QualifiedListener;
 import edu.kit.checkstyle.util.SystemUtil;
+import edu.kit.kastel.sdq.artemis.checkstyle.listeners.QualifiedListener;
+
 import org.apache.commons.cli.ParseException;
 import org.xml.sax.InputSource;
 
